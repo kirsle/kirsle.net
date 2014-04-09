@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block title %}Contact Me{% endblock %}
+{% block content %}
+
+<h1>Contact Me</h1>
+
+You can use the form below to send me an e-mail. Alternatively you can contact
+me on an instant messenger:
+
+<blockquote>
+<table border="0" cellspacing="0" cellpadding="2">
+    <tr>
+        <td align="center" valign="middle">
+            <img src="/static/icons/aim.gif" title="AIM">
+        </td>
+        <td align="left" valign="middle">
+            <strong>AIM:</strong> <a href="aim:goim?ScreenName=Kirsle">Kirsle</a>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" valign="middle">
+            <img src="/static/icons/skype.png" title="Skype">
+        </td>
+        <td align="left" valign="middle">
+            <strong>Skype:</strong> Kirsle
+        </td>
+    </tr>
+    <tr>
+        <td align="center" valign="middle">
+            <img src="/static/icons/xmpp.gif" title="XMPP">
+        </td>
+        <td align="left" valign="middle">
+            <strong>XMPP:</strong> kirsle@kirsle.net
+        </td>
+    </tr>
+</table>
+</blockquote><p>
+
+<strong>You may NOT</strong> use this form to send me any SEO business
+solicitations. That will probably just make me ban your IP address from visiting
+my site ever again.<p>
+
+<form name="contact" action="{{ url_for('contact.send') }}" method="POST">
+<input type="hidden" name="token" value="{{ csrf_token() }}">
+<table border="0" cellspacing="0" cellpadding="2">
+    <tr>
+        <td width="50%" align="left" valign="middle">
+            <strong>Your name:</strong><br>
+            <small>(so I know who you are)</small><br>
+            <input type="text" size="40" name="name">
+        </td>
+        <td width="50%" align="left" valign="middle">
+            <strong>Your email:</strong><br>
+            <small>(if you want a response)</small><br>
+            <input type="email" size="40" name="email">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="left" valign="middle">
+            <strong>Message subject:</strong><br>
+            <small>(optional)</small><br>
+            <input type="text" size="40" name="subject" style="width: 100%"><p>
+
+            <strong>Message:</strong><br>
+            <small>(required)</small><br>
+            <textarea cols="40" rows="12" name="message" style="width: 100%"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right" valign="middle">
+            <button type="submit">Send Message</button>
+        </td>
+    </tr>
+</table>
+<div style="display: none">
+    If you can see these boxes, don't touch them.<br>
+    <input type="text" size="40" name="contact" value=""><br>
+    <input type="text" size="40" name="website" value="http://">
+</div>
+</form>
+
+{% endblock %}
