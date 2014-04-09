@@ -33,6 +33,7 @@
     {% block content %}{% endblock %}
 
     {% if uri not in ["/", "/blog/index"] and not "/blog/category" in uri %}
+        <br>
         {{ leaderboard() }}
     {% endif %}
 

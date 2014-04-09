@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+
+<ul>
+
+	<li><a href="#siikirperl">SiikirPerl</a></li>
+	<li><a href="#perlbrew">Perlbrew</a></li>
+	<li><a href="#apache_configuration">Apache Configuration</a></li>
+	<li><a href="#perl_modules">Perl Modules</a></li>
+	<ul>
+
+		<li><a href="#image__magick">Image::Magick</a></li>
+		<ul>
+
+			<li><a href="#misc_notes">Misc Notes</a></li>
+		</ul>
+
+		<li><a href="#template">Template</a></li>
+	</ul>
+
+</ul>
+
+<hr name="index" />
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<h1><a name="siikirperl">SiikirPerl</a></h1>
+<p>How to install the Perl Siikir CMS.</p>
+<p>
+</p>
+<hr />
+<h1><a name="perlbrew">Perlbrew</a></h1>
+<p>Recommended to install a custom Perl w/ perlbrew instead of using your vendor
+version of Perl. I made a dedicated user, <code>bob</code> that &quot;owns&quot; the Perl
+installation.</p>
+<pre>
+  [bob]$ sudo mkdir /opt/perl5 &amp;&amp; chown bob:bob /opt/perl5
+  [bob]$ export PERLBREW_ROOT=&quot;/opt/perl5&quot;
+  [bob]$ wget -O - <a href="http://install.perlbrew.pl">http://install.perlbrew.pl</a> | bash
+  [bob]$ perlbrew init
+  [bob]$ perlbrew install perl-5.18.0
+  [bob]$ perlbrew switch perl-5.18.0</pre>
+<p>After installing Perl, make a symlink so that <code>/opt/perl</code> points to the Perl
+root, for example:</p>
+<pre>
+  /opt/perl -&gt; /opt/perl5/perls/perl-5.18.0</pre>
+<p>So that <code>/opt/perl/bin/perl</code> exists.</p>
+<p>
+</p>
+<hr />
+<h1><a name="apache_configuration">Apache Configuration</a></h1>
+<p>You'll need <code>mod_fcgid</code>, <code>mod_rewrite</code>, and probably <code>mod_suexec</code>. On
+Debian, install the package <code>apache2-suexec-custom</code> so that you can change
+suexec to use <code>/home</code> as its root (not needed if you plan to put your site
+under <code>/var/www</code>). The suexec config file is usually at
+<code>/etc/apache2/suexec/www-data</code>.</p>
+<p>Typical VirtualHost configuration for mod_fcgid:</p>
+<pre>
+  &lt;VirtualHost *:80&gt;
+    ServerName www.yoursite.com
+    DocumentRoot /home/www/public_html
+    CustomLog /home/www/logs/access_log combined
+    ErrorLog /home/www/logs/error_log
+    SuexecUserGroup www www
+    &lt;Directory &quot;/home/www/public_html&quot;&gt;
+      Options Indexes FollowSymLinks ExecCGI
+      AllowOverride All
+      Order allow,deny
+      Allow from all
+    &lt;/Directory&gt;
+    &lt;Directory &quot;/home/www/public_html/fcgi&quot;&gt;
+      SetHandler fcgid-script
+      Options +ExecCGI
+      AllowOverride All
+      Order allow,deny
+      Allow from all
+    &lt;/Directory&gt;
+  &lt;/VirtualHost&gt;</pre>
+<p>Follow that up with a <code>.htaccess</code> in your document root:</p>
+<pre>
+  &lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine on
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /fcgi/index.cgi [L]
+    RewriteRule ^$ /fcgi/index.cgi [L]
+  &lt;/IfModule&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="perl_modules">Perl Modules</a></h1>
+<p>The typical Siikir installation requires these modules. Install them using
+cpanminus as your Perl user (<code>bob</code> in my case).</p>
+<pre>
+  $ cpan App::cpanminus</pre>
+<p>The required modules (install each with <code>cpanm $NAME</code>):</p>
+<pre>
+  CGI::Fast
+  FCGI
+  JSON
+  JSON::XS
+  Image::Magick*
+  LWP::UserAgent
+  Mail::Sendmail
+  Template*
+  Digest::SHA1
+  Net::DNS</pre>
+<p>You'll <strong>need</strong> JSON::XS. JSON::PP doesn't quite cut it.</p>
+<p>A couple modules have special cases and might not be installable via <code>cpanm</code>:</p>
+<p>
+</p>
+<h2><a name="image__magick">Image::Magick</a></h2>
+<p>Because of Image::Magick's ties with the C ImageMagick library, they need to
+be installed by hand. You'll need to download and build ImageMagick from
+imagemagick.org (it includes the Perl module, so you don't need to deal with
+CPAN at all for this one).</p>
+<pre>
+  $ wget <a href="http://www.imagemagick.org/download/ImageMagick.tar.gz">http://www.imagemagick.org/download/ImageMagick.tar.gz</a>
+  $ tar -xzvf ImageMagick.tar.gz
+  $ cd ImageMagick-*/
+  $ ./configure --with-perl
+  $ make
+  $ make perl-sources
+  $ sudo make install
+  $ sudo ldconfig /usr/local/lib
+  $ cd PerlMagick
+  $ perl Makefile.PL
+  $ make
+  $ make test
+  $ make install</pre>
+<p><strong>Note:</strong> If your site ever starts crashing (particularly after a software
+update) saying it can't find <code>libmagick.so</code> or something, run
+<code>sudo ldconfig /usr/local/lib</code> to rebuild the library cache.</p>
+<p>
+</p>
+<h3><a name="misc_notes">Misc Notes</a></h3>
+<p>You'll need <code>libperl-dev</code> installed on the system (if you get an error like
+&quot;<code>can't find -lperl</code>&quot; when building).</p>
+<p>
+</p>
+<h2><a name="template">Template</a></h2>
+<p>I sometimes have problems installing Template::Toolkit through cpanm because
+the test suite doesn't pass completely (35 out of several thousand tests fail).
+You can just download and install this module by hand and it works.</p>
+
+{% endblock %}
