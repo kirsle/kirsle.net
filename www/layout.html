@@ -12,6 +12,8 @@
     </head>
 <body>
 
+{% from "google-ads.inc.html" import leaderboard, nav_ads %}
+
 <div class="k-supernova"></div>
 <div class="k-kirsle" onClick="self.location='/'"></div>
 
@@ -29,6 +31,10 @@
     {% endwith %}
 
     {% block content %}{% endblock %}
+
+    {% if uri not in ["/", "/blog/index"] and not "/blog/category" in uri %}
+        {{ leaderboard() }}
+    {% endif %}
 
     <div class="k-copyright">
         Copyright &copy; 2014 Noah Petherbridge<br>
@@ -106,19 +112,7 @@
         &#0164; <a href="http://search.cpan.org/~kirsle">CPAN</a>
     </div>
 
-    <div style="text-align: center">
-    <script type="text/javascript"><!--
-        google_ad_client = "ca-pub-0838718168234603";
-        /* Kirsle.net Nav */
-        google_ad_slot = "1728209841";
-        google_ad_width = 120;
-        google_ad_height = 240;
-        //-->
-    </script>
-    <script type="text/javascript"
-        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-    </script>
-    </div>
+    {{ nav_ads() }}
 
     <div class="k-section">Fan Club</div>
     <div class="k-navi">

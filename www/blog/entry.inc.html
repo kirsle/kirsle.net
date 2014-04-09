@@ -1,0 +1,82 @@
+{# Reusable template for showing a blog post content #}
+{% from "google-ads.inc.html" import leaderboard %}
+
+{% macro blog_entry(post, from=None) %}
+
+    {% if from == "index" %}
+        <a href="{{ url_for('blog.entry', fid=post['fid']) }}" class="blog-title-index">
+            {{ post["subject"] }}
+        </a><p>
+    {% endif %}
+
+    <div class="blog-author">
+        {% if post["avatar"] %}
+            <img src="/static/avatars/{{ post['avatar'] }}">
+        {% elif post["photo"] %}
+            <img src="{{ post['photo_url'] }}/{{ post['photo'] }}">
+        {% else %}
+            <img src="/static/avatars/default.png">
+        {% endif %}
+        <br>
+
+        {{ post["profile"]["username"] }}
+    </div>
+
+    <div class="blog-timestamp">
+        Posted by {{ post["profile"]["name"] }}
+        on <span title="{{ post['time'] }}">{{ post["pretty_time"] }}</span>
+    </div>
+
+    {{ post["body"] | safe }}
+
+    <p>
+    <div class="clear">
+        <strong>Categories:</strong>
+        {% if post["categories"]|length == 0 %}
+            <a href="{{ url_for('blog.category', category=Uncategorized) }}">Uncategorized</a>{# TODO hardcoded name #}
+        {% else %}
+            <ul class="blog-categories">
+                {% for tag in post["categories"] %}
+                    <li><a href="{{ url_for('blog.category', category=tag) }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <p>
+
+        [
+            {% if from == "index" %}
+                {% if post["comments"] %}{# Allowed comments #}
+                    <a href="{{ url_for('blog.entry', fid=post['fid']) }}#comments">{{ post["comment_count"] }} comment{% if post["comment_count"] != 1 %}s{% endif %}</a>
+                    |
+                    <a href="{{ url_for('blog.entry', fid=post['fid']) }}#addcomment">Add comment</a>
+                    |
+                {% endif %}
+
+                <a href="{{ url_for('blog.entry', fid=post['fid']) }}">Permalink</a>
+            {% else %}
+                <a href="{{ url_for('blog.index') }}">Blog</a>
+            {% endif %}
+
+            {% if session["login"] %}
+                |
+                <a href="{{ url_for('blog.update', id=post['post_id']) }}">Edit</a>
+                |
+                <a href="{{ url_for('blog.delete', id=post['post_id']) }}">Delete</a>
+            {% endif %}
+        ]
+    </div>
+    <p>
+
+    {# Show the Google ad after the first post. #}
+    {% if from == "index" and post["position_index"] == 1 %}
+        {{ leaderboard() }}
+    {% endif %}
+
+    {% if from != "index" %}
+        {{ include_page("comment.partial_index",
+            thread="blog-"+post["post_id"]|string,
+            subject=post["subject"],
+        ) | safe }}
+    {% endif %}
+
+{% endmacro %}
