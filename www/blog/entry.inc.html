@@ -27,7 +27,7 @@
         on <span title="{{ post['time'] }}">{{ post["pretty_time"] }}</span>
     </div>
 
-    {{ post["body"] | safe }}
+    {{ post["rendered_body"] | safe }}
 
     <p>
     <div class="clear">
