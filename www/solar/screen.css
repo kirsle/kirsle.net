@@ -61,7 +61,8 @@ pre {
 	margin-right: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	overflow-x: auto
+	max-height: 550px;
+	overflow: auto
 }
 code {
 	display: inline
