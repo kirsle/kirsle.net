@@ -7,6 +7,9 @@
         <a href="{{ url_for('blog.entry', fid=post['fid']) }}" class="blog-title-index">
             {{ post["subject"] }}
         </a><p>
+    {% else %}
+        {% include "blog/sibling-links.html" %}
+        <p>
     {% endif %}
 
     <div class="blog-author">
@@ -73,6 +76,9 @@
     {% endif %}
 
     {% if from != "index" %}
+        {% include "blog/sibling-links.html" %}
+        <p>
+
         {{ include_page("comment.partial_index",
             thread="blog-"+post["post_id"]|string,
             subject=post["subject"],
