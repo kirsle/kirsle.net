@@ -82,11 +82,13 @@
     <div class="k-section">Web Tools</div>
     <div class="k-navi">
         &#0187; <a href="/wizards/ttf2eot.cgi">TTF to EOT</a><br>
+        &#0187; <a href="/wizards/ps1.html">Bash $PS1 Prompt</a><br>
         &#0187; <a href="/wizards/fader.cgi">Text Fader</a><br>
         &#0187; <a href="/wizards/favicon.cgi">Favicons</a><br>
         &#0187; <a href="/wizards/distance.cgi">Distance Calc</a><br>
         &#0187; <a href="/wizards/translator.html">Azulian Encoder</a><br>
-        &#0187; <a href="/wizards/xbmask.cgi">XBM Masks</a>
+        &#0187; <a href="/wizards/xbmask.cgi">XBM Masks</a><br>
+        &#0187; <a href="/wizards/flask-session.py">Flask Session</a>
     </div>
 
     <div class="k-section">Subdomains</div>
@@ -130,7 +132,15 @@
         {% endif %}
         &#0187; <a href="{{ url_for('account.logout') }}">Log Out</a>
     {% else %}
-        &#0187; <a href="{{ url_for('account.login') }}">Log In</a>
+        <div id="login-link">&#0187; <a href="{{ url_for('account.login') }}" class="login-link">Log In</a></div>
+        <div id="login-inline" style="display: none">
+            <form action="{{ url_for('account.login') }}" method="POST">
+            <input type="hidden" name="token" value="{{ csrf_token() }}">
+            <input type="text" size="4" name="username" style="width: 45%">
+            <input type="password" size="4" name="password" style="width: 45%"><br>
+            <button type="submit" style="width: 100%">Log In</button>
+            </form>
+        </div>
     {% endif %}
     </div><p>
 
@@ -149,6 +159,15 @@
 
 <script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="/js/offsite.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".login-link").click(function() {
+            $("#login-link").hide();
+            $("#login-inline").show(500);
+            return false;
+        });
+    });
+</script>
 {% block scripts %}{% endblock %}
 
 <script type="text/javascript">
