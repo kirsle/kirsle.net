@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="/solar/monokai.css">
         <link rel="stylesheet" type="text/css" media="print" href="/solar/print.css">
         <link rel="stylesheet" type="text/css" media="all" href="/solar/vim-syntax.css">
-        <link rel="alternate" type="application/rss+xml" title="Kirsle's RSS Feed" href="/rss">
+        <link rel="alternate" type="application/rss+xml" title="Kirsle's RSS Feed" href="/blog/rss">
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
@@ -136,6 +136,7 @@
         <div id="login-inline" style="display: none">
             <form action="{{ url_for('account.login') }}" method="POST">
             <input type="hidden" name="token" value="{{ csrf_token() }}">
+            <input type="hidden" name="url" value="{{ request.path }}">
             <input type="text" size="4" name="username" style="width: 45%">
             <input type="password" size="4" name="password" style="width: 45%"><br>
             <button type="submit" style="width: 100%">Log In</button>
