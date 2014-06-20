@@ -130,7 +130,7 @@ table.table td {
 table.table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	margin: 0px;
+	margin: 10px 0px;
 	padding: 0px;
 }
 
@@ -155,6 +155,8 @@ table.table tr:nth-child(odd) {
 
 table.table td {
 	padding: 4px;
+	vertical-align: top;
+	text-align: left;
 }
 
 /*******************************************************************************
