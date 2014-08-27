@@ -268,6 +268,16 @@ ul.photo-grid li .dummy {
 				-1px 1px 0px #000000;
 }
 
+.photo-description {
+	display: block;
+	border: 1px solid #FF99FF;
+	box-shadow: 0px 0px 4px #0099FF;
+	padding: 10px;
+	margin: 20px 0px;
+	background-color: #000000;
+	width: 790px;
+}
+
 /*ul#arrange-photos {
 	list-style-type: none;
 	margin: 0px;
