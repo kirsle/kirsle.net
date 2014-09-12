@@ -5,3 +5,14 @@
 This is the source code of my personal website,
 [Kirsle.net](http://www.kirsle.net/). It runs on top of my Python CMS called
 [Rophako](https://github.com/kirsle/rophako).
+
+This Git repo only contains templates and design files for the main Kirsle.net
+website. My website uses FastCGI (`mod_fcgid`) to serve all the main site pages
+(the ones with the "solar" web design), but there are a decently large number
+of static files and one-off CGI scripts that get served directly by Apache
+instead, for example the `projects/` folder where I keep downloads of my various
+software projects, and the `creativity/` and `wizards/` folders.
+
+So, feel free to look around in this repo, but you won't find anything too
+interesting in here. It's mostly just Jinja2 HTML templates and the odd web
+design file (CSS, JS, and some images).
