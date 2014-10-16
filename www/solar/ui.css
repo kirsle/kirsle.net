@@ -51,7 +51,8 @@ h4 {
 pre,code {
 	font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 	font-size: 9pt;
-	color: #00CCCC
+	color: #00CCCC;
+	background-color: transparent;
 }
 pre {
 	display: block;
@@ -62,11 +63,11 @@ pre {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	max-height: 550px;
-	background-color: transparent;
 	overflow: auto
 }
 code {
-	display: inline
+	display: inline;
+	padding: 0
 }
 label {
 	cursor: pointer
@@ -397,15 +398,21 @@ ul.blog-categories li:last-child:after {
 
 .k-supernova {
 	/* Main BG image */
-	position: fixed;
+	position: absolute;
 	z-index: -100;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	width: 960px;
 	height: 1000px;
 	background-image: url("supernova.jpg");
 	background-repeat: no-repeat;
-	background-position: 0px 0px
+	background-position: 0 0;
+}
+
+@media (min-width: 768px) {
+	.k-supernova {
+		position: fixed;
+	}
 }
 .k-kirsle {
 	/* Kirsle logo */
@@ -478,7 +485,6 @@ ul.blog-categories li:last-child:after {
 	background-repeat: repeat;
 	background-position: 0px 0px;
 	z-index: 300;
-	margin: 0px 10px;
 	padding: 6px;
 	border: 2px ridge #0099FF;
 	border-radius: 10px;
@@ -499,4 +505,12 @@ ul.blog-categories li:last-child:after {
 	background-repeat: repeat;
 	background-position: 0px 0px;
 	height: 50px
+}
+
+/* Simplify panels for mobile */
+@media (max-width: 768px) {
+	.k-navpanel, .k-content-panel {
+		background-image: none;
+		background-color: #000000;
+	}
 }
