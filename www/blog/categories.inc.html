@@ -1,0 +1,25 @@
+{# Custom category list for kirsle.net <ul>-based design #}
+{% for tag in tags %}
+    {% if not tag["small"] %}
+        <ul>&#0187; <a href="{{ url_for('blog.category', category=tag['category']) }}">{{ tag['category'] }}</a>
+                <small>({{ tag['count'] }})</small></ul>
+    {% endif %}
+{% endfor %}
+{% if has_small %}
+    </ul><!-- end list from layout.html -->
+    <div id="blog_show_more" style="display: none">
+        <ul>
+        {% for tag in tags %}
+            {% if tag["small"] %}
+                &#0187; <a href="{{ url_for('blog.category', category=tag['category']) }}">{{ tag['category'] }}</a>
+                        <small>({{ tag['count'] }})</small><br>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+    <div id="blog_show_less" style="display: block">
+        <ul>
+            <li>&#0164; <a href="#" onClick="$('#blog_show_less').hide(); $('#blog_show_more').show(1000); return false">Show more...</a></li>
+        </ul>
+    </div>
+{% endif %}

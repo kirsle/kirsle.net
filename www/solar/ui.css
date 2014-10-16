@@ -1,0 +1,502 @@
+body {
+	background-color: #000000;
+	background-image: url("space.png");
+	background-repeat: repeat;
+	background-position: 0px 0px;
+	background-attachment: fixed;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: small;
+	color: #BEBEBE;
+	margin: 0px;
+	padding: 0px
+}
+a:link, a:visited {
+	color: #99CCFF;
+	text-decoration: underline
+}
+a:hover, a:active {
+	color: #FFCCFF
+}
+a img {
+	border: 0px
+}
+h1,h2,h3,h4 {
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 10px #0099FF;
+	-moz-text-shadow: 0px 0px 10px #0099FF;
+	-webkit-text-shadow: 0px 0px 10px #0099FF
+}
+h1 {
+	font-size: 32pt;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+h1:first-of-type {
+	padding-top: 0px;
+}
+h2 {
+	font-size: 24pt
+}
+h3 {
+	font-size: 18pt
+}
+h4 {
+	font-size: 16pt
+}
+pre,code {
+	font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+	font-size: 9pt;
+	color: #00CCCC
+}
+pre {
+	display: block;
+	border: 1px dashed #CCCCCC;
+	padding: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-height: 550px;
+	background-color: transparent;
+	overflow: auto
+}
+code {
+	display: inline
+}
+label {
+	cursor: pointer
+}
+legend {
+	color: #0099FF;
+}
+table.box {
+	border: 1px solid #999999
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+textarea,
+input[type="file"],
+select { /* To hell with IE */
+	background-color: #000000 !important;
+	font-family: Verdana,Arial,Helvetica,sans-serif !important;
+	font-size: small !important;
+	color: #CCCCCC !important;
+	margin: 2px 0px;
+	max-width: 400px;
+}
+acronym,abbr {
+	border-bottom: 1px dotted #BEBEBE;
+	cursor: help;
+}
+
+/* Some bootstrap override helpers */
+.input-lg {
+	max-width: none !important;
+	width: 650px;
+}
+.input-sm {
+	width: 4em;
+}
+.form-control.inline {
+	display: inline;
+}
+
+/* Bootstrap CSS overrides */
+p {
+	margin: 10px 0px;
+}
+
+/*******************************************************************************
+ * General CSS Classes                                                         *
+ ******************************************************************************/
+
+.center {
+	margin: auto;
+	text-align: center
+}
+.right {
+	margin-left: auto;
+	margin-right: 0px;
+	text-align: right
+}
+.invisible {
+	display: none
+}
+.clear {
+	clear: both;
+}
+
+table.table,
+table.table th,
+table.table td {
+	border: 1px solid #999999;
+}
+
+table.table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 10px 0px;
+	padding: 0px;
+}
+
+table.table-wide {
+	width: 100%;
+}
+
+table.table th {
+	background-color: #003366;
+	color: #FFFFFF;
+	text-align: left;
+	padding: 4px;
+}
+
+table.table tr:nth-child(even) {
+	background-color: #000000;
+}
+
+table.table tr:nth-child(odd) {
+	background-color: #202020;
+}
+
+table.table td {
+	padding: 4px;
+	vertical-align: top;
+	text-align: left;
+}
+
+/*******************************************************************************
+ * Styles Needed by Specific Pages in the CMS                                  *
+ ******************************************************************************/
+
+/* Downloads */
+
+.distro {
+	border: 1px solid #CCCCCC
+}
+.distro th {
+	width: 150px;
+	text-align: center;
+	vertical-align: top
+}
+.distro td {
+	width: 150px;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid #808080
+}
+.distro td img {
+	float: left
+}
+
+/**********
+ * Photos *
+ **********/
+
+/* Photo Upload page */
+.photo-upload-dropbox {
+    border: 2px dashed #0099FF;
+    padding: 40px;
+}
+.photo-upload-dropbox.active {
+    border: 4px dashed #FF99FF;
+}
+.upload-trough {
+    position: relative;
+    border: 1px solid #000000;
+    width: 100%;
+    height: 28px;
+}
+.upload-progress-bar {
+    position: relative;
+    width: 0%;
+    height: 100%;
+    background-color: #FF9900;
+}
+
+/* Photo Grids: see http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
+ul.photo-grid {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+ul.photo-grid li {
+	position: relative;
+	/*float: left;*/
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+ul.photo-grid li .dummy {
+	padding-top: 100%;
+}
+
+.photo-grid-item {
+	cursor: pointer;
+	overflow: hidden; /* Crop off long names, etc. */
+
+	/* We use absolute positioning to detach this element from the flow, */
+	/* allowing the .dummy to dictate the height of the square. */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.photo-grid-item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.photo-grid-item .name {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	right: 4px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: left;
+	text-shadow: 1px 1px 0px #000000,
+				-1px -1px 0px #000000,
+				 1px -1px 0px #000000,
+				-1px 1px 0px #000000;
+}
+
+.photo-description {
+	display: block;
+	border: 1px solid #FF99FF;
+	box-shadow: 0px 0px 4px #0099FF;
+	padding: 10px;
+	margin: 20px 0px;
+	background-color: #000000;
+	width: 790px;
+}
+
+/*ul#arrange-photos {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+ul#arrange-photos li {
+	cursor: pointer;
+	margin: 20px;
+	padding: 1px;
+	float: left;
+	width: 150px;
+}*/
+
+/********
+ * Blog *
+ *******/
+
+/* Blog titles when shown on index view */
+a.blog-title-index:link, a.blog-title-index:visited {
+	font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
+	font-size: 32pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-shadow: 0px 0px 10px #0099FF;
+	-moz-text-shadow: 0px 0px 10px #0099FF;
+	-webkit-text-shadow: 0px 0px 10px #0099FF
+}
+a.blog-title-index:hover, a.blog-title-index:active {
+	text-decoration: underline;
+	text-shadow: 0px 0px 10px #FF99FF;
+	-moz-text-shadow: 0px 0px 10px #FF99FF;
+	-webkit-text-shadow: 0px 0px 10px #FF99FF
+}
+
+/* Poster's avatar box */
+.blog-author, .comment-author {
+	float: right;
+	background-color: #444444;
+	border: 1px solid #CCCCCC;
+	padding: 2px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100px; /* 96 avatar width + 4px padding */
+	text-align: center;
+	font-weight: bold
+}
+.blog-author a, .comment-author a {
+	text-decoration: none;
+}
+div.siikir-avatar {
+	width: 96px;
+	margin: auto;
+}
+
+/* Timestamp and author line below blog titles */
+.blog-timestamp {
+	font-size: smaller;
+	font-style: italic;
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-bottom: 10px
+}
+
+ul.blog-categories {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+ul.blog-categories li {
+	display: inline;
+}
+ul.blog-categories li:after {
+	content: ", ";
+}
+ul.blog-categories li:last-child:after {
+	content: "";
+}
+
+/* Blog comment wrapper */
+.comment {
+	border: 1px dashed #006699;
+	padding: 5px
+}
+
+/*******************************************************************************
+ * Supernova Website Design Classes - Copyright 2009 Casey Kirsle - Kirsle.com *
+ ******************************************************************************/
+
+/* Make a photo look nice. */
+.portrait {
+	display: inline;
+	background-color: #CFCFCF;
+	padding: 4px;
+	border: 1px solid #000000;
+	box-shadow: 0px 0px 4px #0099FF;
+	-moz-box-shadow: 0px 0px 4px #0099FF;
+	-webkit-box-shadow: 0px 0px 4px #0099FF;
+}
+
+/*************
+ * Eye Candy *
+ ************/
+
+.k-supernova {
+	/* Main BG image */
+	position: fixed;
+	z-index: -100;
+	top: 0px;
+	left: 0px;
+	width: 960px;
+	height: 1000px;
+	background-image: url("supernova.jpg");
+	background-repeat: no-repeat;
+	background-position: 0px 0px
+}
+.k-kirsle {
+	/* Kirsle logo */
+	width: 317px;
+	height: 177px;
+	background-image: url("kirsle.png");
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	cursor: pointer
+}
+
+/********************
+ * Navigation Panel *
+ *******************/
+
+.k-navpanel {
+	/* Wrapper for nav bar */
+	background-image: url("panelbg.png");
+	background-repeat: repeat;
+	background-position: 0px 0px;
+
+	/* width and margins to have some control over the nav bar size
+	   despite bootstrap's grid system */
+	max-width: 152px;
+	min-width: 130px;
+	margin-left: auto;
+	margin-right: auto;
+
+	border: 2px ridge #0099FF;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px
+}
+.k-navpanel > .k-section {
+	/* Division of navigation bar */
+	display: block;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	padding: 0px;
+	text-shadow: 0px 0px 10px #0099FF;
+	-moz-text-shadow: 0px 0px 10px #0099FF;
+	-webkit-text-shadow: 0px 0px 10px #0099FF
+}
+.k-navpanel ul {
+	/* Stretches of hyperlinks inside the nav bar */
+	list-style: none;
+	margin: 0 4px;
+	padding-left: 1em;
+	text-indent: -1em;
+	font-size: x-small;
+	line-height: 160%
+}
+.k-navpanel a:link, .k-navpanel a:visited {
+	/* Hyperlinks inside the nav bar */
+	font-size: x-small;
+	font-weight: bold
+}
+
+/*********************
+ * Main Content Area *
+ ********************/
+
+.k-content-panel {
+	/* Wrapper for the content panel */
+	background-image: url("panelbg.png");
+	background-repeat: repeat;
+	background-position: 0px 0px;
+	z-index: 300;
+	margin: 0px 10px;
+	padding: 6px;
+	border: 2px ridge #0099FF;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px
+}
+
+.k-copyright {
+	/* Copyright text */
+	text-align: center;
+	font-size: x-small;
+	color: #999999;
+	font-weight: bold;
+	padding: 20px 0px
+}
+.k-space {
+	background-image: url("space.png");
+	background-repeat: repeat;
+	background-position: 0px 0px;
+	height: 50px
+}
