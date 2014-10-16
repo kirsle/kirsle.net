@@ -114,6 +114,21 @@ p {
 	margin: 10px 0px;
 }
 
+/* Our own custom nav button for Bootstrap */
+.mobile-nav {
+	display: none; /* for small screens only */
+	position: absolute;
+	z-index: 100;
+	top: 10px;
+	right: 10px;
+}
+
+@media (max-width: 768px) {
+	.mobile-nav {
+		display: block;
+	}
+}
+
 /*******************************************************************************
  * General CSS Classes                                                         *
  ******************************************************************************/

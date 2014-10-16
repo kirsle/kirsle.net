@@ -27,6 +27,10 @@
 
 {% from "google-ads.inc.html" import leaderboard, nav_ads %}
 
+<div class="mobile-nav">
+    <a href="#navbar" class="btn btn-primary"><i class="glyphicon glyphicon-list"></i></a>
+</div>
+
 <div class="k-supernova"></div>
 
 <div class="container-fluid">
@@ -71,6 +75,7 @@
 
         <div class="col-sm-2 col-sm-pull-10">
             <div class="k-navpanel">
+                <a name="navbar"></a>
                 <div class="k-section">Kirsle</div>
                 <ul>
                     <li>&#0187; <a href="/">Homepage</a> (<a href="{{ url_for('blog.rss') }}">RSS</a>)</li>
