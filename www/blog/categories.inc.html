@@ -1,8 +1,8 @@
 {# Custom category list for kirsle.net <ul>-based design #}
 {% for tag in tags %}
     {% if not tag["small"] %}
-        <ul>&#0187; <a href="{{ url_for('blog.category', category=tag['category']) }}">{{ tag['category'] }}</a>
-                <small>({{ tag['count'] }})</small></ul>
+        <li>&#0187; <a href="{{ url_for('blog.category', category=tag['category']) }}">{{ tag['category'] }}</a>
+                <small>({{ tag['count'] }})</small></li>
     {% endif %}
 {% endfor %}
 {% if has_small %}
@@ -11,8 +11,8 @@
         <ul>
         {% for tag in tags %}
             {% if tag["small"] %}
-                &#0187; <a href="{{ url_for('blog.category', category=tag['category']) }}">{{ tag['category'] }}</a>
-                        <small>({{ tag['count'] }})</small><br>
+                <li>&#0187; <a href="{{ url_for('blog.category', category=tag['category']) }}">{{ tag['category'] }}</a>
+                <small>({{ tag['count'] }})</small></li>
             {% endif %}
         {% endfor %}
         </ul>

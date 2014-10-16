@@ -172,10 +172,10 @@
                     <form action="{{ url_for('account.login') }}" method="POST">
                     <input type="hidden" name="token" value="{{ csrf_token() }}">
                     <input type="hidden" name="url" value="{{ request.path }}">
-                    <input type="text" size="4" name="username" style="width: 45%">
-                    <input type="password" size="4" name="password" style="width: 45%">
+                    <input type="text" class="form-control" size="4" name="username" style="display: inline; width: 45%">
+                    <input type="password" class="form-control" size="4" name="password" style="display: inline; width: 45%">
                     <br>
-                    <button type="submit" style="width: 100%">Log In</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%">Log In</button>
                     </form>
                 </div>
 
