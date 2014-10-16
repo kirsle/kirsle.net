@@ -1,0 +1,235 @@
+body {
+ background-color: #FFFFFF;
+ font-family: Verdana,Arial,Helvetica,sans-serif;
+ font-size: small;
+ color: #000000;
+ margin: 0px;
+ padding: 0px
+}
+a:link, a:visited {
+ color: #0000FF;
+ text-decoration: underline
+}
+a:hover, a:active {
+ color: #0000FF
+}
+a img {
+ border: 0px
+}
+h1,h2,h3,h4 {
+ font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+ margin: 0px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ font-weight: bold
+}
+h1 {
+    font-size: 32pt;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+h1:first-of-type {
+    padding-top: 0px;
+}
+h2 {
+ font-size: 24pt
+}
+h3 {
+ font-size: 18pt
+}
+h4 {
+ font-size: 16pt
+}
+pre,code {
+ font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+ font-size: 9pt;
+ color: #000000
+}
+pre {
+ display: block;
+ border: 1px dashed #000000;
+ padding: 10px;
+ margin-left: 5px;
+ margin-right: 5px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ overflow-x: auto
+}
+code {
+ display: inline
+}
+label {
+ cursor: pointer
+}
+legend {
+ color: #000000;
+ font-weight: bold
+}
+table,th,td {
+ border-color: #999999
+}
+table.box {
+ border: 1px solid #999999
+}
+
+/*******************************************************************************
+ * General CSS Classes                                                         *
+ ******************************************************************************/
+
+.center {
+ margin: auto;
+ text-align: center
+}
+.right {
+ margin-left: auto;
+ margin-right: 0px;
+ text-align: right
+}
+.invisible {
+ display: none
+}
+
+/*******************************************************************************
+ * Styles Needed by Specific Pages in the CMS                                  *
+ ******************************************************************************/
+
+/* Downloads */
+
+.distro {
+ border: 1px solid #CCCCCC
+}
+.distro th {
+ width: 150px;
+ text-align: center;
+ vertical-align: top
+}
+.distro td {
+ width: 150px;
+ text-align: center;
+ vertical-align: top;
+ border: 1px solid #808080
+}
+.distro td img {
+ float: left
+}
+
+/********
+ * Blog *
+ *******/
+
+/* Blog titles when shown on index view */
+a.blog-title-index:link, a.blog-title-index:visited {
+ font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
+ font-size: 32pt;
+ font-weight: bold;
+ color: #FFFFFF;
+ text-decoration: none
+}
+a.blog-title-index:hover, a.blog-title-index:active {
+ text-decoration: underline
+}
+
+/* Poster's avatar box */
+.blog-author, .comment-author {
+ float: right;
+ background-color: #444444;
+ border: 1px solid #CCCCCC;
+ padding: 2px;
+ margin-left: 10px;
+ margin-bottom: 10px;
+ width: 100px; /* 96 avatar width + 4px padding */
+ text-align: center;
+ font-weight: bold
+}
+
+/* Timestamp and author line below blog titles */
+.blog-timestamp {
+ font-size: smaller;
+ font-style: italic;
+ padding-left: 30px;
+ padding-top: 5px;
+ padding-bottom: 10px
+}
+
+ul.blog-categories {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+ul.blog-categories li {
+    display: inline;
+}
+ul.blog-categories li:after {
+    content: ", ";
+}
+ul.blog-categories li:last-child:after {
+    content: "";
+}
+
+/* Blog comment wrapper */
+.comment {
+ border: 1px dashed #006699;
+ padding: 5px
+}
+
+/*******************************************************************************
+ * Supernova Website Design Classes - Copyright 2009 Casey Kirsle - Kirsle.com *
+ ******************************************************************************/
+
+/*************
+ * Eye Candy *
+ ************/
+
+.k-supernova {
+ /* Main BG image */
+ display: none
+}
+.k-kirsle {
+ /* Kirsle logo */
+ display: none
+}
+
+/********************
+ * Navigation Panel *
+ *******************/
+
+.k-navpanel {
+ /* Wrapper for nav bar */
+ display: none
+}
+.k-section {
+ /* Division of navigation bar */
+}
+.k-navi {
+ /* Stretches of hyperlinks inside the nav bar */
+}
+ /* Hyperlinks inside the nav bar */
+.k-navi a:link, .k-navi a:visited {
+}
+
+/*********************
+ * Main Content Area *
+ ********************/
+
+.k-content-panel {
+ /* Wrapper for the content panel */
+ display: inline;
+ margin-left: 25px;
+ margin-right: 25px
+}
+
+.k-copyright {
+ /* Copyright text */
+ text-align: center;
+ font-size: x-small;
+ color: #000000;
+ font-weight: bold;
+ padding: 20px 0px
+}
+.k-space {
+ background-image: url("space.png");
+ background-repeat: repeat;
+ background-position: 0px 0px;
+ height: 50px
+}

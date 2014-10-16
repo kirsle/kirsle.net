@@ -1,0 +1,245 @@
+body {
+ background-color: #FFFFFF;
+ background-image: url(rain.jpg);
+ background-repeat: repeat;
+ background-position: top left;
+ font-family: Verdana,Arial,Helvetica,sans-serif;
+ font-size: 9pt;
+ color: #000000;
+ margin: 0px;
+ padding: 0px
+}
+a:link, a:visited {
+ font-weight: bold;
+ text-decoration: underline;
+ color: #000000
+}
+a:hover, a:active {
+ text-decoration: none
+}
+a img {
+ border: 0px solid transparent
+}
+h1 {
+ font-size: 36pt;
+ font-weight: bold
+}
+h2 {
+ font-size: 24pt;
+ font-weight: bold
+}
+h3 {
+ font-size: 18pt;
+ font-weight: bold;
+ font-style: italic
+}
+h1.top, h2.top, h3.top {
+ margin-top: 0px
+}
+pre {
+ display: block;
+ border: 1px dashed #000000;
+ padding: 5px;
+ font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bistream Vera Sans Mono",monospace;
+ font-size: 10pt;
+ color: #000000
+}
+pre.notes {
+ height: 300px;
+ overflow: auto
+}
+code {
+ display: inline;
+ font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bistream Vera Sans Mono",monospace;
+ font-size: 9pt;
+ color: #000000
+}
+
+/******************************************************************************
+ * Starburst CMS Necessary Style Classes                                      *
+ ******************************************************************************/
+
+.sblog-title {
+ display: block;
+ margin-bottom: 0px;
+ margin-top: 15px;
+ font-size: 24pt;
+ font-weight: bold
+}
+.sblog-title a:link, .sblog-title a:visited {
+ color: #000000;
+ text-decoration: none
+}
+.sblog-title a:hover, .sblog-title a:active {
+ color: #000000;
+ text-decoration: underline
+}
+
+/******************************************************************************
+ * Cuvou Storm -- Page Styles                                                 *
+ ******************************************************************************/
+
+/* Lightning Background Style */
+.lightning {
+ position: absolute;
+ z-index: 100;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ width: 100%;
+ height: 800px;
+ background-image: url(lightning.jpg);
+ background-repeat: repeat-x;
+ background-position: top left
+}
+
+/* Top Storm Bar and Logo Styles */
+.storm {
+ z-index: 150;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ width: 100%;
+ height: 173px;
+ background-image: url(thunder.jpg);
+ background-repeat: repeat-x
+}
+.logo {
+ position: absolute;
+ top: 3px;
+ left: 32px;
+ width: 308px;
+ height: 105px
+}
+
+/* Left Navigation Bar Styles */
+.navpanel {
+ z-index: 175;
+ position: absolute;
+ top: 152px;
+ left: 40px;
+ width: 150px;
+}
+.navbar {
+ background-image: url(navbody.png);
+ background-repeat: repeat-y
+}
+.navbody {
+ padding-left: 3px;
+ padding-right: 3px;
+ background-image: url(navhead.png);
+ background-repeat: no-repeat
+}
+.navfoot {
+ width: 150px;
+ height: 10px;
+ background-image: url(navfoot.png);
+ background-repeat: no-repeat
+}
+.section {
+ font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
+ font-size: 14pt;
+ font-weight: bold;
+ text-align: center;
+ color: #0000FF;
+ border-bottom: 1px solid #0000FF
+}
+.subsection {
+  text-align: center;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  border-bottom: 1px dashed #000099;
+  color: #000099
+}
+.navbody a:link, .navbody a:visited {
+ text-decoration: none
+}
+.navbody a:hover, .navbody a:active {
+ text-decoration: underline
+}
+
+/* Main Content Area */
+.maincontent {
+ position: absolute;
+ z-index: 9000;
+ top: 120px;
+ left: 220px;
+ right: 15px;
+ text-align: justify
+}
+
+/* Miscellaneous and Page-Specific Styles */
+
+.copyright {
+  margin-top: 96px;
+  margin-bottom: 32px;
+  text-align: center;
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  color: #000000
+}
+.distro {
+  border: 1px solid #000000
+}
+.distro th {
+  width: 150px;
+  text-align: center;
+  vertical-align: top
+}
+.distro td {
+  width: 150px;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #000000
+}
+.distro td img {
+  float: left
+}
+
+/******************************************************************************
+ * Software Design Styles                                                     *
+ ******************************************************************************/
+
+.sw-tab-wrapper {
+  display: block
+}
+.sw-tab-top {
+  padding-left: 16px;
+}
+.sw-tab-frame {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000
+}
+.sw-tab-content {
+  padding: 5px
+}
+.sw-tab-active {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  background-color: #99CCFF;
+  margin-right: 10px
+}
+.sw-tab-normal {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  margin-right: 10px
+}
+.sw-tab-active span, .sw-tab-normal span {
+  padding-left: 4px;
+  padding-right: 4px
+}
+.sw-tab-active a:link, .sw-tab-active a:visited,
+.sw-tab-normal a:link, .sw-tab-normal a:visited {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: small;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+}

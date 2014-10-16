@@ -1,0 +1,29 @@
+/* CSS classes used by vim syntax highlighting */
+
+pre.vim {
+	background-color: #000000;
+	color: #FFFFFF;
+	max-height: 450px;
+	overflow: auto;
+}
+
+pre.vim span.Identifier {
+	color: #00FFFF;
+	font-weight: bold;
+}
+pre.vim span.Constant {
+	color: #FF99FF;
+	font-weight: bold;
+}
+pre.vim span.Statement {
+	color: #FFFF00;
+	font-weight: bold;
+}
+pre.vim span.Comment {
+	color: #0099FF;
+	font-weight: bold;
+}
+pre.vim span.PreProc {
+	color: #8080FF;
+	font-weight: bold;
+}
