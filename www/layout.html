@@ -180,6 +180,18 @@
                     </form>
                 </div>
 
+                <div class="k-section">Visitors</div>
+                <ul>
+                    <li>&#0164; <strong>Unique Visits:</strong><br>
+                        Today: {{ tracking["unique_today"] }}<br>
+                        Total: {{ tracking["unique_total"] }}</li>
+                    <li>&#0164; <strong>Total Hits:</strong><br>
+                        Today: {{ tracking["hits_today"] }}<br>
+                        Total: {{ tracking["hits_total"] }}</li>
+                    <li>&#0164; <a href="{{ url_for('tracking.visitors') }}">Visitor Details</a></li>
+                    <li>&#0164; <a href="{{ url_for('tracking.referrers') }}">Referring URLs</a></li>
+                </ul>
+
                 <div class="center">
                     <a href="https://www.python.org/" target="_blank">
                         <img src="/static/images/python.png" width="80" height="15" alt="Python powered">

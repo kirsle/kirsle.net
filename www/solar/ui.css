@@ -392,6 +392,26 @@ ul.blog-categories li:last-child:after {
 	padding: 5px
 }
 
+/********************
+ * Visitor Tracking *
+ ********************/
+
+.visitor-graph {
+	height: 16px;
+	width: 100%;
+	border: 1px outset;
+}
+.visitor-graph.unique {
+	background-color: #0099FF;
+	background-image: url("/static/images/blue-clearlooks.png");
+	border-color: #0099FF;
+}
+.visitor-graph.hits {
+	background-color: #FF99FF;
+	background-image: url("/static/images/pink-clearlooks.png");
+	border-color: #FF99FF;
+}
+
 /*******************************************************************************
  * Supernova Website Design Classes - Copyright 2009 Casey Kirsle - Kirsle.com *
  ******************************************************************************/
