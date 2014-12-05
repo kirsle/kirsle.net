@@ -1,0 +1,268 @@
+body {
+ background-color: #FFFFFF;
+ font-family: Verdana,Arial,Helvetica,sans-serif;
+ font-size: small;
+ color: #000000;
+}
+a:link, a:visited {
+ color: #0000FF;
+ text-decoration: underline;
+}
+a:hover, a:active {
+ color: #FF0000
+}
+.cv-leftnav-body a:link, .cv-leftnav-body a:visited {
+ display: none
+}
+a img {
+ border: 0px
+}
+h1,h2,h3,h4 {
+ font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+ font-weight: bold;
+ color: #FFFFFF
+}
+h1.top, h2.top, h3.top, h4.top {
+ margin-top: 0px;
+}
+h1 {
+ margin-top: 0px;
+ font-size: 24pt
+}
+h2 {
+ font-size: 18pt
+}
+h3 {
+ font-size: 18pt;
+ font-style: italic
+}
+h4 {
+ font-size: 16pt;
+ font-style: italic
+}
+pre {
+ display: inline;
+ font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bistream Vera Sans Mono",monospace;
+ font-size: 10pt;
+ color: #006666
+}
+pre.notes {
+ /* No special styles needed */
+}
+code {
+ display: inline;
+ font-family: "Lucida Console","DejaVu LGC Sans Mono","DejaVu Sans Mono","Bistream Vera Sans Mono",monospace;
+ font-size: 9pt;
+ color: #006666
+}
+
+/* A logo for the printed page */
+.logo-printed {
+ display: block;
+ text-align: center;
+ font-family: "Trebuchet MS","Verdana","Arial",sans-serif;
+ font-size: 36pt;
+ font-weight: bold;
+ border-bottom: 2px solid #000000;
+ margin-bottom: 24px
+}
+.logo-printed small {
+ font-size: 12pt
+}
+
+/* Copyright block */
+.copyright {
+ text-align: center;
+ font-size: x-small;
+ font-weight: bold;
+ color: #000000;
+ margin-top: 50px
+}
+
+/******************************************************************************
+ * Software Design Styles                                                     *
+ ******************************************************************************/
+
+.distro {
+ border: 1px solid #CCCCCC
+}
+.distro th {
+ width: 150px;
+ text-align: center;
+ vertical-align: top
+}
+.distro td {
+ width: 150px;
+ text-align: center;
+ vertical-align: top;
+ border: 1px solid #808080
+}
+.distro td img {
+ float: left
+}
+
+.sw-tab-wrapper {
+  display: block
+}
+.sw-tab-top {
+  padding-left: 16px;
+}
+.sw-tab-frame {
+  border-top: 1px solid #999999;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999
+}
+.sw-tab-content {
+  padding: 5px
+}
+.sw-tab-active {
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  margin-right: 10px
+}
+.sw-tab-normal {
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+  border-right: 1px solid #666666;
+  margin-right: 10px
+}
+.sw-tab-active span, .sw-tab-normal span {
+  padding-left: 4px;
+  padding-right: 4px
+}
+.sw-tab-active a:link, .sw-tab-active a:visited,
+.sw-tab-normal a:link, .sw-tab-normal a:visited {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: small;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+
+/******************************************************************************
+ * Starburst CMS Mandated Style Classes for the Web Blog                      *
+ ******************************************************************************/
+
+.sblog-title {
+ display: block;
+ margin-bottom: 0px;
+ margin-top: 15px;
+ font-size: 24pt;
+ font-weight: bold
+}
+.sblog-title a:link, .sblog-title a:visited {
+ color: #000000;
+ text-decoration: none
+}
+.sblog-title a:hover, .sblog-title a:active {
+ color: #000000;
+ text-decoration: underline
+}
+
+/******************************************************************************
+ * Cuvou.com Web Design Styles                                                *
+ ******************************************************************************/
+
+/*-------------------------------------*
+ * Background and Logo Styles          *
+ *-------------------------------------*/
+
+/* The main starburst BG image */
+.cv-starburst {
+ display: none
+}
+
+/* The container for the logo */
+.cv-logo {
+ display: none
+}
+
+/*-------------------------------------*
+ * Left Navigation Bar                 *
+ *-------------------------------------*/
+
+/* The wrapper that holds the left navigation panel */
+.cv-leftnav-wrapper {
+ display: none
+}
+
+/* This has the BG image for the top part of the nav bar */
+.cv-leftnav-panel {
+ display: none
+}
+
+/* This div holds the actual text of the navigation bar */
+.cv-leftnav-body {
+ display: none
+}
+
+/* This is the footer of the nav bar */
+.cv-leftnav-foot {
+ display: none
+}
+
+/* Header sections on the navigation bar */
+.cv-nav-section {
+ display: none
+}
+
+.subsection {
+ display: none
+}
+
+
+/*-------------------------------------*
+ * Main Content Panel                  *
+ *-------------------------------------*/
+
+/* The overall wrapper for the content panel */
+.cv-content-wrapper {
+ display: inline
+}
+
+/* Provide the eye candy background image */
+.cv-content-eyecandy {
+ display: inline
+}
+
+/* Top edge of the window */
+.cv-content-topedge {
+ display: inline
+}
+
+/* Abs positioned top right border corner */
+.cv-content-brdrne {
+ display: inline
+}
+
+/* Provides the left border to the content area */
+.cv-content-left {
+ display: inline
+}
+
+/* Adds the right border to the content area */
+.cv-content-right {
+ display: inline
+}
+
+/* The wrapper for the actual body area */
+.cv-content-body {
+ display: inline
+}
+
+/* Bottom edge of the window */
+.cv-content-botedge {
+ display: inline
+}
+
+/* Abs position the bottom left border corner */
+.cv-content-brdrsw {
+ display: inline
+}
+
+/* Abs position the bottom right border corner */
+.cv-content-brdrse {
+ display: inline
+}

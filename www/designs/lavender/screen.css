@@ -1,0 +1,123 @@
+body {
+ background-image: url(starburst.jpg);
+ background-repeat: no-repeat;
+ background-color: #0099FF;
+ font-family: Verdana,Arial,Helvetica,sans-serif;
+ font-size: small;
+ color: #000000;
+ margin-left: 220px;
+ margin-top: 130px;
+ margin-right: 25px;
+ margin-bottom: 0px
+}
+a:link, a:visited {
+ font-weight: bold;
+ color: #FFFFFF;
+ text-decoration: none
+}
+a:hover, a:active {
+ font-weight: bold;
+ color: #FFFFFF;
+ text-decoration: underline
+}
+a:link img, a:visited img, a:hover img, a:active img {
+ border: 0px
+}
+img.left {
+ float: left
+}
+img.right {
+ float: right
+}
+.center {
+ text-align: center
+}
+h1 {
+ font-family: Arial,Helvetica,sans-serif;
+ font-size: 36pt;
+ font-weight: bold;
+ font-style: italic;
+ margin-bottom: 20px;
+ margin-top: 20px
+}
+h2 {
+ font-family: Arial,Helvetica,sans-serif;
+ font-size: 24pt;
+ font-weight: bold;
+ font-style: italic;
+ margin-bottom: 20px;
+ margin-top: 20px
+}
+h3 {
+ font-family: Arial,Helvetica,sans-serif;
+ font-size: 14pt;
+ font-weight: bold;
+ margin-bottom: 20px;
+ margin-top: 20px
+}
+pre {
+ font-family: "Courier New",Courier,monospace;
+ font-size: small;
+ color: #000000;
+ background-color: #EEEEFF;
+ border: 1px solid #000000;
+ display: block;
+ padding: 2px
+}
+pre.notes {
+ height: 300px;
+ overflow: auto
+}
+.leader {
+ position: absolute;
+ left: 300px;
+ top: 30px;
+}
+.printleader {
+ display: none
+}
+.navstrip {
+ position: absolute;
+ left: 31px;
+ top: 129px;
+ width: 150px;
+ background-image: url(navbg.png);
+ background-repeat: repeat-y;
+ border-bottom: 3px solid #036BB2
+}
+.navi {
+ background-image: url(navi.png);
+ background-repeat: repeat-x;
+ color: #FFFFFF;
+ padding: 5px
+}
+.navhead {
+ font-family: Arial,Helvetica,sans-serif;
+ text-align: center;
+ font-weight: bold;
+ font-size: large;
+ color: #00FFFF;
+ border-bottom: 1px solid #00FFFF;
+ margin-left: 20px;
+ margin-right: 20px
+}
+.copyright {
+ text-align: center;
+ font-family: Verdana,Arial,Helvetica,sans-serif;
+ font-size: smaller;
+ font-weight: bold
+}
+.wrapper {
+ display: inline
+}
+.dltab {
+ width: 700px;
+ border: 1px solid #000000
+}
+.dltab th {
+ width: 25%
+}
+.dltab td {
+ border: 1px solid #000000;
+ width: 25%
+}
