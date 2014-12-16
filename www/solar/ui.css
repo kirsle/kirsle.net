@@ -113,6 +113,12 @@ acronym,abbr {
 p {
 	margin: 10px 0px;
 }
+ul {
+	margin: 10px 0px;
+}
+blockquote {
+	margin: 20px 0px;
+}
 
 /* Our own custom nav button for Bootstrap */
 .mobile-nav {
@@ -425,6 +431,12 @@ ul.blog-categories li:last-child:after {
 	box-shadow: 0px 0px 4px #0099FF;
 	-moz-box-shadow: 0px 0px 4px #0099FF;
 	-webkit-box-shadow: 0px 0px 4px #0099FF;
+}
+
+/* Responsive images in markdown */
+.markdown img {
+	max-width: 100%;
+	height: auto;
 }
 
 /*************
