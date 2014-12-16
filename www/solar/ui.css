@@ -422,8 +422,9 @@ ul.blog-categories li:last-child:after {
  * Supernova Website Design Classes - Copyright 2009 Casey Kirsle - Kirsle.com *
  ******************************************************************************/
 
-/* Make a photo look nice. */
-.portrait {
+/* Make a photo look nice. Apply it to Markdown images too, but not to
+ * CMS generated emoticons. */
+.portrait, .markdown img:not([class~=rophako-emoticon]) {
 	display: inline;
 	background-color: #CFCFCF;
 	padding: 4px;
