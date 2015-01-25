@@ -113,7 +113,7 @@ acronym,abbr {
 p {
 	margin: 10px 0px;
 }
-ul {
+ul, ul ul, ol ul, ul ol, ol ol {
 	margin: 10px 0px;
 }
 blockquote {
