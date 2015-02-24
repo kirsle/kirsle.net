@@ -378,6 +378,11 @@ ul.blog-categories li:last-child:after {
 	font-size: 9pt;
 }
 
+/* Wiki styles */
+a.wiki-broken {
+	color: #FF9900;
+}
+
 /*******************************************************************************
  * Supernova Website Design Classes - Copyright 2009 Casey Kirsle - Kirsle.com *
  ******************************************************************************/

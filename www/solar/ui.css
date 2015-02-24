@@ -398,6 +398,11 @@ ul.blog-categories li:last-child:after {
 	padding: 5px
 }
 
+/* Wiki */
+a.wiki-broken {
+	color: #FF9900;
+}
+
 /********************
  * Visitor Tracking *
  ********************/
