@@ -60,7 +60,7 @@
                 {% block content %}{% endblock %}
 
                 {% if uri not in ["/", "/blog/index"] and not "/blog/category" in uri %}
-                    <br>
+                    <br><br>
                     {{ leaderboard() }}
                 {% endif %}
 
@@ -98,7 +98,6 @@
                     <li>&#0187; <a href="/flash">Flash Animation</a></li>
                     <li>&#0187; <a href="/javascript">JavaScript</a></li>
                     <li>&#0187; <a href="/fonts">Fonts</a></li>
-                    <li>&#0187; <a href="/metacity">Metacity</a></li>
                     <li>&#0187; <a href="/doc/">Tutorials</a></li>
                     <li>&#0187; <a href="/designs">Web Design</a></li>
                 </ul>
