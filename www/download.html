@@ -3,42 +3,42 @@
 {% block content %}
 
 {% if method == "index" %}
-    <h1>Project {{ project }}</h1>
+	<h1>Project {{ project }}</h1>
 
-    You are about to download the file <strong>{{ file }}</strong> from the
-    project <strong>{{ project }}</strong>. This file has been downloaded
-    {{ hits }} time(s).
+	You are about to download the file <strong>{{ file }}</strong> from the
+	project <strong>{{ project }}</strong>. This file has been downloaded
+	{{ hits }} time(s).
 
-    <h1>Download</h1>
+	<h1>Download</h1>
 
-    To continue your download, click on the button below.
-    <br><br><br>
+	To continue your download, click on the button below.
+	<br><br><br>
 
-    <form name="download" action="/download" method="POST">
-    <input type="hidden" name="token" value="{{ csrf_token() }}">
-    <input type="hidden" name="method" value="get">
-    <input type="hidden" name="project" value="{{ project }}">
-    <input type="hidden" name="file" value="{{ file }}">
+	<form name="download" action="/download" method="POST">
+	<input type="hidden" name="token" value="{{ csrf_token() }}">
+	<input type="hidden" name="method" value="get">
+	<input type="hidden" name="project" value="{{ project }}">
+	<input type="hidden" name="file" value="{{ file }}">
 
-    <span style="background-color: #88AADD; padding: 15px; border-top: 2px solid #006699;
-    border-left: 2px solid #006699; border-right: 2px solid #AACCFF; border-bottom: 2px solid #AACCFF">
-        <button type="submit">Download Now</button>
-    </span>
-    </form>
+	<span style="background-color: #88AADD; padding: 15px; border-top: 2px solid #006699;
+	border-left: 2px solid #006699; border-right: 2px solid #AACCFF; border-bottom: 2px solid #AACCFF">
+		<button type="submit">Download Now</button>
+	</span>
+	</form>
 {% elif method == "get" %}
-    <h1>Downloading File...</h1>
+	<h1>Downloading File...</h1>
 
-    Your download of <strong>{{ file }}</strong> will begin shortly. If it doesn't,
-    <a href="/projects/{{ project }}/{{ file }}">download it directly</a>.
+	Your download of <strong>{{ file }}</strong> will begin shortly. If it doesn't,
+	<a href="/projects/{{ project }}/{{ file }}">download it directly</a>.
 {% endif %}
 
 {% endblock %}
 {% block scripts %}
-    {% if method == "get" %}
-        <script>
-        $(document).ready(function() {
-            window.location.href = "/projects/{{ project }}/{{ file }}";
-        });
-        </script>
-    {% endif %}
+	{% if method == "get" %}
+		<script>
+		$(document).ready(function() {
+			window.location.href = "/projects/{{ project }}/{{ file }}";
+		});
+		</script>
+	{% endif %}
 {% endblock %}

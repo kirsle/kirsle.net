@@ -5,113 +5,113 @@
 <h1>RiveScript</h1>
 
 <ul>
-    <li><a href="#intro">Project Description</a></li>
-    <li><a href="#site">Project Website</a></li>
-    <li><a href="#history">History</a></li>
+	<li><a href="#intro">Project Description</a></li>
+	<li><a href="#site">Project Website</a></li>
+	<li><a href="#history">History</a></li>
 </ul>
 
-    <a name="intro"></a>
-    <img src="projects/RiveScript/logo.png" alt="RiveScript" width="400" height="90">
-    <h2>Project Description</h2>
+	<a name="intro"></a>
+	<img src="projects/RiveScript/logo.png" alt="RiveScript" width="400" height="90">
+	<h2>Project Description</h2>
 
-    <strong>RiveScript</strong> is a text-based scripting language for giving responses to chatterbots.
-    The project was started in late 2004 and tentatively named <em>AiChaos Alpha</em>. It has a simple,
-    easy to learn format and it could be argued that it's more powerful than AIML (Artificial Intelligence
-    Markup Language).<p>
+	<strong>RiveScript</strong> is a text-based scripting language for giving responses to chatterbots.
+	The project was started in late 2004 and tentatively named <em>AiChaos Alpha</em>. It has a simple,
+	easy to learn format and it could be argued that it's more powerful than AIML (Artificial Intelligence
+	Markup Language).<p>
 
-    In short, it's a scripting language used to match a response to a message provided by the human.<p>
+	In short, it's a scripting language used to match a response to a message provided by the human.<p>
 
-    In its simplest form, RiveScript code might look like this:
+	In its simplest form, RiveScript code might look like this:
 
-    <pre>+ hello bot
+	<pre>+ hello bot
 - Hello, human!</pre>
 
-    And can get into some more complicated things like this:
+	And can get into some more complicated things like this:
 
-    <pre>+ my name is *
-* &lt;get name&gt; == undefined  =&gt; &lt;set name=&lt;formal&gt;&gt;Nice to meet you, &lt;get name&gt;&gt;!
+	<pre>+ my name is *
+* &lt;get name&gt; == undefined	 =&gt; &lt;set name=&lt;formal&gt;&gt;Nice to meet you, &lt;get name&gt;&gt;!
 * &lt;get name&gt; == &lt;formal&gt;   =&gt; I know, you've told me your name before.
 * &lt;get name&gt; == &lt;bot name&gt; =&gt; &lt;set name=&lt;formal&gt;&gt;Wow, we have the same name!
 * &lt;get name&gt; != &lt;formal&gt;   =&gt; &lt;set name=&lt;formal&gt;&gt;Did you get a name change?</pre>
 
-    <a name="site"></a>
-    <h2>Project Website</h2>
+	<a name="site"></a>
+	<h2>Project Website</h2>
 
-    This project's official website is <a href="http://www.rivescript.com/">RiveScript.com</a>.
-    Go there to learn more, download bots and RiveScript interpreters, and join the forum.<p>
+	This project's official website is <a href="http://www.rivescript.com/">RiveScript.com</a>.
+	Go there to learn more, download bots and RiveScript interpreters, and join the forum.<p>
 
-    For my Perl RiveScript library, the latest version can always be downloaded from CPAN:<br>
-    <a href="http://search.cpan.org/perldoc?RiveScript">http://search.cpan.org/perldoc?RiveScript</a>
+	For my Perl RiveScript library, the latest version can always be downloaded from CPAN:<br>
+	<a href="http://search.cpan.org/perldoc?RiveScript">http://search.cpan.org/perldoc?RiveScript</a>
 
-    <a name="history"></a>
-    <h2>History</h2>
+	<a name="history"></a>
+	<h2>History</h2>
 
-    <h3>A Brief Introduction to Bots</h3>
+	<h3>A Brief Introduction to Bots</h3>
 
-    In short, chatterbots are programs that communicate with humans using natural language. Often,
-    chatterbots will communicate with humans over a common interface, such as an instant messenger.
-    I got into bot programming around the years of 2000 and 2001, starting out with RunABot.com, where
-    many other would-be botmasters start. RunABot used AIML (Artificial Intelligence Markup Language)
-    as their method of programming replies for the bots.<p>
+	In short, chatterbots are programs that communicate with humans using natural language. Often,
+	chatterbots will communicate with humans over a common interface, such as an instant messenger.
+	I got into bot programming around the years of 2000 and 2001, starting out with RunABot.com, where
+	many other would-be botmasters start. RunABot used AIML (Artificial Intelligence Markup Language)
+	as their method of programming replies for the bots.<p>
 
-    Due to RunABot's restrictions and the fact that free bot accounts would suffer anytime there was
-    a server problem, I found my way to the website of the <a href="http://www.alicebot.org/">ALICE A.I.
-    Foundation</a>, the home of AIML and the chatterbot that made it famous: Alice. I downloaded AliceBot
-    Program D, a Java-based AIML robot that worked on AIM and IRC. Immediately it was much more responsive
-    and fast than RunABot, but at a price: it had no built-in rate limit circumvention. The bot I ran from
-    Program D wasn't popular enough that it would violate its rate limits by sending its messages instantly
-    to its users, but it was a concern of mine. Also, it had no way of defending itself against the
-    infamous Warning system that AIM has.
+	Due to RunABot's restrictions and the fact that free bot accounts would suffer anytime there was
+	a server problem, I found my way to the website of the <a href="http://www.alicebot.org/">ALICE A.I.
+	Foundation</a>, the home of AIML and the chatterbot that made it famous: Alice. I downloaded AliceBot
+	Program D, a Java-based AIML robot that worked on AIM and IRC. Immediately it was much more responsive
+	and fast than RunABot, but at a price: it had no built-in rate limit circumvention. The bot I ran from
+	Program D wasn't popular enough that it would violate its rate limits by sending its messages instantly
+	to its users, but it was a concern of mine. Also, it had no way of defending itself against the
+	infamous Warning system that AIM has.
 
-    <h3>Programming My Own</h3>
+	<h3>Programming My Own</h3>
 
-    Due to AliceBot Program D's disregard to the worrisome aspects of the AIM protocol, and because I
-    wanted to have a bot for MSN Messenger, I googled for MSN bots and found my way to WiredBots.com,
-    where they had simple Perl bot templates for AIM and MSN bots. These templates were very simplistic
-    and they were only programmed to send a random quote from a text file in response to all human
-    messages. I also had never really dealt with Perl very much before this. I had mainly only worked
-    with the more simplistic languages of JavaScript and HTML.<p>
+	Due to AliceBot Program D's disregard to the worrisome aspects of the AIM protocol, and because I
+	wanted to have a bot for MSN Messenger, I googled for MSN bots and found my way to WiredBots.com,
+	where they had simple Perl bot templates for AIM and MSN bots. These templates were very simplistic
+	and they were only programmed to send a random quote from a text file in response to all human
+	messages. I also had never really dealt with Perl very much before this. I had mainly only worked
+	with the more simplistic languages of JavaScript and HTML.<p>
 
-    I learned a lot about Perl just by tinkering with these bot templates. After I got a good handle
-    on the language, I started releasing my own bot templates based on the WiredBots code, before
-    rewriting some of my own templates from scratch. The one thing I missed about my past bot adventures
-    that I couldn't get from Perl: the AIML language of Alice bots.
+	I learned a lot about Perl just by tinkering with these bot templates. After I got a good handle
+	on the language, I started releasing my own bot templates based on the WiredBots code, before
+	rewriting some of my own templates from scratch. The one thing I missed about my past bot adventures
+	that I couldn't get from Perl: the AIML language of Alice bots.
 
-    <h3>Alternatives to AIML</h3>
+	<h3>Alternatives to AIML</h3>
 
-    Somebody made a Perl-based Alice bot once. It was called Program V, and as of now it's impossible
-    to find anymore. Nobody I know could ever figure out how to make this program work, though. And its
-    AIML modules were difficult to port. Alice bot programs tend to be complete all-in-one bots. I only
-    wanted the module that parses AIML, but I couldn't separate that module from the other ones that
-    managed the configuration and other intricate details that don't apply to what I wanted it for.<p>
+	Somebody made a Perl-based Alice bot once. It was called Program V, and as of now it's impossible
+	to find anymore. Nobody I know could ever figure out how to make this program work, though. And its
+	AIML modules were difficult to port. Alice bot programs tend to be complete all-in-one bots. I only
+	wanted the module that parses AIML, but I couldn't separate that module from the other ones that
+	managed the configuration and other intricate details that don't apply to what I wanted it for.<p>
 
-    Ultimately giving up with Program V's code, and failing numerous times with XML parsers trying to
-    create my own, I had little other choice than to create something new. Something easier for Perl
-    to parse. I made a couple of my own XML-based languages, which failed. A couple other attempts later,
-    and I ended up with a rather simple concept: creating a text-based language driven by command characters
-    and lines of text. The basic idea was that the language should look like this:
+	Ultimately giving up with Program V's code, and failing numerous times with XML parsers trying to
+	create my own, I had little other choice than to create something new. Something easier for Perl
+	to parse. I made a couple of my own XML-based languages, which failed. A couple other attempts later,
+	and I ended up with a rather simple concept: creating a text-based language driven by command characters
+	and lines of text. The basic idea was that the language should look like this:
 
-    <pre>+ hello bot
+	<pre>+ hello bot
 - Hello human!</pre>
 
-    A plus for the trigger to match against the human's message, and a minus for the bot's response.
-    Following that format I added a few more commands to enable it to handle conditionals, redirections,
-    topics, and a lot of the other cool things that AIML can do.
+	A plus for the trigger to match against the human's message, and a minus for the bot's response.
+	Following that format I added a few more commands to enable it to handle conditionals, redirections,
+	topics, and a lot of the other cool things that AIML can do.
 
-    <h3>Chatbot::Alpha</h3>
+	<h3>Chatbot::Alpha</h3>
 
-    The first incarnation of my chatterbot scripting language was called <em>AiChaos Alpha</em>,
-    where AiChaos was the name of my website devoted to bots and Alpha was the name of the scripting
-    language itself. I chose the Chatbot:: namespace because it's difficult to get a root level namespace
-    on <a href="http://www.cpan.org/">CPAN</a>, and because Chatbot::Eliza was looking pretty lonely there,
-    being the only module under the Chatbot space.<p>
+	The first incarnation of my chatterbot scripting language was called <em>AiChaos Alpha</em>,
+	where AiChaos was the name of my website devoted to bots and Alpha was the name of the scripting
+	language itself. I chose the Chatbot:: namespace because it's difficult to get a root level namespace
+	on <a href="http://www.cpan.org/">CPAN</a>, and because Chatbot::Eliza was looking pretty lonely there,
+	being the only module under the Chatbot space.<p>
 
-    After working on Chatbot::Alpha for a while, it grew to be more powerful than the simple idea that
-    started it, however it wasn't being programmed very efficiently. It wasn't as powerful as AIML yet,
-    and the logic of the program didn't allow for complicated things that would rival the &lt;that&gt; tag
-    from AIML.
+	After working on Chatbot::Alpha for a while, it grew to be more powerful than the simple idea that
+	started it, however it wasn't being programmed very efficiently. It wasn't as powerful as AIML yet,
+	and the logic of the program didn't allow for complicated things that would rival the &lt;that&gt; tag
+	from AIML.
 
-    <pre>&lt;!-- This is an example of the &lt;that&gt; tag in AIML --&gt;
+	<pre>&lt;!-- This is an example of the &lt;that&gt; tag in AIML --&gt;
 
 &lt;category&gt;
 &lt;pattern&gt;ASK ME A QUESTION&lt;/pattern&gt;
@@ -133,48 +133,48 @@ What is its name?
 &lt;/template&gt;
 &lt;/category&gt;</pre>
 
-    <h3>Chatbot::RiveScript</h3>
+	<h3>Chatbot::RiveScript</h3>
 
-    Since I programmed myself into a corner with Alpha, I changed its name to RiveScript and
-    started over from scratch. The syntax was still very similar, but RiveScript was rebuilt
-    from the ground up, this time with Alpha's limitations in mind. It wasn't very long before
-    RiveScript not only matched the features of AIML, but surpassed AIML in multiple areas.
-    After it became quite a large program, I submitted a request to CPAN to have a root-level
-    name space. The CPAN admins accepted my request and gave me the root-level name space
-    of RiveScript. And thus, the module went from being "Chatbot::RiveScript" to simply "RiveScript".
+	Since I programmed myself into a corner with Alpha, I changed its name to RiveScript and
+	started over from scratch. The syntax was still very similar, but RiveScript was rebuilt
+	from the ground up, this time with Alpha's limitations in mind. It wasn't very long before
+	RiveScript not only matched the features of AIML, but surpassed AIML in multiple areas.
+	After it became quite a large program, I submitted a request to CPAN to have a root-level
+	name space. The CPAN admins accepted my request and gave me the root-level name space
+	of RiveScript. And thus, the module went from being "Chatbot::RiveScript" to simply "RiveScript".
 
-    <h3>RiveScript 1.00</h3>
+	<h3>RiveScript 1.00</h3>
 
-    The module started at version 0.01 as Chatbot::RiveScript, and I wanted to make sure it
-    was perfect before calling it 1.00. After about a year of development, it was about as
-    perfect as it was going to get. I released the 1.00 version. Years went by before new bugs
-    were reported, and it eventually went to 1.02 and stayed there. The chatterbot scene was
-    drying up by now. The once lively forum of <a href="http://www.bot-depot.com/">Bot-Depot</a>
-    was losing all its best members. Nobody was actively developing bots anymore, and all that
-    was left were the occasional newbies asking questions that nobody might answer.<p>
+	The module started at version 0.01 as Chatbot::RiveScript, and I wanted to make sure it
+	was perfect before calling it 1.00. After about a year of development, it was about as
+	perfect as it was going to get. I released the 1.00 version. Years went by before new bugs
+	were reported, and it eventually went to 1.02 and stayed there. The chatterbot scene was
+	drying up by now. The once lively forum of <a href="http://www.bot-depot.com/">Bot-Depot</a>
+	was losing all its best members. Nobody was actively developing bots anymore, and all that
+	was left were the occasional newbies asking questions that nobody might answer.<p>
 
-    Thus, I lost interest in furthering the development of RiveScript. That was in 2005. Now,
-    three years later, somebody in a different forum posted a thread about wanting to learn
-    Perl. I asked why (for CGI or for offline programming) so I could link him to the appropriate
-    tutorial, and he said he wanted to learn it because he heard he could program bots with it.
-    That inspired me to dust off the old RiveScript module and fix it up.<p>
+	Thus, I lost interest in furthering the development of RiveScript. That was in 2005. Now,
+	three years later, somebody in a different forum posted a thread about wanting to learn
+	Perl. I asked why (for CGI or for offline programming) so I could link him to the appropriate
+	tutorial, and he said he wanted to learn it because he heard he could program bots with it.
+	That inspired me to dust off the old RiveScript module and fix it up.<p>
 
-    <h3>RiveScript 2.00</h3>
+	<h3>RiveScript 2.00</h3>
 
-    So, I registered the domain name <a href="http://www.rivescript.com/">RiveScript.com</a>,
-    which is now the "RiveScript Headquarters". I decided I would also come up with a new standard
-    for RiveScript. Learning from the limitations of the old version and how it relied on Perl
-    so much, the new standard was written with multiple implementations in mind. I published
-    a "RiveScript 2.00 Working Draft", a document describing the standards of the RiveScript
-    language from an implementation-agnostic point of view. It describes how RiveScript itself
-    should work -- it's up to the programmer to implement it. The new standards raised the bar
-    over what the old language was capable of, and I began development of a new RiveScript
-    module to meet these new standards.<p>
+	So, I registered the domain name <a href="http://www.rivescript.com/">RiveScript.com</a>,
+	which is now the "RiveScript Headquarters". I decided I would also come up with a new standard
+	for RiveScript. Learning from the limitations of the old version and how it relied on Perl
+	so much, the new standard was written with multiple implementations in mind. I published
+	a "RiveScript 2.00 Working Draft", a document describing the standards of the RiveScript
+	language from an implementation-agnostic point of view. It describes how RiveScript itself
+	should work -- it's up to the programmer to implement it. The new standards raised the bar
+	over what the old language was capable of, and I began development of a new RiveScript
+	module to meet these new standards.<p>
 
-    Development of a RiveScript 2.00-compliant module is still in development, but it's getting
-    close to completion. I'm trying to learn C++ with the goal of eventually making a RiveScript
-    interpreter in that, which could be compiled into a DLL or Shared Object that other programs
-    could utilize, or provide the source code to allow it to be directly compiled in with other
-    programs.
+	Development of a RiveScript 2.00-compliant module is still in development, but it's getting
+	close to completion. I'm trying to learn C++ with the goal of eventually making a RiveScript
+	interpreter in that, which could be compiled into a DLL or Shared Object that other programs
+	could utilize, or provide the source code to allow it to be directly compiled in with other
+	programs.
 
 {% endblock %}

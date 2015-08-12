@@ -112,7 +112,7 @@
 
 	<pre>And
    preformatted
-      text!</pre>
+	  text!</pre>
 </div>
 
 <p>&nbsp;
@@ -128,12 +128,12 @@ Use content only with permission.
    ##########################################################
    # Hyperlink Editor Script || Copyright 2007 Casey Kirsle #
    #--------------------------------------------------------#
-   # This script makes all offsite links open in a new      #
-   # window, and turns all e-mail links in the format of    #
-   # "name-at-domain.com" into "name\@domain.com"            #
+   # This script makes all offsite links open in a new		#
+   # window, and turns all e-mail links in the format of	#
+   # "name-at-domain.com" into "name\@domain.com"			 #
    #--------------------------------------------------------#
-   # Use content only with permission. Get permission from  #
-   # casey "at" cuvou.org                                   #
+   # Use content only with permission. Get permission from	#
+   # casey "at" cuvou.org									#
    ##########################################################
 */
 // var localAddr = new Array();
@@ -146,61 +146,61 @@ Use content only with permission.
 // localAddr[6] = "upsilon.cuvou.com";
 
 // if (document.getElementsByTagName) {
-// 	var links = document.getElementsByTagName("a");
+//	var links = document.getElementsByTagName("a");
 
-// 	for (var i = 0; i < links.length; i++) {
-// 		var loc = links[i].href;
+//	for (var i = 0; i < links.length; i++) {
+//		var loc = links[i].href;
 
-// 		var parts = loc.split ("/"); // http, null, domain name, request
-// 		var prot = parts[0].split(":");
-// 		var protocol = prot[0];
-// 		protocol.toLowerCase;
-// 		if (protocol == "http" || protocol == "https") {
-// 			// This is an absolute URL.
-// 			var isLocal = 0;
+//		var parts = loc.split ("/"); // http, null, domain name, request
+//		var prot = parts[0].split(":");
+//		var protocol = prot[0];
+//		protocol.toLowerCase;
+//		if (protocol == "http" || protocol == "https") {
+//			// This is an absolute URL.
+//			var isLocal = 0;
 
-// 			for (var j = 0; j < localAddr.length; j++) {
-// 				if (parts[2] == localAddr[j]) {
-// 					isLocal = 1;
-// 				}
-// 			}
+//			for (var j = 0; j < localAddr.length; j++) {
+//				if (parts[2] == localAddr[j]) {
+//					isLocal = 1;
+//				}
+//			}
 
-// 			if (isLocal == 1) {
-// 				// Local links don't need to be modified.
-// 			}
-// 			else {
-// 				// Remote links need to open in a new window.
-// 				links[i].target = "_blank";
-// 			}
-// 		}
-// 		else if (protocol == "mailto") {
-// 			// MailTo link. See if this isn't a normal link.
-// 			if (loc.indexOf("-at-") > -1) {
-// 				var newhref = loc.split("-at-").join("@");
-// 				links[i].href = newhref;
+//			if (isLocal == 1) {
+//				// Local links don't need to be modified.
+//			}
+//			else {
+//				// Remote links need to open in a new window.
+//				links[i].target = "_blank";
+//			}
+//		}
+//		else if (protocol == "mailto") {
+//			// MailTo link. See if this isn't a normal link.
+//			if (loc.indexOf("-at-") > -1) {
+//				var newhref = loc.split("-at-").join("@");
+//				links[i].href = newhref;
 
-// 				// Convert it in the text too.
-// 				if (links[i].innerHTML.indexOf("-at-") > -1) {
-// 					var mailLabel = links[i].innerHTML.split("-at-");
-// 					var newLabel = mailLabel.join ("@");
-// 					links[i].innerHTML = newLabel;
-// 				}
-// 			}
-// 		}
-// 		else if (protocol == "msnim") {
-// 			if (loc.indexOf("-at-") > -1) {
-// 				var newhref = loc.split("-at-").join("@");
-// 				links[i].href = newhref;
+//				// Convert it in the text too.
+//				if (links[i].innerHTML.indexOf("-at-") > -1) {
+//					var mailLabel = links[i].innerHTML.split("-at-");
+//					var newLabel = mailLabel.join ("@");
+//					links[i].innerHTML = newLabel;
+//				}
+//			}
+//		}
+//		else if (protocol == "msnim") {
+//			if (loc.indexOf("-at-") > -1) {
+//				var newhref = loc.split("-at-").join("@");
+//				links[i].href = newhref;
 
-// 				// Convert it in the text too.
-// 				if (links[i].innerHTML.indexOf("-at-") > -1) {
-// 					var mailLabel = links[i].innerHTML.split("-at-");
-// 					var newLabel = mailLabel.join ("@");
-// 					links[i].innerHTML = newLabel;
-// 				}
-// 			}
-// 		}
-// 	}
+//				// Convert it in the text too.
+//				if (links[i].innerHTML.indexOf("-at-") > -1) {
+//					var mailLabel = links[i].innerHTML.split("-at-");
+//					var newLabel = mailLabel.join ("@");
+//					links[i].innerHTML = newLabel;
+//				}
+//			}
+//		}
+//	}
 // }
 </script>
 

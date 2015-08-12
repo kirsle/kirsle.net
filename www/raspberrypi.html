@@ -28,10 +28,10 @@ export XXL_XMODMAP_DISABLE=1
 /usr/bin/xfce4-session</pre>
 
 <ul>
-    <li>Use <code>vncpasswd</code> to set a password.</li>
-    <li>Use <code>vncserver</code> to start a VNC server (defaults to display :1
-        for the first server)</li>
-    <li>Use <code>vncserver -kill :1</code> to kill a server.
+	<li>Use <code>vncpasswd</code> to set a password.</li>
+	<li>Use <code>vncserver</code> to start a VNC server (defaults to display :1
+		for the first server)</li>
+	<li>Use <code>vncserver -kill :1</code> to kill a server.
 </ul>
 
 <h2>Pi User Groups</h2>
@@ -40,17 +40,17 @@ If you add other users to the system, you'll probably want them to be members of
 all the groups the pi user is part of. So...
 
 <ul>
-    <li>adm</li>
-    <li>dialout</li>
-    <li>cdrom</li>
-    <li>sudo</li>
-    <li>audio</li>
-    <li>video</li>
-    <li>plugdev</li>
-    <li>games</li>
-    <li>users</li>
-    <li>netdev</li>
-    <li>input</li>
+	<li>adm</li>
+	<li>dialout</li>
+	<li>cdrom</li>
+	<li>sudo</li>
+	<li>audio</li>
+	<li>video</li>
+	<li>plugdev</li>
+	<li>games</li>
+	<li>users</li>
+	<li>netdev</li>
+	<li>input</li>
 </ul>
 
 <pre>$ sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input <ins>kirsle</ins></pre>
@@ -79,8 +79,8 @@ You'll need to do this <em>before</em> starting the VNC server. If you've alread
 started one, shut it down and restart it.
 
 {{ include_page("comment.partial_index",
-    thread="article-raspberrypi",
-    subject="Raspberry Pi",
+	thread="article-raspberrypi",
+	subject="Raspberry Pi",
 ) | safe }}
 
 {% endblock %}
