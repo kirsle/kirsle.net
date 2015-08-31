@@ -13,8 +13,9 @@
 
 <h2>Web Apps</h2>
 
-<button id="app-slack" class="btn btn-primary">ZEFR Slack</button>
-<button id="app-fb" class="btn btn-primary">Facebook</button>
+<button data-url="https://zefr.slack.com/" class="app btn btn-primary">ZEFR Slack</button>
+<button data-url="https://la-engineers.slack.com/" class="app btn btn-primary">LA-Engineers Slack</button>
+<button data-url="https://www.facebook.com/" class="app btn btn-primary">Facebook</button>
 
 {% endblock %}
 {% block scripts %}
@@ -22,11 +23,9 @@
 	$(document).ready(function() {
 		$("#google-search").focus();
 
-		$("#app-slack").click(function() {
-			launchApp("https://zefr.slack.com/");
-		});
-		$("#app-fb").click(function() {
-			launchApp("https://www.facebook.com/");
+		$("button.app").click(function() {
+			var url = $(this).attr("data-url");
+			launchApp(url);
 		});
 	});
 
