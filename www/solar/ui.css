@@ -116,6 +116,10 @@ p {
 ul, ul ul, ol ul, ul ol, ol ol {
 	margin: 10px 0px;
 }
+li > ul, li > ol {
+	/* embedded list */
+	margin: 0px;
+}
 blockquote {
 	margin: 20px 0px;
 }
