@@ -377,6 +377,23 @@ div.siikir-avatar {
 	margin: auto;
 }
 
+.blog-entry-private, .blog-entry-draft, .blog-entry-sticky {
+	font-weight: bold;
+	font-style: normal;
+}
+
+.blog-entry-private {
+	color: #FF9900;
+}
+
+.blog-entry-draft {
+	color: #00FFFF;
+}
+
+.blog-entry-sticky {
+	color: #FF99FF;
+}
+
 /* Timestamp and author line below blog titles */
 .blog-timestamp {
 	font-size: smaller;

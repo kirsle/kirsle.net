@@ -1,6 +1,6 @@
 rophako:
   site:
-    debug: false
+    debug: true
     site_name: kirsle.net
     site_root: ../www
   security:

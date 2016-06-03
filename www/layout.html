@@ -160,6 +160,7 @@
 							<li>&#0187; <a href="{{ url_for('admin.index') }}">Admin Center</a></li>
 						{% endif %}
 						<li>&#0187; <a href="{{ url_for('blog.update') }}">Update Blog</a></li>
+						<li>&#0187; <a href="{{ url_for('blog.drafts') }}">Drafts</a>/<a href="{{ url_for('blog.private') }}">Private</a></li>
 						{% if "impersonator" in session %}
 							<li>&#0187; <a href="{{ url_for('admin.unimpersonate') }}">Unimpersonate</a></li>
 						{% endif %}
