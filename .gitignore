@@ -1,5 +1,6 @@
-prod.ini
-db
+/prod.ini
+/db
+/rophako
 /www/static/photos/*.jpg
 /www/static/photos/*.png
 /www/static/photos/*.gif

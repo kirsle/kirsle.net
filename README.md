@@ -16,3 +16,8 @@ my various software projects, and the `creativity/` and `wizards` folders.
 So, feel free to look around in this repo, but you won't find anything too
 interesting in here. It's mostly just Jinja2 HTML templates and the odd web
 design file (CSS, JS, and some images).
+
+## Dev Environment Quick Start
+
+Run `bootstrap.py` to automatically clone and configure the Rophako CMS to run
+a local dev instance of Kirsle.net.

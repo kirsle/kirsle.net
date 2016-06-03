@@ -2,14 +2,13 @@ rophako:
   site:
     debug: false
     site_name: kirsle.net
-    site_root: /home/kirsle/git/kirsle.net/www
+    site_root: ../www
   security:
-    force_ssl: true
     secret_key: something random
     use_forwarded_for: true
   db:
-    db_root: /home/kirsle/git/kirsle.net/db
-    redis_db: 1
+    db_root: db
+    redis_prefix: "kirsle.net:"
   mail:
     sender: Kirsle.net <no-reply@kirsle.net>
   blog:
@@ -20,6 +19,6 @@ rophako:
     image_url: https://www.kirsle.net/static/avatars/casey.png
     image_description: Kirsle.net
   photo:
-    root_private: /home/kirsle/www/static/photos
+    root_private: ../www/static/photos
   custom:
     - kirsle_legacy
