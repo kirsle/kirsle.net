@@ -424,6 +424,9 @@ ul.blog-categories li:last-child:after {
 	border: 1px dashed #006699;
 	padding: 5px
 }
+.comment-editable {
+	color: #FF9900;
+}
 
 /* Wiki */
 a.wiki-broken {
