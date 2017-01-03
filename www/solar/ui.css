@@ -29,12 +29,18 @@ h1,h2,h3,h4 {
 	color: #FFFFFF;
 	text-shadow: 0px 0px 10px #0099FF;
 	-moz-text-shadow: 0px 0px 10px #0099FF;
-	-webkit-text-shadow: 0px 0px 10px #0099FF
+	-webkit-text-shadow: 0px 0px 10px #0099FF;
 }
 h1 {
 	font-size: 32pt;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+h2,h3,h4 {
+	color: #BBDDFF;
+	text-shadow: 0px 0px 10px #006699;
+	-moz-text-shadow: 0px 0px 10px #006699;
+	-webkit-text-shadow: 0px 0px 10px #006699;
 }
 h1:first-of-type {
 	padding-top: 0px;
@@ -345,7 +351,6 @@ a.blog-title-index:link, a.blog-title-index:visited {
 	font-size: 32pt;
 	font-weight: bold;
 	color: #FFFFFF;
-	text-decoration: none;
 	text-shadow: 0px 0px 10px #0099FF;
 	-moz-text-shadow: 0px 0px 10px #0099FF;
 	-webkit-text-shadow: 0px 0px 10px #0099FF
