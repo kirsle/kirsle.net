@@ -2,7 +2,7 @@
  * http://tmtheme-editor.herokuapp.com/#/theme/Monokai%20Bright
  * Using: https://github.com/davinche/pygments-from-tmtheme
  */
-.codehilite { background-color: #272822; color: #F8F8F2; }
+.codehilite { color: #F8F8F2; }
 .codehilite .ge { font-style: italic; }
 .codehilite .gs { font-weight: bold; }
 .codehilite .c { color: #75715E; }
