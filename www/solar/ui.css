@@ -92,9 +92,10 @@ textarea,
 input[type="file"],
 select { /* To hell with IE */
 	background-color: #000000 !important;
+	border: 1px solid #999;
 	font-family: Verdana,Arial,Helvetica,sans-serif !important;
 	font-size: small !important;
-	color: #CCCCCC !important;
+	color: #FFF !important;
 	margin: 2px 0px;
 	max-width: 400px;
 }
