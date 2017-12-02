@@ -1,0 +1,20 @@
+{{ if .IndexView }}
+    Sorted by most frequently used:
+
+    <ul>
+    {{ range .Tags }}
+        <li><a href="/tagged/{{ .Name }}">{{ .Name }}</a> ({{ .Count }})</li>
+    {{ end }}
+    </ul>
+{{ else }}
+    <ul>
+        <li>&#0187; <a href="/blog/archive">Blog Archives</a></li>
+        {{ range .Tags }}
+            {{ if ge .Count 8 }}
+            <li>&#0187; <a href="/tagged/{{ .Name }}">{{ .Name }}</a>
+                <small>({{ .Count }})</small></li>
+            {{ end }}
+        {{ end }}
+        <li>&#0187; <a href="/tagged">View all tags</a></li>
+    </ul>
+{{ end }}
