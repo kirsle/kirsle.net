@@ -1,6 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}Creative JavaScripts{% endblock %}
-{% block content %}
+{{ define "title" }}Creative JavaScripts{{ end }}
+{{ define "content" }}
 
 <h1>Creative JavaScripts</h1>
 
@@ -31,7 +30,7 @@ programming and attention to detail.<p>
 &#0164; <a href="creativity/javascript/jsrpg.html" onClick="return openWin(this)">
 	View this script in action</a><p>
 
-{% endblock %}
+{{ end }}
 {% block scripts %}
 <script type="text/javascript">
 function openWin(obj) {

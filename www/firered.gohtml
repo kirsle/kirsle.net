@@ -1,6 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}Sequence Breaking Pokemon FireRed{% endblock %}
-{% block content %}
+{{ define "title" }}Sequence Breaking Pokemon FireRed{{ end }}
+{{ define "content" }}
 
 <h1>Sequence Breaking Pokemon FireRed</h1>
 
@@ -8,28 +7,6 @@ This is the story of my quest to <a href="http://tvtropes.org/pmwiki/pmwiki.php/
 Break</a> Pokemon FireRed Version. I decided a good place to begin my quest would be Fuchsia City instead of
 Palette Town. This is what happened...
 
-{% set pages = {
-	"1": "Getting to Fuchsia City",
-	"2": "Level Grinding on Silence Bridge",
-	"3": "On the Road to Cerulean City",
-	"4": "Breaking Mt. Moon"
-} %}
-<ul>
-{% for i in pages|sort %}
-	{% set link = pages[i] %}
-
-	<li>
-		{% if i == page %}
-			<strong>Part {{ i }} - {{ link }}</strong>
-		{% else %}
-			<a href="/firered{% if i != '1' %}/{{ i }}{% endif %}">Part {{ i }} - {{ link }}</a>
-		{% endif %}
-	</li>
-{% endfor %}
-	<li><a href="/firered/full">All on one page</a></li>
-</ul>
-
-{% if page == "1" or page == "full" %}
 	<h2>The Original Idea</h2>
 
 	In the zoo in Fuchsia City in front of the
@@ -179,12 +156,10 @@ Palette Town. This is what happened...
 		<em>Charmander is evolving!</em>
 	</div>
 
-	{% if page == "1" %}
-		<p>&gt; Continue to <a href="/firered/2">Part 2 - {{ pages["2"] }}</a>
-	{% endif %}
-{% endif %}
 
-{% if page == "2" or page == "full" %}
+
+
+
 	<h1>Level Grinding on Silence Bridge</h1>
 
 	After battling my way through the Bikers and Bird Catchers, I finally
@@ -321,12 +296,11 @@ Palette Town. This is what happened...
 		<em>North to Cerulean City, south to Vermilion City.</em>
 	</div>
 
-	{% if page == "2" %}
-		<p>&gt; Continue to <a href="/firered/3">Part 3 - {{ pages["3"] }}</a>
-	{% endif %}
-{% endif %}
 
-{% if page == "3" or page == "full" %}
+
+
+
+
 	<h1>On the Road to Cerulean City</h1>
 
 	<div class="center">
@@ -453,12 +427,11 @@ Palette Town. This is what happened...
 		<em>My gym badges so far. I never got the 1<sup>st</sup> badge.</em>
 	</div>
 
-	{% if page == "3" %}
-		<p>&gt; Continue to <a href="/firered/4">Part 4 - {{ pages["4"] }}</a>
-	{% endif %}
-{% endif %}
 
-{% if page == "4" or page == "full" %}
+
+
+
+
 	<h1>Breaking Mt. Moon</h1>
 
 	<div class="center">
@@ -594,12 +567,8 @@ Palette Town. This is what happened...
 
 	So this is where my quest comes to an end. If anybody has any new
 	ideas, feel free to leave me a comment about them. :)
-{% endif %}
 
 <p>
-{{ include_page("comment.partial_index",
-	thread="article-firered",
-	subject="Sequence Breaking FireRed Version",
-) | safe }}
+{{ RenderComments "Sequence Breaking Pokémon FireRed" "article-firered" }}
 
-{% endblock %}
+{{ end }}

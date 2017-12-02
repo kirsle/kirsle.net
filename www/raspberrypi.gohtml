@@ -1,6 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}Raspberry Pi{% endblock %}
-{% block content %}
+{{ define "title" }}Raspberry Pi{{ end }}
+{{ define "content" }}
 
 <h1>Raspberry Pi</h1>
 
@@ -83,4 +82,4 @@ started one, shut it down and restart it.
 	subject="Raspberry Pi",
 ) | safe }}
 
-{% endblock %}
+{{ end }}

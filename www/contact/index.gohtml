@@ -1,6 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}Contact Me{% endblock %}
-{% block content %}
+{{ define "title" }}Contact Me{{ end }}
+{{ define "content" }}
 
 <h1>Contact Me</h1>
 
@@ -44,8 +43,8 @@ Things that you <strong>SHOULD NOT</strong> use this form for:
 
 For anything else:<p>
 
-<form name="contact" action="{{ url_for('contact.send') }}" method="POST">
-	<input type="hidden" name="token" value="{{ csrf_token() }}">
+<form name="contact" action="/contact" method="POST">
+	<input type="hidden" name="token" value="{{ .CSRF }}">
 
 	<strong>Your name:</strong><br>
 	<small>(so I know who you are)</small><br>
@@ -72,4 +71,4 @@ For anything else:<p>
 	</div>
 </form>
 
-{% endblock %}
+{{ end }}

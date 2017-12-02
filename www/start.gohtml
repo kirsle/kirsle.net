@@ -1,6 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}Start Page{% endblock %}
-{% block content %}
+{{ define "title" }}Start Page{{ end }}
+{{ define "content" }}
 
 <h1>Start Page</h1>
 
@@ -20,7 +19,7 @@
 
 <em>David is the best.</em>
 
-{% endblock %}
+{{ end }}
 {% block scripts %}
 <script>
 	$(document).ready(function() {

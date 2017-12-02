@@ -1,6 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}TrueType Fonts{% endblock %}
-{% block content %}
+{{ define "title" }}TrueType Fonts{{ end }}
+{{ define "content" }}
 
 <h1>TrueType Fonts</h1>
 
@@ -48,4 +47,4 @@ letters than are in the English alphabet and I did that on purpose.<p>
 
 &#0164; <a href="/download?project=TTF&file=Lorelei.zip">Download Lorelei.ttf</a> (ZIP; 7.66 KB)
 
-{% endblock %}
+{{ end }}
