@@ -65,7 +65,7 @@
 				<div class="k-copyright">
 					Copyright &copy; {{ Now.Format "2006" }} Noah Petherbridge &mdash; All rights reserved<br>
 					Hosted by <a href="https://www.digitalocean.com/?refcode=ea01734d3fc7">DigitalOcean</a><br>
-					Page generated in %time_elapsed%s.
+					Page generated in {{ printf "%.4f" .RequestDuration.Seconds }}s.
 				</div>
 			</div>
 		</div>
