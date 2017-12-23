@@ -44,7 +44,7 @@ Things that you <strong>SHOULD NOT</strong> use this form for:
 For anything else:<p>
 
 <form name="contact" action="/contact" method="POST">
-	<input type="hidden" name="token" value="{{ .CSRF }}">
+	<input type="hidden" name="_csrf" value="{{ .CSRF }}">
 
 	<strong>Your name:</strong><br>
 	<small>(so I know who you are)</small><br>
