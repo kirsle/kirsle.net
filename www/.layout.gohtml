@@ -62,6 +62,12 @@
 
 				{{ template "content" . }}
 
+				{{ if and .CurrentUser.Admin .Editable }}
+					<p>
+						<strong>Admin:</strong> [<a href="/admin/editor?file={{ or .Data.MarkdownFile TemplateName }}">edit this page</a>]
+					</p>
+				{{ end }}
+
 				<div class="k-copyright">
 					Copyright &copy; {{ Now.Format "2006" }} Noah Petherbridge &mdash; All rights reserved<br>
 					Hosted by <a href="https://www.digitalocean.com/?refcode=ea01734d3fc7">DigitalOcean</a><br>
