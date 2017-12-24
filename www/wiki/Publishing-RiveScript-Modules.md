@@ -60,8 +60,8 @@ $ rpmbuild -ba python-rivescript.spec
     1. Build distributable files: `grunt dist`
     2. Remove cruft: `rm -rf node_modules`
     3. Go up a directory to create zip/tar files
-        * zip -r rivescript-js-1.1.2.zip rivescript-js -x '*.git*'
-        * tar -czvf rivescript-js-1.1.2.tar.gz rivescript-js --exclude .git
+        * `zip -r rivescript-js-1.1.2.zip rivescript-js -x '*.git*'`
+        * `tar -czvf rivescript-js-1.1.2.tar.gz rivescript-js --exclude .git`
 
 See also: [npm developers](https://docs.npmjs.com/misc/developers)
 
