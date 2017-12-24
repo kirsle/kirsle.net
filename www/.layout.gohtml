@@ -151,7 +151,7 @@
 				<div class="k-section">Fan Club</div>
 				<ul>
 					{{ if .LoggedIn }}
-						<li>&#0164; Hi, <big>{{ or .CurrentUser.Name .CurrentUser.Username }}</big></li>
+						<li>&#0164; Hi, <big><a href="/account">{{ or .CurrentUser.Name .CurrentUser.Username }}</a></big></li>
 						{{ if .CurrentUser.Admin }}
 							<li>&#0187; <a href="/admin">Admin Center</a></li>
 						{{ end }}
