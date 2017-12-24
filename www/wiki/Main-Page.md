@@ -23,4 +23,5 @@ See [the index](/wiki/_pages) for the list of all available pages in this wiki.
 
 # Personal Reference
 
+* [Bookmarks](/wiki/Bookmarks)
 * [Publishing RiveScript Modules](/wiki/Publishing-RiveScript-Modules)
