@@ -148,10 +148,10 @@ blockquote {
 	position: absolute;
 	z-index: 100;
 	top: 10px;
-	right: 10px;
+	left: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 	.mobile-nav {
 		display: block;
 	}
@@ -369,6 +369,7 @@ ul.blog-categories li:last-child:after {
 	/* Kirsle logo */
 	width: 317px;
 	height: 177px;
+	margin: 0 auto;
 	background-image: url("kirsle.png");
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -385,17 +386,16 @@ ul.blog-categories li:last-child:after {
 	background-repeat: repeat;
 	background-position: 0px 0px;
 
-	/* width and margins to have some control over the nav bar size
-	   despite bootstrap's grid system */
-	max-width: 152px;
-	min-width: 130px;
-	margin-left: auto;
-	margin-right: auto;
-
 	border: 2px ridge #0099FF;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px
+}
+@media (min-width: 1200px) {
+	.k-navpanel {
+		max-width: 200px;
+		margin: 0 auto;
+	}
 }
 .k-navpanel > .k-section {
 	/* Division of navigation bar */

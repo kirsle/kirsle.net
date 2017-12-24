@@ -13,6 +13,9 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 
+	<!-- FontAwesome -->
+	<link rel="stylesheet" type="text/css" href="/vendor/FontAwesome/css/fa-svg-with-js.css">
+
 	<!-- Kirsle.net Solar -->
 	<link rel="stylesheet" type="text/css" media="screen" href="/solar/ui.css">
 	<link rel="stylesheet" type="text/css" media="print" href="/solar/print.css">
@@ -23,22 +26,21 @@
 <body>
 
 <div class="mobile-nav">
-	<a href="#navbar" class="btn btn-primary"><i class="glyphicon glyphicon-list"></i></a>
+	<a href="#navbar" class="btn btn-primary"><i class="fas fa-bars"></i></a>
 </div>
 
 <div class="k-supernova"></div>
 
 <div class="container-fluid">
-
 	<div class="row">
-		<div class="col-md-4 col-md-offset-3">
+		<div class="col-12 col-lg-10 col-xl-8">
 			<div class="k-kirsle" onclick="self.location='/'"></div>
 		</div>
 	</div>
 
 	<div class="row">
 
-		<div class="order-1 order-md-12 col-12 col-md-10">
+		<div class="order-1 order-lg-12 col-12 col-lg-10 col-xl-8">
 			<div class="k-content-panel mb-4">
 				{{ if .SetupNeeded }}
 				<div class="alert alert-success">
@@ -76,8 +78,8 @@
 			</div>
 		</div>
 
-		<div class="order-12 order-md-1 col-12 col-md-2">
-			<div class="k-navpanel" id="navbar">
+		<div class="order-12 order-xl-1 col-12 col-xl-2">
+			<div class="k-navpanel mb-4" id="navbar">
 				<div class="k-section">Kirsle</div>
 				<ul>
 					<li>&#0187; <a href="/">Homepage</a> (<a href="/blog.rss">RSS</a>)</li>
@@ -201,6 +203,7 @@
 <script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="/js/offsite.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/vendor/FontAwesome/js/fontawesome-all.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(".login-link").click(function() {
