@@ -1,0 +1,11 @@
+{{ define "title" }}Welcome!{{ end }}
+{{ define "content" }}
+<h1>Welcome!</h1>
+
+Welcome to <a href="http://www.kirsle.net/">Kirsle.net</a>! This is the personal
+website of Noah Petherbridge, and it's where my various software projects and
+web blog lives.<p>
+
+{{ RenderIndex .Request "" "" }}
+
+{{ end }}

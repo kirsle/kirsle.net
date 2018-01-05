@@ -1,0 +1,221 @@
+{{ define "title" }}{{ end }}
+{{ define "scripts" }}{{ end }}
+
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ template "title" . }} - {{ .Title }}</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" type="text/css" href="/vendor/FontAwesome/css/fa-svg-with-js.css">
+
+	<!-- Kirsle.net Solar -->
+	<link rel="stylesheet" type="text/css" media="screen" href="/solar/ui.css">
+	<link rel="stylesheet" type="text/css" media="print" href="/solar/print.css">
+	<link rel="stylesheet" type="text/css" href="/solar/monokai.css">
+	<link rel="stylesheet" type="text/css" href="/solar/vim-syntax.css">
+	<link rel="alternate" type="application/rss+xml" title="Kirsle's RSS Feed" href="/blog/rss">
+</head>
+<body>
+
+<div class="mobile-nav">
+	<a href="#navbar" class="btn btn-primary"><i class="fas fa-bars"></i></a>
+</div>
+
+<div class="k-supernova"></div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 col-lg-10 col-xl-8">
+			<div class="k-kirsle" onclick="self.location='/'"></div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="order-1 order-lg-12 col-12 col-lg-10 col-xl-8">
+			<div class="k-content-panel mb-4">
+				{{ if .SetupNeeded }}
+				<div class="alert alert-success">
+					Your web blog needs to be set up!
+					Please <a href="/initial-setup">click here</a> to
+					configure your blog.
+				</div>
+				{{ end }}
+
+				{{ range .Flashes }}
+				<div class="alert alert-success">
+					{{ . }}
+				</div>
+				{{ end }}
+
+				{{ if .Error }}
+				<div class="alert alert-danger">
+					<strong>Error:</strong> {{ .Error }}
+				</div>
+				{{ end }}
+
+				{{ template "content" . }}
+
+				{{ if and .CurrentUser.Admin .Editable }}
+					<p>
+						<strong>Admin:</strong> [<a href="/admin/editor?file={{ or .Data.MarkdownFile TemplateName }}">edit this page</a>]
+					</p>
+				{{ end }}
+
+				<div class="k-copyright">
+					Copyright &copy; {{ Now.Format "2006" }} Noah Petherbridge &mdash; All rights reserved<br>
+					Hosted by <a href="https://www.digitalocean.com/?refcode=ea01734d3fc7">DigitalOcean</a><br>
+					Page generated in {{ printf "%.4f" .RequestDuration.Seconds }}s.
+				</div>
+			</div>
+		</div>
+
+		<div class="order-12 order-lg-1 col-12 col-lg-2">
+			<div class="k-navpanel mb-4" id="navbar">
+				<div class="k-section">Kirsle</div>
+				<ul>
+					<li>&#0187; <a href="/">Homepage</a> (<a href="/blog.rss">RSS</a>)</li>
+					<li>&#0187; <a href="/about">About Me</a></li>
+					<!-- <li>&#0187; <a href="/photos/albums">Photo Albums</a></li> -->
+					<li>&#0187; <a href="/wiki/Main-Page">Wiki</a></li>
+					<li>&#0187; <a href="/guestbook">Guestbook</a></li>
+					<li>&#0187; <a href="/contact">Contact Me</a></li>
+				</ul>
+
+				<div class="k-section">Blog Tags</div>
+				{{ RenderTags .Request false }}
+
+				<div class="k-section">Creativity</div>
+				<ul>
+					<li>&#0187; <a href="/rendering">3D Renderings</a></li>
+					<li>&#0187; <a href="/flash">Flash Animation</a></li>
+					<li>&#0187; <a href="/javascript">JavaScript</a></li>
+					<li>&#0187; <a href="/fonts">Fonts</a></li>
+					<li>&#0187; <a href="/doc/">Tutorials</a></li>
+					<li>&#0187; <a href="/designs">Web Design</a></li>
+				</ul>
+
+				<div class="k-section">Software</div>
+				<ul>
+					<li>&#0187; <a href="/rivescript">RiveScript</a></li>
+					<li>&#0187; <a href="/errorgen">Error Generator</a></li>
+					<li>&#0187; <a href="/tkcalc">Tk Calculator</a></li>
+					<li>&#0187; <a href="http://sh.kirsle.net/" target="_blank">Terminal Apps</a></li>
+					<li>&#0187; <a href="/pccc">CyanChat Client</a></li>
+				</ul>
+
+				<div class="k-section">Web Tools</div>
+				<ul>
+					<li>&#0187; <a href="/wizards/ttf2eot.cgi">TTF to EOT</a></li>
+					<li>&#0187; <a href="/wizards/ps1.html">Bash $PS1 Prompt</a></li>
+					<li>&#0187; <a href="/wizards/fader.cgi">Text Fader</a></li>
+					<li>&#0187; <a href="/wizards/favicon.cgi">Favicons</a></li>
+					<li>&#0187; <a href="/wizards/distance.cgi">Distance Calc</a></li>
+					<li>&#0187; <a href="/wizards/translator.html">Azulian Translater</a></li>
+					<li>&#0187; <a href="/wizards/xbmask.cgi">XBM Masks</a></li>
+					<li>&#0187; <a href="/wizards/flask-session.cgi">Flask Session</a></li>
+				</ul>
+
+				<div class="k-section">Subdomains</div>
+				<ul>
+					<li>&#0187; <a href="https://rophako.kirsle.net/">Rophako CMS</a></li>
+					<li>&#0187; <a href="https://mc.kirsle.net/">Minecraft Server</a></li>
+					<li>&#0187; <a href="https://rpm.kirsle.net/">Linux RPMs</a></li>
+				</ul>
+
+				<div class="k-section">Miscellany</div>
+				<ul>
+					<li>&#0187; <a href="/firered">Pok&#0233;mon Fuchsia City</a></li>
+					<li>&#0187; <a href="/msdos">DOS and Windows</a></li>
+					<li>&#0187; <a href="/raspberrypi">Raspberry Pi</a></li>
+				</ul>
+
+				<div class="k-section">Social Links</div>
+				<ul>
+					<li>&#0187; <a href="https://www.google.com/+NoahPetherbridge" rel="me">Google+</a></li>
+					<li>&#0187; <a href="https://www.facebook.com/noah.lee.petherbridge" rel="me">Facebook</a></li>
+					<li>&#0187; <a href="https://twitter.com/kirsle" rel="me">Twitter</a></li>
+					<li>&#0187; <a href="https://www.instagram.com/kirsle" rel="me">Instagram</a></li>
+					<li>&#0187; <a href="https://myspace.com/kirsle" rel="me">MySpace</a></li>
+					<li>&#0187; <a href="https://github.com/kirsle" rel="me">Github</a></li>
+					<li>&#0187; <a href="http://search.cpan.org/~kirsle" rel="me">CPAN</a></li>
+					<li>&#0187; <a href="https://www.npmjs.org/~kirsle" rel="me">npm</a></li>
+				</ul>
+
+				<div class="k-section">Fan Club</div>
+				<ul>
+					{{ if .LoggedIn }}
+						<li>&#0164; Hi, <big><a href="/account">{{ or .CurrentUser.Name .CurrentUser.Username }}</a></big></li>
+						{{ if .CurrentUser.Admin }}
+							<li>&#0187; <a href="/admin">Admin Center</a></li>
+						{{ end }}
+						<li>&#0187; <a href="/blog/edit">Update Blog</a></li>
+						<li>&#0187; <a href="/blog/drafts">Drafts</a>/<a href="/blog/private">Private</a></li>
+						<li>&#0187; <a href="/logout">Log Out</a>
+					{{ else }}
+						<li id="login-link">&#0187; <a href="/login" class="login-link">Log In</a></li>
+					{{ end }}
+				</ul>
+				<div id="login-inline" style="display: none">
+					<form action="/login" method="POST">
+					<input type="hidden" name="_csrf" value="{{ .CSRF }}">
+					<input type="hidden" name="next" value="{{ .Path }}">
+					<input type="text" class="form-control" size="4" name="username" style="display: inline; width: 45%">
+					<input type="password" class="form-control" size="4" name="password" style="display: inline; width: 45%">
+					<br>
+					<button type="submit" class="btn btn-primary" style="width: 100%">Log In</button>
+					</form>
+				</div>
+
+				<div class="center">
+					<a href="https://www.python.org/" target="_blank">
+						<img src="/static/images/python.png" width="80" height="15" alt="Python powered">
+					</a><br>
+
+					<a href="https://validator.w3.org/check?uri=referer">
+						<img src="/static/images/html5.png" width="80" height="15" alt="W3C Valid HTML5">
+					</a><br>
+
+					<a href="https://jigsaw.w3.org/css-validator/validator?uri=http://www.kirsle.com/solar/screen.css">
+						<img src="/static/images/css3.png" width="80" height="15" alt="W3C Valid CSS3">
+					</a><p>
+
+					<a href="https://www.digitalocean.com/?refcode=ea01734d3fc7" target="_blank">
+						<img src="/static/images/digital-ocean.png" width="140" height="39" alt="Proudly hosted by DigitalOcean">
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="/js/offsite.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/vendor/FontAwesome/js/fontawesome-all.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".login-link").click(function() {
+			$("#login-link").hide();
+			$("#login-inline").show(500);
+			return false;
+		});
+	});
+</script>
+
+{{ template "scripts" }}
+
+</body>
+</html>
+{{ end }}

@@ -1,0 +1,353 @@
+{{ define "title" }}Perl CyanChat Client{{ end }}
+{{ define "content" }}
+
+<h1>Perl CyanChat Client</h1>
+
+<ul>
+	<li><a href="#intro">Project Description</a></li>
+	<li><a href="#screenshots">Screenshots</a></li>
+	<li><a href="#license">License</a></li>
+	<li><a href="#downloads">Downloads</a></li>
+</ul>
+
+	<a name="intro"></a>
+	<img src="projects/PCCC/logo.png" alt="PCCC" width="400" height="90">
+	<h2>Project Description</h2>
+
+	<strong>Perl CyanChat Client</strong> (PCCC) is a chat client for
+	<em>CyanChat</em>, the official chat room of
+	<a href="http://www.cyanworlds.com/">Cyan Worlds, Inc.</a>.<p>
+
+	This project is now hosted on Github:
+	<a href="https://github.com/kirsle/PCCC">https://github.com/kirsle/PCCC</a>
+
+	<h3>Features</h3>
+
+	Here's a brief list of some of PCCC's features:
+
+	<ul>
+		<li>Full support of Version 1 of the CyanChat protocol.</li>
+		<li>Save the conversation in XHTML format, keeping colors intact.</li>
+		<li>Configurable "default nickname", and the ability to automatically
+			sign you into the chat when you connect.</li>
+		<li>Configurable CC host and port, automatically connect on startup,
+			and reconnect when disconnected.</li>
+		<li>Configurable colors, both for the main window and for the chat
+			message and nickname colors.</li>
+
+		<li>Configurable "echo" color, so that your own nickname in chat will
+			show up in a different color, so you can quickly distinguish
+			your messages from everyone else's.</li>
+		<li>Clickable hyperlinks when they appear in chat.</li>
+		<li>Support for IRC-style "/me" actions.</li>
+		<li>Messages in the format <b>*...*</b> can be displayed as "/me" actions
+			automatically.</li>
+		<li>Sound effects!</li>
+
+		<li>Private message windows so you can chat privately in an
+			Instant Messenger style.</li>
+		<li>Option to ignore private messages from ChatServer (useful when
+			Cho goes down and you need to use the debug port)</li>
+		<li>Option to automatically ignore users who ignore you.</li>
+		<li>Option to notify you when users ignore you.</li>
+		<li>Option to send a "real" ignore command to the server when you
+			ignore a user (as opposed to a local ignore).</li>
+		<li>Options to reverse the orientation of the chat client, so that
+			new messages appear on the bottom, and the input text box
+			is at the bottom (like most traditional chat programs).</li>
+
+		<li>A full built-in documentation system.</li>
+		<li>Built-in packet viewer with the Debug Window / Console.</li>
+		<li>A dialog to send raw commands to the CC server.</li>
+	</ul>
+
+	<a name="screenshots"></a>
+	<h2 style="margin-top: 0px">Screenshots</h2>
+
+	<table border="0" cellspacing="0" cellpadding="0" style="margin-left: auto; margin-right: auto">
+		<tr>
+			<td align="center" valign="top">
+				<a href="projects/PCCC/ss07.png">
+				<img src="projects/PCCC/t_ss07.png" width="324" height="256" alt="Screenshot">
+				</a><br>
+				PCCC 3.0 running on Windows 7 Beta.
+			</td>
+			<td align="center" valign="top">
+
+				<a href="projects/PCCC/ss08.png">
+				<img src="projects/PCCC/t_ss08.png" width="324" height="256" alt="Screenshot">
+				</a><br>
+				Ignore List preferences on Windows 7 Beta.
+			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+				&nbsp;<br>
+
+				<a href="projects/PCCC/ss06.png">
+				<img src="projects/PCCC/t_ss06.png" width="324" height="269" alt="Screenshot">
+				</a><br>
+				Linux: PCCC connected to a local CyanChat server,<br>
+				demonstrating the colors of Cyan Admins and<br>
+				Special Guests.
+			</td>
+			<td align="center" valign="top">
+
+				&nbsp;<br>
+				<a href="projects/PCCC/ss05.png">
+				<img src="projects/PCCC/t_ss05.png" width="324" height="240" alt="Screenshot">
+				</a><br>
+				PCCC running on Mac OS X using X Windows.<br>
+				<small>Screenshot credit: Amonre</small>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center" valign="top">
+				&nbsp;<br>
+				<a href="projects/PCCC/ss04.png">
+				<img src="projects/PCCC/t_ss04.png" width="324" height="270" alt="Screenshot">
+				</a><br>
+				Linux: A tab from the Preferences window.
+			</td>
+			<td align="center" valign="top">
+
+				&nbsp;<br>
+				<a href="projects/PCCC/ss03.png">
+				<img src="projects/PCCC/t_ss03.png" width="324" height="240" alt="Screenshot">
+				</a><br>
+				Linux: PCCC in action.
+			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+
+				&nbsp;<br>
+				<a href="projects/PCCC/ss02.gif">
+				<img src="projects/PCCC/t_ss02.gif" width="324" height="257" alt="Screenshot">
+				</a><br>
+				Windows XP: PCCC with a couple dialog windows open.
+			</td>
+			<td align="center" valign="top">
+				&nbsp;<br>
+				<a href="projects/PCCC/ss01.gif">
+
+				<img src="projects/PCCC/t_ss01.gif" width="324" height="257" alt="Screenshot">
+				</a><br>
+				Windows XP: PCCC 2.0's main window.
+			</td>
+		</tr>
+	</table>
+
+	<a name="license"></a>
+	<h2 style="margin-top: 0px">Software License</h2>
+
+<pre>    Perl CyanChat Client
+    Copyright (C) 2013 Noah Petherbridge
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</pre>
+
+	<a name="downloads">
+	<h2 style="margin-top: 0px">Downloads</h2>
+
+	It's recommended that you download the latest version of this software
+	as listed below. To download older versions and source code, skip to
+	the next section.
+
+	<h3>Windows Executable</h3>
+
+	<blockquote>
+	<img src="images/dos.png" width="32" height="32" alt="Win32" style="vertical-align: middle">
+	<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-3.0_bin.zip">
+	Download Perl CyanChat Client</a><br>
+	Version 3.0 - 2007/06/21<br>
+	<small>ZIP format/2.3 MB</small>
+	</blockquote>
+
+	<h3>Linux Binary</h3>
+
+	<blockquote>
+	<img src="images/exec.png" width="32" height="32" alt="Linux" style="vertical-align: middle">
+	<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-3.0_linux.tar.gz">
+	Download Perl CyanChat Client</a><br>
+	Version 3.0 - 2007/06/21<br>
+
+	<small>TAR.GZ format/4.7 MB</small>
+	</blockquote>
+
+	<h2>All Distributions</h2>
+
+	The following are all the distributions available for this software,
+	starting with the most recent. Source code is also available for all
+	versions.<p>
+
+	<table border="0" cellspacing="2" cellpadding="2" class="distro">
+<tr>
+
+<th>Release</th>
+<th>Windows EXE</th>
+<th>Linux Binary</th>
+<th>Source Code</th>
+</tr>
+<tr>
+<td>
+<b>3.0</b><br>
+<small>2007/06/21</small>
+</td>
+<td>
+
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-3.0_bin.zip">PCCC 3.0</a><br>
+<small>(ZIP; 2.3 MB)</small>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-3.0_linux.tar.gz">PCCC 3.0</a><br>
+<small>(TAR.GZ; 4.7 MB)</small>
+<td>
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-3.0_src.tar.gz">PCCC 3.0</a><br>
+<small>(TAR.GZ; 175 KB)</small>
+
+</tr>
+<tr>
+<td>
+<b>2.8</b><br>
+<small>2007/06/01</small>
+</td>
+<td>
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-2.8_bin.zip">PCCC 2.8</a><br>
+<small>(ZIP; 2.2 MB)</small>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-2.8_linux.tar.gz">PCCC 2.8</a><br>
+
+<small>(TAR.GZ; 4.6 MB)</small>
+<td>
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-2.8_src.tar.gz">PCCC 2.8</a><br>
+<small>(TAR.GZ; 48.7 KB)</small>
+</tr>
+<tr>
+<td>
+<b>2.7</b><br>
+<small>2007/05/23</small>
+</td>
+<td>
+
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-2.7_bin.zip">PCCC 2.7</a><br>
+<small>(ZIP; 2 MB)</small>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-2.7_linux.tar.gz">PCCC 2.7</a><br>
+<small>(TAR.GZ; 4.5 MB)</small>
+<td>
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-2.7_src.zip">PCCC 2.7</a><br>
+<small>(TAR.GZ; 42 KB)</small>
+
+</tr>
+<tr>
+<td>
+<b>2.6</b><br>
+<small>2007/04/14</small>
+</td>
+<td>
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<em>Not available.</em>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<em>Not available.</em>
+<td>
+
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-2.6_src.tar.gz">PCCC 2.6</a><br>
+<small>(TAR.GZ; 40.7 KB)</small>
+</tr>
+<tr>
+<td>
+<b>2.3</b><br>
+<small>2006/11/07</small>
+</td>
+<td>
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-2.3_bin.zip">PCCC 2.3</a><br>
+
+<small>(ZIP; 3.2 MB)</small>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<em>Not available.</em>
+<td>
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-2.3_src.zip">PCCC 2.3</a><br>
+<small>(ZIP; 31.2 KB)</small>
+</tr>
+<tr>
+<td>
+<b>2.1</b><br>
+
+<small>2006/10/24</small>
+</td>
+<td>
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<em>Not available.</em>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<em>Not available.</em>
+<td>
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-2.1_src.zip">PCCC 2.1</a><br>
+<small>(ZIP; 23.5 KB)</small>
+
+</tr>
+<tr>
+<td>
+<b>2.0</b><br>
+<small>2006/10/01</small>
+</td>
+<td>
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<em>Not available.</em>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<em>Not available.</em>
+<td>
+
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-2.0_src.zip">PCCC 2.0</a><br>
+<small>(ZIP; 21.2 KB)</small>
+</tr>
+<tr>
+<td>
+<b>1.2</b><br>
+<small>2005/07/19</small>
+</td>
+<td>
+<img src="images/dos.png" width="32" height="32" alt="Win32">
+<a href="/download?type=bin&amp;project=PCCC&amp;file=PCCC-1.2_bin.zip">PCCC 1.2</a><br>
+
+<small>(ZIP; 3.2 MB)</small>
+<td>
+<img src="images/exec.png" width="32" height="32" alt="Linux">
+<em>Not available.</em>
+<td>
+<img src="images/perl.png" width="32" height="32" alt="Perl Source">
+<a href="/download?type=gpl&amp;project=PCCC&amp;file=PCCC-1.2_src.zip">PCCC 1.2</a><br>
+<small>(ZIP; 16.2 KB)</small>
+</tr>
+</table>
+
+{{ end }}

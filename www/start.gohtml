@@ -1,0 +1,38 @@
+{{ define "title" }}Start Page{{ end }}
+{{ define "content" }}
+
+<h1>Start Page</h1>
+
+<h2>Google</h2>
+
+<form method="GET" action="https://www.google.com/search">
+	<input type="text" size="80" class="form-control inline" name="q" id="google-search">
+	<button type="submit" class="btn btn-primary">Go</button>
+</form>
+
+<h2>Slack Teams</h2>
+
+<button data-url="https://with-in.slack.com/" class="app btn btn-primary">Within Slack</button>
+<button data-url="https://la-engineers.slack.com/" class="app btn btn-primary">LA-Engineers Slack</button>
+<button data-url="https://botmakers.slack.com/" class="app btn btn-primary">Botmakers Slack</button>
+<button data-url="https://socalpython.slack.com/" class="app btn btn-primary">SoCal Python Slack</button><p>
+
+<em>David is the best.</em>
+
+{{ end }}
+{% block scripts %}
+<script>
+	$(document).ready(function() {
+		$("#google-search").focus();
+
+		$("button.app").click(function() {
+			var url = $(this).attr("data-url");
+			launchApp(url);
+		});
+	});
+
+	function launchApp(url) {
+		window.open(url, "_blank", "width=1024,height=768,location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0");
+	}
+</script>
+{% endblock %}

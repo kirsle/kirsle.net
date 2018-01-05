@@ -1,0 +1,20 @@
+{{ define "title" }}Kanian/Azulian War - Flash Animations{{ end }}
+{{ define "content" }}
+
+<h1>Kanian/Azulian War</h1>
+
+<script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+<div id="swfObject"></div>
+<br><br>
+
+<script>
+	swfobject.embedSWF("/creativity/flash/KanianAzuWar.swf", "swfObject",
+		550, 400,
+		"10.0.0"
+	);
+</script>
+
+&#0171; <a href="/flash">More Flash Animations</a>
+
+{{ end }}

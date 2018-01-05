@@ -1,0 +1,82 @@
+{{ define "title" }}Raspberry Pi{{ end }}
+{{ define "content" }}
+
+<h1>Raspberry Pi</h1>
+
+This page is my personal reference/cheat sheet for Raspberry Pi
+related topics.<p>
+
+<h1>Raspbian Wheezy</h1>
+
+<h2>Install the XFCE Desktop</h2>
+
+To install XFCE to use it instead of the default LXDE.
+
+<pre>$ sudo apt-get install task-xfce-desktop</pre>
+
+<h2>XFCE for the TightVNC Server</h2>
+
+After setting up TightVNC, you can configure it to load the XFCE desktop environment
+by modifying your <code>~/.vnc/xstartup</code> file. Mine looks like this:
+
+<pre>#!/bin/sh
+
+xrdb $HOME/.Xresources
+xsetroot -solid grey
+export XXL_XMODMAP_DISABLE=1
+/usr/bin/xfce4-session</pre>
+
+<ul>
+	<li>Use <code>vncpasswd</code> to set a password.</li>
+	<li>Use <code>vncserver</code> to start a VNC server (defaults to display :1
+		for the first server)</li>
+	<li>Use <code>vncserver -kill :1</code> to kill a server.
+</ul>
+
+<h2>Pi User Groups</h2>
+
+If you add other users to the system, you'll probably want them to be members of
+all the groups the pi user is part of. So...
+
+<ul>
+	<li>adm</li>
+	<li>dialout</li>
+	<li>cdrom</li>
+	<li>sudo</li>
+	<li>audio</li>
+	<li>video</li>
+	<li>plugdev</li>
+	<li>games</li>
+	<li>users</li>
+	<li>netdev</li>
+	<li>input</li>
+</ul>
+
+<pre>$ sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input <ins>kirsle</ins></pre>
+
+<h2>Sound access for other users</h2>
+
+If you add a second user to the system besides the default "pi" user, they don't
+get access to the sound device by default - so for example, the XFCE Mixer applet
+gives a gstreamer error.
+
+To get the XFCE Mixer applet to work, make sure the gstreamer plugins are
+installed.
+
+<pre>$ sudo apt-get install gstreamer0.10-plugins</pre>
+
+<h3>Method 1: audio user group</h3>
+
+This is probably the preferred way. Make sure your alternate user is a member of
+the <code>audio</code> group.
+
+<h3>Method 2: Add your user to the ACL for /dev/snd</h3>
+
+<pre>$ sudo setfacl -m u:<ins>kirsle</ins>:rw /dev/snd/*</pre>
+
+You'll need to do this <em>before</em> starting the VNC server. If you've already
+started one, shut it down and restart it.
+
+{{ RenderComments "Raspberry Pi" "raspberrypi" }}
+
+{{ end }}

@@ -1,0 +1,44 @@
+{{ define "title" }}Contact Me{{ end }}
+{{ define "content" }}
+
+<h1>Contact Me</h1>
+
+You can use the form below to send me an e-mail. Things that you
+<strong>SHOULD NOT</strong> use this form for:
+
+<ul>
+	<li>Any SEO business solicitations.</li>
+	<li>Any advertisement related things. Google AdSense is fine for me, thanks.</li>
+</ul>
+
+For anything else:<p>
+
+<form name="contact" action="/contact" method="POST">
+	<input type="hidden" name="_csrf" value="{{ .CSRF }}">
+
+	<strong>Your name:</strong><br>
+	<small>(so I know who you are)</small><br>
+	<input type="text" class="form-control" size="40" name="name"><p>
+
+	<strong>Your email:</strong><br>
+	<small>(if you want a response)</small><br>
+	<input type="email" class="form-control" size="40" name="email"><p>
+
+	<strong>Message subject:</strong><br>
+	<small>(optional)</small><br>
+	<input type="text" class="form-control" size="40" name="subject" style="width: 100%"><p>
+
+	<strong>Message:</strong><br>
+	<small>(required)</small><br>
+	<textarea class="form-control" cols="40" rows="12" name="message" style="width: 100%"></textarea><p>
+
+	<button type="submit" class="btn btn-primary">Send Message</button>
+
+	<div style="display: none">
+		If you can see these boxes, don't touch them.<br>
+		<input type="text" size="40" name="contact" value=""><br>
+		<input type="text" size="40" name="website" value="http://">
+	</div>
+</form>
+
+{{ end }}

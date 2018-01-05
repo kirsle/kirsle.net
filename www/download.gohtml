@@ -1,0 +1,49 @@
+{{ define "title" }}Download{{ end }}
+{{ define "content" }}
+
+{{ $method := or (.Request.FormValue "method") "index" }}
+{{ $project := .Request.FormValue "project" }}
+{{ $file := .Request.FormValue "file" }}
+{{ if eq $project "" }}
+	<h1>An error has occurred</h1>
+{{ else if eq $method "index" }}
+	<h1>Project {{ $project }}</h1>
+
+	You are about to download the file <strong>{{ $file }}</strong> from the
+	project <strong>{{ $project }}</strong>. <!-- This file has been downloaded
+	0 time(s). -->
+
+	<h1>Download</h1>
+
+	To continue your download, click on the button below.
+	<br><br><br>
+
+	<form name="download" action="/download" method="POST">
+	<input type="hidden" name="_csrf" value="{{ .CSRF }}">
+	<input type="hidden" name="method" value="get">
+	<input type="hidden" name="project" value="{{ $project }}">
+	<input type="hidden" name="file" value="{{ $file }}">
+
+	<span style="background-color: #88AADD; padding: 15px; border-top: 2px solid #006699;
+	border-left: 2px solid #006699; border-right: 2px solid #AACCFF; border-bottom: 2px solid #AACCFF">
+		<button type="submit">Download Now</button>
+	</span>
+	</form>
+{{ else if eq $method "get" }}
+	<h1>Downloading File...</h1>
+
+	Your download of <strong>{{ $file }}</strong> will begin shortly. If it doesn't,
+	<a href="/projects/{{ $project }}/{{ $file }}">download it directly</a>.
+
+	<script type="text/javascript">
+	(function() {
+		setTimeout(function() {
+			window.location.href = "/projects/{{ $project }}/{{ $file }}";
+		}, 2000);
+	})();
+	</script>
+{{ else }}
+	<h1>An error has occurred.</h1>
+{{ end}}
+
+{{ end }}

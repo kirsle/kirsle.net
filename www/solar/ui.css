@@ -91,12 +91,16 @@ input[type="email"],
 textarea,
 input[type="file"],
 select { /* To hell with IE */
-	background-color: #000000 !important;
+	background-color: #000 !important;
+	border: 1px solid #999 !important;
 	font-family: Verdana,Arial,Helvetica,sans-serif !important;
 	font-size: small !important;
-	color: #CCCCCC !important;
+	color: #FFF !important;
 	margin: 2px 0px;
-	max-width: 400px;
+	max-width: 600px;
+}
+input:focus, textarea:focus, select:focus {
+	border: 1px solid #09F !important;
 }
 acronym,abbr {
 	border-bottom: 1px dotted #BEBEBE;
@@ -116,6 +120,10 @@ acronym,abbr {
 }
 
 /* Bootstrap CSS overrides */
+a.btn {
+	text-decoration: none;
+	color: white;
+}
 p {
 	margin: 10px 0px;
 }
@@ -129,6 +137,10 @@ li > ul, li > ol {
 blockquote {
 	margin: 20px 0px;
 }
+.card {
+	background-color: transparent;
+	border: 1px dashed #006699;
+}
 
 /* Our own custom nav button for Bootstrap */
 .mobile-nav {
@@ -136,10 +148,10 @@ blockquote {
 	position: absolute;
 	z-index: 100;
 	top: 10px;
-	right: 10px;
+	left: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
 	.mobile-nav {
 		display: block;
 	}
@@ -233,120 +245,17 @@ table.table td {
 	float: left
 }
 
-/**********
- * Photos *
- **********/
-
-/* Photo Upload page */
-.photo-upload-dropbox {
-    border: 2px dashed #0099FF;
-    padding: 40px;
-}
-.photo-upload-dropbox.active {
-    border: 4px dashed #FF99FF;
-}
-.upload-trough {
-    position: relative;
-    border: 1px solid #000000;
-    width: 100%;
-    height: 28px;
-}
-.upload-progress-bar {
-    position: relative;
-    width: 0%;
-    height: 100%;
-    background-color: #FF9900;
-}
-
-/* Photo Grids: see http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
-ul.photo-grid {
-	list-style: none;
-	display: inline;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-
-ul.photo-grid li {
-	position: relative;
-	/*float: left;*/
-	display: inline-block;
-	width: 260px;
-	height: 260px;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-ul.photo-grid li .dummy {
-	padding-top: 100%;
-}
-
-.photo-grid-item {
-	cursor: pointer;
-	overflow: hidden; /* Crop off long names, etc. */
-
-	/* We use absolute positioning to detach this element from the flow, */
-	/* allowing the .dummy to dictate the height of the square. */
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.photo-grid-item img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.photo-grid-item .name {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	right: 4px;
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 14pt;
-	font-weight: bold;
-	color: #FFFFFF;
-	text-align: left;
-	text-shadow: 1px 1px 0px #000000,
-				-1px -1px 0px #000000,
-				 1px -1px 0px #000000,
-				-1px 1px 0px #000000;
-}
-
-.photo-description {
-	display: block;
-	border: 1px solid #FF99FF;
-	box-shadow: 0px 0px 4px #0099FF;
-	padding: 10px;
-	margin: 20px 0px;
-	background-color: #000000;
-	width: 790px;
-}
-
-/*ul#arrange-photos {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-}
-ul#arrange-photos li {
-	cursor: pointer;
-	margin: 20px;
-	padding: 1px;
-	float: left;
-	width: 150px;
-}*/
-
 /********
  * Blog *
  *******/
 
+.blog-title {
+	display: block;
+	padding-bottom: 0;
+}
+
 /* Blog titles when shown on index view */
-a.blog-title-index:link, a.blog-title-index:visited {
+a.blog-title:link, a.blog-title:visited {
 	font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
 	font-size: 32pt;
 	font-weight: bold;
@@ -355,59 +264,47 @@ a.blog-title-index:link, a.blog-title-index:visited {
 	-moz-text-shadow: 0px 0px 10px #0099FF;
 	-webkit-text-shadow: 0px 0px 10px #0099FF
 }
-a.blog-title-index:hover, a.blog-title-index:active {
+a.blog-title:hover, a.blog-title:active {
 	text-decoration: underline;
 	text-shadow: 0px 0px 10px #FF99FF;
 	-moz-text-shadow: 0px 0px 10px #FF99FF;
 	-webkit-text-shadow: 0px 0px 10px #FF99FF
 }
 
-/* Poster's avatar box */
-.blog-author, .comment-author {
-	float: right;
-	background-color: #444444;
-	border: 1px solid #CCCCCC;
-	padding: 2px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	width: 100px; /* 96 avatar width + 4px padding */
-	text-align: center;
-	font-weight: bold
-}
-.blog-author a, .comment-author a {
-	text-decoration: none;
-}
-div.siikir-avatar {
-	width: 96px;
-	margin: auto;
-}
-
-.blog-entry-private, .blog-entry-draft, .blog-entry-sticky {
+.blog-meta .blog-private,
+.blog-meta .blog-unlisted,
+.blog-meta .blog-draft,
+.blog-meta .blog-sticky {
 	font-weight: bold;
 	font-style: normal;
 }
 
-.blog-entry-private {
+.blog-meta .blog-private,
+.blog-meta .blog-unlisted {
 	color: #FF9900;
 }
 
-.blog-entry-draft {
+.blog-meta .blog-draft {
 	color: #00FFFF;
 }
 
-.blog-entry-sticky {
+.blog-meta .blog-sticky {
 	color: #FF99FF;
 }
 
 /* Timestamp and author line below blog titles */
-.blog-timestamp {
+.blog-meta, .comment-meta {
 	font-size: smaller;
 	font-style: italic;
-	padding-left: 30px;
-	padding-top: 5px;
-	padding-bottom: 10px
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+.comment-meta {
+	margin-top: 0;
+	margin-bottom: 1rem;
 }
 
+/* TODO */
 ul.blog-categories {
 	list-style: none;
 	display: inline;
@@ -422,40 +319,6 @@ ul.blog-categories li:after {
 }
 ul.blog-categories li:last-child:after {
 	content: "";
-}
-
-/* Blog comment wrapper */
-.comment {
-	border: 1px dashed #006699;
-	padding: 5px
-}
-.comment-editable {
-	color: #FF9900;
-}
-
-/* Wiki */
-a.wiki-broken {
-	color: #FF9900;
-}
-
-/********************
- * Visitor Tracking *
- ********************/
-
-.visitor-graph {
-	height: 16px;
-	width: 100%;
-	border: 1px outset;
-}
-.visitor-graph.unique {
-	background-color: #0099FF;
-	background-image: url("/static/images/blue-clearlooks.png");
-	border-color: #0099FF;
-}
-.visitor-graph.hits {
-	background-color: #FF99FF;
-	background-image: url("/static/images/pink-clearlooks.png");
-	border-color: #FF99FF;
 }
 
 /*******************************************************************************
@@ -478,13 +341,6 @@ a.wiki-broken {
 .markdown img {
 	max-width: 100%;
 	height: auto;
-}
-
-/* Hide the uber wide leaderboard Google ad on mobile */
-@media (max-width: 940px) {
-	.google-leaderboard {
-		display: none;
-	}
 }
 
 /*************
@@ -513,6 +369,7 @@ a.wiki-broken {
 	/* Kirsle logo */
 	width: 317px;
 	height: 177px;
+	margin: 0 auto;
 	background-image: url("kirsle.png");
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -529,17 +386,16 @@ a.wiki-broken {
 	background-repeat: repeat;
 	background-position: 0px 0px;
 
-	/* width and margins to have some control over the nav bar size
-	   despite bootstrap's grid system */
-	max-width: 152px;
-	min-width: 130px;
-	margin-left: auto;
-	margin-right: auto;
-
 	border: 2px ridge #0099FF;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px
+}
+@media (min-width: 1200px) {
+	.k-navpanel {
+		max-width: 200px;
+		margin: 0 auto;
+	}
 }
 .k-navpanel > .k-section {
 	/* Division of navigation bar */

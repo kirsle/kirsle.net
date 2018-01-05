@@ -1,5 +1,6 @@
 /prod.yml
 /db
+/www/.private
 /rophako
 /www/static/photos/*.jpg
 /www/static/photos/*.png
