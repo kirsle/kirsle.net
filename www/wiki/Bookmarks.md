@@ -142,6 +142,7 @@ sub-pages when this list gets too long.
 I don't hide my critism of the PHP language.
 
 * [PHP: a fractal of bad design](https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/) — A thorough breakdown (from 2012) of all of PHP's problems.
+* [PHP in contrast to Perl](https://tnx.nl/php.html) — Enumerates so many of PHP's problems (in the set of built-in functions in the language, their naming conventions, arguments and return values are wildly inconsistent)
 
 ## Programmer Humor
 
@@ -267,6 +268,7 @@ If you violate terms in any of Google's monetary services, your account can be g
 # Philosophy
 
 * [Breaking into the Simulated Universe](https://ieet.org/index.php/IEET2/more/Edge20161030)
+* [What Does It Mean to Die?](https://www.newyorker.com/magazine/2018/02/05/what-does-it-mean-to-die) — Concerning what it means to die: A New Yorker article explores some of the real-world effects of the work of philosophers.
 
 # Short Stories
 

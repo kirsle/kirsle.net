@@ -10,6 +10,7 @@ See [the index](/wiki/_pages) for the list of all available pages in this wiki.
 
 * [Python cocos2d Installation](/wiki/Python-cocos2d-Installation)
 * [Fedora on Macbook](/wiki/Fedora-on-Macbook)
+* [Debian on Macbook](/wiki/Debian-on-Macbook)
 * [nginx configs](/wiki/nginx-configs)
 
 # Ideas and Notes

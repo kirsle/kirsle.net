@@ -1,0 +1,698 @@
+{{ define "title" }}Markdown Cheatsheet{{ end }}
+{{ define "content" }}
+
+<h1>Markdown Cheatsheet</h1>
+
+This is a simple reference sheet for Markdown syntax. The de facto place to find Markdown syntax is at
+<a href="https://daringfireball.net/projects/markdown/syntax">https://daringfireball.net/projects/markdown/syntax</a>
+but I find his web design ugly and hard to follow. ;)<p>
+
+This page just serves as a cheat sheet for Markdown syntax and their results. For descriptive paragraphs
+explaining the syntax, see the page linked above.<p>
+
+The Rophako CMS supports a few extensions to Markdown such as GitHub-style code blocks.<p>
+
+<ul>
+	<li>
+		<a href="#block">Block Elements</a>
+		<ul>
+			<li><a href="#pbr">Paragraphs and Line Breaks</a></li>
+			<li><a href="#h1">Headers</a></li>
+			<li><a href="#bq">Blockquotes</a></li>
+			<li><a href="#ul">Lists</a></li>
+			<li><a href="#pre">Code Blocks</a></li>
+			<li><a href="#hr">Horizontal Rules</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#span">Span Elements</a>
+		<ul>
+			<li><a href="#a">Links</a></li>
+			<li><a href="#em">Emphasis</a></li>
+			<li><a href="#code">Code</a></li>
+			<li><a href="#img">Images</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#misc">Miscellaneous</a>
+		<ul>
+			<li><a href="#autolink">Automatic Links</a></li>
+			<li><a href="#escape">Backslash Escapes</a></li>
+		</ul>
+	</li>
+</ul>
+
+<a name="block"></a>
+<h1>Block Elements</h1>
+
+<a name="pbr"></a>
+<h2>Paragraphs and Line Breaks</h2>
+
+In normal Markdown, a paragraph is defined as a group of lines of text separated from other groups
+by at least one blank line. A hard return inside a paragraph doesn't get rendered in the output.<p>
+
+However, the Rophako CMS uses GitHub style markdown, so a hard return inside a paragraph <em>does</em>
+get translated into a line break (<code>&lt;br&gt;</code>) in the output.
+
+<a name="h1"></a>
+<h2>Headers</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					This is an H1<br>
+					=============<p>
+
+					This is an H2<br>
+					-------------
+				</code>
+			</td>
+			<td>
+				<h1>This is an H1</h1>
+				<h2>This is an H2</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					# This is an H1<p>
+					## This is an H2<p>
+					#### This is an H4
+				</code>
+			</td>
+			<td>
+				<h1>This is an H1</h1>
+				<h2>This is an H2</h2>
+				<h4>This is an H4</h4>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="bq"></a>
+<h3>Blockquotes</h3>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>
+					&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>
+					&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br>
+					&gt;<br>
+					&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>
+					&gt; id sem consectetuer libero luctus adipiscing.
+				</code>
+			</td>
+			<td>
+				<blockquote>
+					This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+					consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+					Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<p>
+
+					Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+					id sem consectetuer libero luctus adipiscing.
+				</blockquote>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>
+					consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>
+					Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br><br>
+
+					&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>
+					id sem consectetuer libero luctus adipiscing.
+				</code>
+			</td>
+			<td>
+				<blockquote>
+					This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+					consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+					Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<p>
+
+					Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+					id sem consectetuer libero luctus adipiscing.
+				</blockquote>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					&gt; This is the first level of quoting.<br>
+					&gt;<br>
+					&gt; &gt; This is nested blockquote.<br>
+					&gt;<br>
+					&gt; Back to the first level.
+				</code>
+			</td>
+			<td>
+				<blockquote>
+					This is the first level of quoting.
+					<blockquote>This is nested blockquote.</blockquote>
+					Back to the first level.
+				</blockquote>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					&gt; ## This is a header.<br>
+					&gt;<br>
+					&gt; 1. This is the first list item.<br>
+					&gt; 2. This is the second list item.<br>
+					&gt;<br>
+					&gt;Here's some example code:<br>
+					&gt;<br>
+					&gt;&nbsp;&nbsp;&nbsp;&nbsp;return shell_exec("echo $input | $markdown_script");
+				</code>
+			</td>
+			<td>
+				<blockquote>
+					<h2>This is a header.</h2>
+					<ol>
+						<li>This is the first list item.</li>
+						<li>This is the second list item.</li>
+					</ol>
+					Here's some example code:
+					<pre>return shell_exec("echo $input | $markdown_script");</pre>
+				</blockquote>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="ul"></a>
+<h2>Lists</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					* Red<br>
+					* Green<br>
+					* Blue
+				</code>
+			</td>
+			<td>
+				<ul>
+					<li>Red</li>
+					<li>Green</li>
+					<li>Blue</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					+ Red<br>
+					+ Green<br>
+					+ Blue
+				</code>
+			</td>
+			<td>
+				<ul>
+					<li>Red</li>
+					<li>Green</li>
+					<li>Blue</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					- Red<br>
+					- Green<br>
+					- Blue
+				</code>
+			</td>
+			<td>
+				<ul>
+					<li>Red</li>
+					<li>Green</li>
+					<li>Blue</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					1. Bird<br>
+					2. McHale<br>
+					3. Parish
+				</code>
+			</td>
+			<td>
+				<ol>
+					<li>Bird</li>
+					<li>McHale</li>
+					<li>Parish</li>
+				</ol>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					1.&nbsp;&nbsp;This is a list item with two paragraphs. Lorem ipsum dolor<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;mi posuere lectus.<p>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;sit amet velit.<p>
+
+					2.&nbsp;&nbsp;Suspendisse id sem consectetuer libero luctus adipiscing.
+				</code>
+			</td>
+			<td>
+				<ol>
+					<li>This is a list item with two paragraphs. Lorem ipsum dolor
+						sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+						mi posuere lectus.<p>
+
+						Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+						vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+						sit amet velit.</li>
+
+					<li>Suspendisse id sem consectetuer libero luctus adipiscing.</li>
+				</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="pre"></a>
+<h2>Code Blocks</h2>
+
+The typical Markdown way to write a code block is to indent each line of a paragraph with at
+least 4 spaces or 1 tab character. The Rophako CMS also uses GitHub-style code blocks, where
+you can use three backticks before and after the code block and then you don't need to indent
+each line of the code (makes copying/pasting easier!)<p>
+
+Like GitHub-flavored Markdown, with a fenced code block you can also specify a programming
+language to get syntax highlighting for the code.<p>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					This is a normal paragraph.<p>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;This is a code block.
+				</code>
+			</td>
+			<td>
+				This is a normal paragraph.<p>
+
+				<pre>This is a code block</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					This is a normal paragraph.<p>
+
+					```<br>
+					This is a GitHub style "fenced code block".<br>
+					```
+				</code>
+			</td>
+			<td>
+				This is a normal paragraph.<p>
+
+				<pre>This is a GitHub style "fenced code block".</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					```javascript<br>
+					document.writeln("Hello world.");<br>
+					```
+				</code>
+			</td>
+			<td>
+				<div class="codehilite"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">writeln</span><span class="p">(</span><span class="s2">&quot;Hello world.&quot;</span><span class="p">);</span></pre></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="hr"></a>
+<h2>Horizontal Rules</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					* * *<p>
+					***<p>
+					*****<p>
+					- - -<p>
+					---------------------------
+				</code>
+			</td>
+			<td>
+				<hr><p>
+				<hr><p>
+				<hr><p>
+				<hr><p>
+				<hr>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<a name="span"></a>
+<h1>Span Elements</h1>
+
+<a name="a"></a>
+<h2>Links</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					This is [an example](http://example.com/ "Title") inline link.<p>
+					[This link](http://example.net/) has no title attribute.
+				</code>
+			</td>
+			<td>
+				This is <a href="http://example.com/" title="Title">an example</a> inline link.<p>
+				<a href="http://example.net/">This link</a> has no title attribute.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					See my [About](/about) page for details.
+				</code>
+			</td>
+			<td>
+				See my <a href="/about">About</a> page for details.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					This is [an example][id] reference-style link.<p>
+					[id]: http://example.com/ "Optional Title Here"
+				</code>
+			</td>
+			<td>
+				This is <a href="http://example.com/" title="Optional Title Here">an example</a> reference-style link.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					This is an example of an implicit reference-style link: search [Google][] for more.<p>
+					[Google]: http://google.com/
+				</code>
+			</td>
+			<td>
+				This is an example of an implicit reference-style link: search <a href="http://google.com/">Google</a> for more.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					I get 10 times more traffic from [Google] [1] than from<br>
+					[Yahoo] [2] or [Bing] [3].<p>
+
+					[1]: http://google.com/ "Google"<br>
+					[2]: http://search.yahoo.com/ "Yahoo Search"<br>
+					[3]: http://bing.com/ "Bing"
+				</code>
+			</td>
+			<td>
+				I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
+				<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or
+				<a href="http://bing.com/" title="Bing">Bing</a>.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="em"></a>
+<h2>Emphasis</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					*single asterisks*<p>
+					_single underscores_<p>
+					**double asterisks**<p>
+					__double underscores__
+				</code>
+			</td>
+			<td>
+				<em>single asterisks</em><p>
+				<em>single underscores</em><p>
+				<strong>double asterisks</strong><p>
+				<strong>double underscores</strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					un*frigging*believable
+				</code>
+			</td>
+			<td>
+				un<em>frigging</em>believable
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					\*this text is surrounded by literal asterisks\*
+				</code>
+			</td>
+			<td>
+				*this text is surrounded by literal asterisks*
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="code"></a>
+<h2>Code</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>
+					Use the `printf()` function.
+				</code>
+			</td>
+			<td>
+				Use the <code>printf()</code> function.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					``There is a literal backtick (`) here.``
+				</code>
+			</td>
+			<td>
+				<code>There is a literal backtick (`) here.</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					A single backtick in a code span: `` ` ``<p>
+					A backtick-delimited string in a code span: `` `foo` ``
+				</code>
+			</td>
+			<td>
+				A single backtick in a code span: <code>`</code><p>
+				A backtick-delimited string in a code span: <code>`foo`</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Please don't use any `&lt;blink&gt;` tags.</code>
+			</td>
+			<td>
+				Please don't use any <code>&lt;blink&gt;</code> tags.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>`&amp;#8212;` is the decimal-encoded equivalent of `&amp;mdash;`.</code>
+			</td>
+			<td>
+				<code>&amp;#8212;</code> is the decimal-encoded equivalent of
+				<code>&amp;mdash;</code>.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="img"></a>
+<h2>Images</h2>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>![Alt text](/static/avatars/default.png)</code>
+			</td>
+			<td>
+				<img src="/static/avatars/default.png" alt="Alt text">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>![Alt text](/static/avatars/default.png "Optional title")</code>
+			</td>
+			<td>
+				<img src="/static/avatars/default.png" alt="Alt text" title="Optional title">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>
+					![Alt text][id]<p>
+					[id]: /static/avatars/default.png "Optional title attribute"
+				</code>
+			</td>
+			<td>
+				<img src="/static/avatars/default.png" alt="Alt text" title="Optional title attribute">
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="misc"></a>
+<h1>Miscellaneous</h1>
+
+<a name="autolink"></a>
+<h2>Automatic Links</h2>
+
+E-mail links get automatically converted into a random mess of HTML attributes to
+attempt to thwart e-mail harvesting spam bots.<p>
+
+<table width="100%" class="table">
+	<thead>
+		<tr>
+			<th width="50%">Markdown Syntax</th>
+			<th width="50%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>&lt;http://example.com/&gt;</code>
+			</td>
+			<td>
+				<a href="http://example.com/">http://example.com/</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>&lt;address@example.com&gt;</code>
+			</td>
+			<td>
+				<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#100;&#100;&#114;&#101;&#115;&#115;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#97;&#100;&#100;&#114;&#101;&#115;&#115;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a><p>
+
+				(Source: <code>&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58; &amp;#97;&amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64; &amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108; &amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#97; &amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#115; &amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112; &amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111; &amp;#109;&lt;/a&gt;</code>)
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<a name="escape"></a>
+<h2>Backslash Escapes</h2>
+
+Use backslash characters to escape any other special characters in the Markdown syntax. For example,
+<code>\*</code> to insert a literal asterisk so that it doesn't get mistaken for e.g. emphasized text,
+a list item, etc.<p>
+
+Markdown provides backslash escapes for the following characters:<p>
+
+<pre>\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parenthesis
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark</pre>
+
+{{ end }}

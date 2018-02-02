@@ -1,0 +1,16 @@
+{{ define "title" }}Google+{{ end }}
+{{ define "content" }}
+<h1>Google+</h1>
+
+{{ $to := "https://plus.google.com/+NoahPetherbridge" }}
+
+Redirecting to <a href="{{ $to }}">{{ $to }}</a>
+
+<script>
+(function() {
+	setTimeout(function() {
+		window.location = "{{ $to }}";
+	}, 200);
+})();
+</script>
+{{ end }}
