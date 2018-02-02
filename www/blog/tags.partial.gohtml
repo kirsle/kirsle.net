@@ -1,13 +1,13 @@
 {{ if .IndexView }}
     Sorted by most frequently used:
 
-    <ul>
+    <ul class="list-unstyled">
     {{ range .Tags }}
         <li><a href="/tagged/{{ .Name }}">{{ .Name }}</a> ({{ .Count }})</li>
     {{ end }}
     </ul>
 {{ else }}
-    <ul>
+    <ul class="list-unstyled">
         <li>&#0187; <a href="/archive">Blog Archives</a></li>
         {{ range .Tags }}
             {{ if ge .Count 8 }}

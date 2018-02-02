@@ -16,11 +16,12 @@
 	<!-- FontAwesome -->
 	<link rel="stylesheet" type="text/css" href="/vendor/FontAwesome/css/fa-svg-with-js.css">
 
-	<!-- Kirsle.net Solar -->
-	<link rel="stylesheet" type="text/css" media="screen" href="/solar/ui.css">
-	<link rel="stylesheet" type="text/css" media="print" href="/solar/print.css">
+	<!-- Kirsle.net Flare -->
+	<link rel="stylesheet" type="text/css" href="/flare/ui.css">
+
 	<link rel="stylesheet" type="text/css" href="/solar/monokai.css">
 	<link rel="stylesheet" type="text/css" href="/solar/vim-syntax.css">
+
 	<link rel="alternate" type="application/rss+xml" title="Kirsle's RSS Feed" href="/blog/rss">
 </head>
 <body>
@@ -29,19 +30,20 @@
 	<a href="#navbar" class="btn btn-primary"><i class="fas fa-bars"></i></a>
 </div>
 
-<div class="k-supernova"></div>
+<div class="brand d-lg-none">
+	<a href="/">
+		<img src="/flare/cjk-48.png" width="48" height="48" alt="Kirsle.net logo">
+		Kirsle.net
+	</a>
+</div>
+
+<div class="wallpaper"></div>
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-12 col-lg-10 col-xl-8">
-			<div class="k-kirsle" onclick="self.location='/'"></div>
-		</div>
-	</div>
-
-	<div class="row">
 
 		<div class="order-1 order-lg-12 col-12 col-lg-10 col-xl-8">
-			<div class="k-content-panel mb-4">
+			<div class="content-panel mb-4">
 				{{ if .SetupNeeded }}
 				<div class="alert alert-success">
 					Your web blog needs to be set up!
@@ -70,76 +72,64 @@
 					</p>
 				{{ end }}
 
-				<div class="k-copyright">
+				<div class="mt-4 copyright">
 					Copyright &copy; {{ Now.Format "2006" }} Noah Petherbridge &mdash; All rights reserved<br>
 					Hosted by <a href="https://www.digitalocean.com/?refcode=ea01734d3fc7">DigitalOcean</a><br>
-					Page generated in {{ printf "%.4f" .RequestDuration.Seconds }}s.
+					Page generated in <code>{{ printf "%.4f" .RequestDuration.Seconds }}s</code>.
 				</div>
 			</div>
 		</div>
 
-		<div class="order-12 order-lg-1 col-12 col-lg-2">
-			<div class="k-navpanel mb-4" id="navbar">
-				<div class="k-section">Kirsle</div>
-				<ul>
+		<div id="navbar" class="nav-panel order-12 order-lg-1 col-12 col-lg-2">
+			<div class="brand">
+				<a href="/">
+					<img src="/flare/cjk-48.png" width="48" height="48" alt="Kirsle.net logo">
+					Kirsle.net
+				</a>
+			</div>
+			<div class="mb-4 center d-lg-none">
+				<a href="#"><i class="fa fa-arrow-up"></i> Back to Top</a>
+			</div>
+			<div class="mb-4">
+				<ul class="list-unstyled">
 					<li>&#0187; <a href="/">Homepage</a> (<a href="/blog.rss">RSS</a>)</li>
 					<li>&#0187; <a href="/about">About Me</a></li>
 					<!-- <li>&#0187; <a href="/photos/albums">Photo Albums</a></li> -->
-					<li>&#0187; <a href="/wiki/Main-Page">Wiki</a></li>
+					<li>&#0187; <a href="/wiki/Main-Page">My Wiki</a></li>
 					<li>&#0187; <a href="/guestbook">Guestbook</a></li>
 					<li>&#0187; <a href="/contact">Contact Me</a></li>
+					<li>&#0187; <a href="/tagged">Blog Tags</a></li>
+					<li>&#0187; <a href="/archive">Archive</a></li>
 				</ul>
 
-				<div class="k-section">Blog Tags</div>
-				{{ RenderTags .Request false }}
-
-				<div class="k-section">Creativity</div>
-				<ul>
+				<h2>Creativity</h2>
+				<ul class="list-unstyled">
 					<li>&#0187; <a href="/rendering">3D Renderings</a></li>
-					<li>&#0187; <a href="/flash">Flash Animation</a></li>
-					<li>&#0187; <a href="/javascript">JavaScript</a></li>
-					<li>&#0187; <a href="/fonts">Fonts</a></li>
-					<li>&#0187; <a href="/doc/">Tutorials</a></li>
-					<li>&#0187; <a href="/designs">Web Design</a></li>
+					<li>&#0187; <a href="/flash">Flash Animations</a></li>
+					<li>&#0187; <a href="/javascript">JavaScript Games</a></li>
+					<li>&#0187; <a href="/fonts">TrueType Fonts</a></li>
+					<li>&#0187; <a href="/designs">Past Web Designs</a></li>
 				</ul>
 
-				<div class="k-section">Software</div>
-				<ul>
-					<li>&#0187; <a href="/rivescript">RiveScript</a></li>
-					<li>&#0187; <a href="/errorgen">Error Generator</a></li>
-					<li>&#0187; <a href="/tkcalc">Tk Calculator</a></li>
-					<li>&#0187; <a href="http://sh.kirsle.net/" target="_blank">Terminal Apps</a></li>
+				<h2>Web Tools</h2>
+				<ul class="list-unstyled">
+					<li>&#0187; <a href="/wizards/ttf2eot.cgi">TTF to EOT Font Converter</a></li>
+					<li>&#0187; <a href="/wizards/ps1.html">Bash $PS1 Prompt Generator</a></li>
+					<li>&#0187; <a href="/wizards/fader.cgi">Text Color Fader</a></li>
+					<li>&#0187; <a href="/wizards/translator.html">Azulian Translater</a></li>
+					<li>&#0187; <a href="/wizards/flask-session.cgi">Flask Session Viewer</a></li>
+				</ul>
+
+				<h2>Software</h2>
+				<ul class="list-unstyled">
+					<li>&#0187; <a href="/tagged/rivescript">RiveScript</a></li>
+					<li>&#0187; <a href="/errorgen">Error Message Generator</a></li>
+					<li>&#0187; <a href="/tkcalc">Perl/Tk Calculator</a></li>
 					<li>&#0187; <a href="/pccc">CyanChat Client</a></li>
 				</ul>
 
-				<div class="k-section">Web Tools</div>
-				<ul>
-					<li>&#0187; <a href="/wizards/ttf2eot.cgi">TTF to EOT</a></li>
-					<li>&#0187; <a href="/wizards/ps1.html">Bash $PS1 Prompt</a></li>
-					<li>&#0187; <a href="/wizards/fader.cgi">Text Fader</a></li>
-					<li>&#0187; <a href="/wizards/favicon.cgi">Favicons</a></li>
-					<li>&#0187; <a href="/wizards/distance.cgi">Distance Calc</a></li>
-					<li>&#0187; <a href="/wizards/translator.html">Azulian Translater</a></li>
-					<li>&#0187; <a href="/wizards/xbmask.cgi">XBM Masks</a></li>
-					<li>&#0187; <a href="/wizards/flask-session.cgi">Flask Session</a></li>
-				</ul>
-
-				<div class="k-section">Subdomains</div>
-				<ul>
-					<li>&#0187; <a href="https://rophako.kirsle.net/">Rophako CMS</a></li>
-					<li>&#0187; <a href="https://mc.kirsle.net/">Minecraft Server</a></li>
-					<li>&#0187; <a href="https://rpm.kirsle.net/">Linux RPMs</a></li>
-				</ul>
-
-				<div class="k-section">Miscellany</div>
-				<ul>
-					<li>&#0187; <a href="/firered">Pok&#0233;mon Fuchsia City</a></li>
-					<li>&#0187; <a href="/msdos">DOS and Windows</a></li>
-					<li>&#0187; <a href="/raspberrypi">Raspberry Pi</a></li>
-				</ul>
-
-				<div class="k-section">Social Links</div>
-				<ul>
+				<h2>Out of Network</h2>
+				<ul class="list-unstyled">
 					<li>&#0187; <a href="https://www.google.com/+NoahPetherbridge" rel="me">Google+</a></li>
 					<li>&#0187; <a href="https://www.facebook.com/noah.lee.petherbridge" rel="me">Facebook</a></li>
 					<li>&#0187; <a href="https://twitter.com/kirsle" rel="me">Twitter</a></li>
@@ -150,36 +140,7 @@
 					<li>&#0187; <a href="https://www.npmjs.org/~kirsle" rel="me">npm</a></li>
 				</ul>
 
-				<div class="k-section">Fan Club</div>
-				<ul>
-					{{ if .LoggedIn }}
-						<li>&#0164; Hi, <big><a href="/account">{{ or .CurrentUser.Name .CurrentUser.Username }}</a></big></li>
-						{{ if .CurrentUser.Admin }}
-							<li>&#0187; <a href="/admin">Admin Center</a></li>
-						{{ end }}
-						<li>&#0187; <a href="/blog/edit">Update Blog</a></li>
-						<li>&#0187; <a href="/blog/drafts">Drafts</a>/<a href="/blog/private">Private</a></li>
-						<li>&#0187; <a href="/logout">Log Out</a>
-					{{ else }}
-						<li id="login-link">&#0187; <a href="/login" class="login-link">Log In</a></li>
-					{{ end }}
-				</ul>
-				<div id="login-inline" style="display: none">
-					<form action="/login" method="POST">
-					<input type="hidden" name="_csrf" value="{{ .CSRF }}">
-					<input type="hidden" name="next" value="{{ .Path }}">
-					<input type="text" class="form-control" size="4" name="username" style="display: inline; width: 45%">
-					<input type="password" class="form-control" size="4" name="password" style="display: inline; width: 45%">
-					<br>
-					<button type="submit" class="btn btn-primary" style="width: 100%">Log In</button>
-					</form>
-				</div>
-
 				<div class="center">
-					<a href="https://www.python.org/" target="_blank">
-						<img src="/static/images/python.png" width="80" height="15" alt="Python powered">
-					</a><br>
-
 					<a href="https://validator.w3.org/check?uri=referer">
 						<img src="/static/images/html5.png" width="80" height="15" alt="W3C Valid HTML5">
 					</a><br>
@@ -193,6 +154,32 @@
 					</a>
 				</div>
 
+				<ul class="list-unstyled">
+					{{ if .LoggedIn }}
+						<li>&#0164; Hi, <big><a href="/account">{{ or .CurrentUser.Name .CurrentUser.Username }}</a></big></li>
+						{{ if .CurrentUser.Admin }}
+							<li>&#0187; <a href="/admin">Admin Center</a></li>
+						{{ end }}
+						<li>&#0187; <a href="/blog/edit">Update Blog</a></li>
+						<li>&#0187; <a href="/blog/drafts">Drafts</a>/<a href="/blog/private">Private</a></li>
+						<li>&#0187; <a href="/logout">Log Out</a>
+					{{ else }}
+						<li id="login-link">
+							<small><a href="/login" class="login-link text-muted">Log In</a></small>
+						</li>
+					{{ end }}
+				</ul>
+				<div id="login-inline" style="display: none">
+					<form action="/login" method="POST">
+					<input type="hidden" name="_csrf" value="{{ .CSRF }}">
+					<input type="hidden" name="next" value="{{ .Path }}">
+					<input type="text" class="form-control" size="4" name="username" style="display: inline; width: 46%">
+					<input type="password" class="form-control" size="4" name="password" style="display: inline; width: 46%">
+					<br>
+					<button type="submit" class="btn btn-primary" style="width: 100%">Log In</button>
+					</form>
+				</div>
+
 			</div>
 		</div>
 
@@ -200,11 +187,11 @@
 
 </div>
 
-<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="/js/offsite.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/vendor/FontAwesome/js/fontawesome-all.min.js"></script>
-<script type="text/javascript">
+<script src="/js/jquery-2.1.0.min.js"></script>
+<script src="/js/offsite.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/vendor/FontAwesome/js/fontawesome-all.min.js"></script>
+<script>
 	$(document).ready(function() {
 		$(".login-link").click(function() {
 			$("#login-link").hide();

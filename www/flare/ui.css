@@ -1,0 +1,354 @@
+body {
+    background-color: #000000;
+    background-image: url("/flare/starscape.png");
+    background-attachment: fixed;
+    line-height: 1.6rem;
+    color: #BEBEBE;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited {
+    color: #99CCFF;
+    text-decoration: underline;
+}
+a:hover, a:active {
+    color: #FFCCFF;
+}
+a img {
+    border: 0;
+}
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #0099FF;
+}
+h2, h3, h4 {
+    color: #BBDDFF;
+}
+
+pre, code {
+    font-family: "Lucida Console", "DejaVu LGC Sans Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Ubuntu Mono", monospace;
+    color: #FF9900;
+}
+pre {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px dashed #CCCCCC;
+    padding: 10px;
+    margin: 10px 5px;
+    max-height: 550px;
+    overflow: auto;
+}
+
+label {
+    cursor: pointer;
+}
+legend {
+    color: #0099FF;
+}
+
+table.box {
+    border: 1px solid #999999;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+textarea,
+input[type="file"],
+select {
+    background-color: rgba(0, 0, 0, .5) !important;
+    border: 1px solid #999 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    margin: 2px 0;
+}
+input:focus, textarea:focus, select:focus {
+    border: 1px solid #069 !important;
+    color: #FFF !important;
+}
+
+/* Bootstrap CSS overrides */
+p {
+    margin: 10px 0;
+}
+.text-muted {
+    color: #959595 !important;
+}
+ul, ul ul, ol ul, ul ol, ol ol {
+    margin: 10px 0;
+}
+li > ul, li > ol {
+    /* embedded list */
+    margin: 0;
+}
+blockquote {
+    margin: 20px 0;
+}
+.card {
+    background-color: transparent;
+    border: 1px dashed #006699;
+}
+
+/* Mobile responsiveness */
+.mobile-nav {
+    display: none;
+}
+@media (max-width: 990px) {
+    body {
+        background-image: url("/flare/blue-dust.png");
+        background-attachment: scroll;
+    }
+    .mobile-nav {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        top: 10px;
+        right: 10px;
+    }
+    .wallpaper {
+        display: none;
+    }
+}
+
+/*******************************************************************************
+ * General CSS Classes                                                         *
+ ******************************************************************************/
+
+.center {
+	margin: auto;
+	text-align: center
+}
+.right {
+	margin-left: auto;
+	margin-right: 0px;
+	text-align: right
+}
+.invisible {
+	display: none
+}
+.clear {
+	clear: both;
+}
+
+.markdown table,
+table.table,
+table.table th,
+table.table td {
+	border: 1px solid #999999;
+}
+
+.markdown table,
+table.table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 10px 0px;
+	padding: 0px;
+}
+
+table.table-wide {
+	width: 100%;
+}
+
+.markdown table th,
+table.table th {
+	background-color: #003366;
+	color: #FFFFFF;
+	text-align: left;
+	padding: 4px;
+}
+
+.markdown table tr:nth-child(even),
+table.table tr:nth-child(even) {
+	background-color: #000000;
+}
+
+.markdown table tr:nth-child(odd),
+table.table tr:nth-child(odd) {
+	background-color: #202020;
+}
+
+.markdown table td,
+table.table td {
+	padding: 4px;
+	vertical-align: top;
+	text-align: left;
+}
+
+/* Make a photo look nice. */
+.portrait, .markdown img {
+	display: inline;
+	background-color: #CFCFCF;
+	padding: 4px;
+	border: 1px solid #000000;
+	box-shadow: 0px 0px 4px #0099FF;
+}
+
+/* Responsive images in markdown */
+.markdown img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*******************************************************************************
+ * Styles Needed by Specific Pages in the CMS                                  *
+ ******************************************************************************/
+
+/* Downloads */
+
+.distro {
+	border: 1px solid #CCCCCC
+}
+.distro th {
+	width: 150px;
+	text-align: center;
+	vertical-align: top
+}
+.distro td {
+	width: 150px;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid #808080
+}
+.distro td img {
+	float: left
+}
+
+/********
+ * Blog *
+ *******/
+
+.blog-title {
+	display: block;
+	padding-bottom: 0;
+}
+
+/* Blog titles when shown on index view */
+a.blog-title:link, a.blog-title:visited {
+	font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
+	font-size: 32pt;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 10px #0099FF;
+	-moz-text-shadow: 0px 0px 10px #0099FF;
+	-webkit-text-shadow: 0px 0px 10px #0099FF
+}
+a.blog-title:hover, a.blog-title:active {
+	text-decoration: underline;
+	text-shadow: 0px 0px 10px #FF99FF;
+	-moz-text-shadow: 0px 0px 10px #FF99FF;
+	-webkit-text-shadow: 0px 0px 10px #FF99FF
+}
+
+.blog-meta .blog-private,
+.blog-meta .blog-unlisted,
+.blog-meta .blog-draft,
+.blog-meta .blog-sticky {
+	font-weight: bold;
+	font-style: normal;
+}
+
+.blog-meta .blog-private,
+.blog-meta .blog-unlisted {
+	color: #FF9900;
+}
+
+.blog-meta .blog-draft {
+	color: #00FFFF;
+}
+
+.blog-meta .blog-sticky {
+	color: #FF99FF;
+}
+
+/* Timestamp and author line below blog titles */
+.blog-meta, .comment-meta {
+	font-size: smaller;
+	font-style: italic;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+.comment-meta {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+/* TODO */
+ul.blog-categories {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+ul.blog-categories li {
+	display: inline;
+}
+ul.blog-categories li:after {
+	content: ", ";
+}
+ul.blog-categories li:last-child:after {
+	content: "";
+}
+
+/*******************************************************************************
+ * Kirsle.net Flare Design                                                     *
+ ******************************************************************************/
+
+.wallpaper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    background-image: url("/flare/purple-star.jpg");
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.brand, .brand a {
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    line-height: 48px;
+    font-style: italic;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav-panel, .content-panel {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.nav-panel h2 {
+    font-size: 18pt;
+    text-align: center;
+    border-bottom: 2px ridge #0099FF;
+}
+
+.content-panel {
+    border: 2px ridge #0099FF;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 40px;
+    padding: 16px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: smaller;
+    font-style: italic;
+}
+.copyright code {
+    color: inherit;
+}
+
+@media (max-width: 990px) {
+    .content-panel {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
