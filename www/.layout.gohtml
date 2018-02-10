@@ -66,9 +66,9 @@
 
 				{{ template "content" . }}
 
-				{{ if and .CurrentUser.Admin .Editable }}
+				{{ if and .CurrentUser.Admin .Editable (ne .TemplatePath ".markdown.gohtml") }}
 					<p>
-						<strong>Admin:</strong> [<a href="/admin/editor?file={{ or .Data.MarkdownFile TemplateName }}">edit this page</a>]
+						<strong>Admin:</strong> [<a href="/admin/editor?file={{ .TemplatePath }}">edit this page</a>]
 					</p>
 				{{ end }}
 
