@@ -32,6 +32,7 @@ sub-pages when this list gets too long.
 * [Network Security](#network-security) — Encryption, OpSec, &amp; hacking topics.
   * [NSA](#nsa) — Stories of the NSA, Edward Snowden, and related OpSec topics.
 * [Philosophy](#philosophy)
+* [Privacy](#privacy)
 * [Short Stories](#short-stories)
 * [Reddit](#reddit) — Miscellaneous cool Reddit threads and comments.
 
@@ -270,6 +271,13 @@ If you violate terms in any of Google's monetary services, your account can be g
 * [Breaking into the Simulated Universe](https://ieet.org/index.php/IEET2/more/Edge20161030)
 * [What Does It Mean to Die?](https://www.newyorker.com/magazine/2018/02/05/what-does-it-mean-to-die) — Concerning what it means to die: A New Yorker article explores some of the real-world effects of the work of philosophers.
 
+# Privacy
+
+This topic has some overlap with my [NSA](#nsa) category; check those links too.
+
+* [Privacy in General](https://www.billdietrich.me/Privacy.html) — "Why should I care about privacy ? I have nothing to hide. I'm not a criminal." —  Privacy matters because there are criminals and corporations out there trying to rip you off.
+* [If You Are Doing Nothing Wrong You Have PLENTY to Fear - 30 Examples](https://foodforthethinkers.com/2014/04/25/if-you-are-doing-nothing-wrong-you-have-plenty-to-fear-30-examples/)
+
 # Short Stories
 
 * [There Will Come Soft Rains by Bradbury](http://www.gs.cidsnet.de/englisch-online/originals/soft_rains.htm) — A chilling tale of a smart home in a post-apocalyptic future.
@@ -278,7 +286,7 @@ If you violate terms in any of Google's monetary services, your account can be g
 * [I don't know, Timmy, being God is a big responsibility](https://qntm.org/responsibility) — A short story about a supercomputer that simulates the universe a little *too* perfectly. *"Well, we can't exactly turn it off."*
 * [The Egg by Andy Weir](http://www.galactanet.com/oneoff/theegg_mod.html) — A story about the space in between lives. [Excellent YouTube adaptation.](https://www.youtube.com/watch?v=ehRggplMieM)
 * [Ragged Trousered Philosopher](http://www.fullmoon.nu/articles/art.php?id=tal) — A conversation with God on a train.
-* [The Machine](http://www.effectgames.com/demos/canvascycle/) — A webcomic about teleporters and whether they murder &amp; re-materialize their users.
+* [The Machine](http://existentialcomics.com/comic/1) — A webcomic about teleporters and whether they murder &amp; re-materialize their users.
 * [25 Lives](https://s2b2.livejournal.com/142934.html) — A touching webcomic about reincarnation.
 
 # Reddit

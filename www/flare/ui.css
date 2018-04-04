@@ -332,7 +332,7 @@ ul.blog-categories li:last-child:after {
 .content-panel {
     border: 2px ridge #0099FF;
     border-radius: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 40px;
     padding: 16px;
 }
