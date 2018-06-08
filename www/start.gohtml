@@ -5,22 +5,27 @@
 
 <h2>Google</h2>
 
-<form method="GET" action="https://www.google.com/search">
+<form method="GET" class="form-inline" action="https://www.google.com/search">
 	<input type="text" size="80" class="form-control inline" name="q" id="google-search">
 	<button type="submit" class="btn btn-primary">Go</button>
 </form>
 
+<p>
+	<button data-url="https://hangouts.google.com/" class="app btn btn-primary">Google Hangouts</button>
+</p>
+
 <h2>Slack Teams</h2>
 
-<button data-url="https://with-in.slack.com/" class="app btn btn-primary">Within Slack</button>
-<button data-url="https://la-engineers.slack.com/" class="app btn btn-primary">LA-Engineers Slack</button>
-<button data-url="https://botmakers.slack.com/" class="app btn btn-primary">Botmakers Slack</button>
-<button data-url="https://socalpython.slack.com/" class="app btn btn-primary">SoCal Python Slack</button><p>
+<p>
+<button data-url="https://with-in.slack.com/" class="app btn btn-primary">WITHIN</button>
+<button data-url="https://la-engineers.slack.com/" class="app btn btn-primary">LA-Engineers</button>
+<button data-url="https://botmakers.slack.com/" class="app btn btn-primary">Botmakers</button>
+</p>
 
 <em>David is the best.</em>
 
 {{ end }}
-{% block scripts %}
+{{define "scripts" }}
 <script>
 	$(document).ready(function() {
 		$("#google-search").focus();
@@ -35,4 +40,4 @@
 		window.open(url, "_blank", "width=1024,height=768,location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0");
 	}
 </script>
-{% endblock %}
+{{ end }}

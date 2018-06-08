@@ -119,6 +119,7 @@ sub-pages when this list gets too long.
   * [Architecture for a Golang Web App](https://larry-price.com/blog/2015/06/25/architecture-for-a-golang-web-app/)
   * [Structuring Applications in Go](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)
   * [The Project Directory Structure](http://www.nguyenanhdung.info/2017/11/golang-project-directory-structure.html)
+  * [How I write Go services after seven years](https://medium.com/@matryer/how-i-write-go-http-services-after-seven-years-37c208122831)
 * Makefiles
   * [Make and Go for Fun and Profit](https://unwiredcouch.com/2016/05/31/go-make.html)
 * Interoperability

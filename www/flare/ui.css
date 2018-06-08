@@ -27,6 +27,7 @@ h1, h2, h3, h4,
 }
 h2, h3, h4 {
     color: #BBDDFF;
+    margin: 20px 0;
 }
 
 pre, code {
@@ -41,6 +42,17 @@ pre {
     margin: 10px 5px;
     max-height: 550px;
     overflow: auto;
+}
+
+blockquote {
+	border-left: 2px solid #FF99FF;
+	padding-left: 1rem;
+}
+blockquote blockquote {
+	border-left-color: #FF9900;
+}
+blockquote blockquote blockquote {
+	border-left-color: #0099FF;
 }
 
 label {
