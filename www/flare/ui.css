@@ -88,6 +88,9 @@ input:focus, textarea:focus, select:focus {
 p {
     margin: 10px 0;
 }
+hr {
+	border-top: 1px solid #006699;
+}
 .text-muted {
     color: #959595 !important;
 }
