@@ -41,8 +41,11 @@ sub-pages when this list gets too long.
   * [NSA](#nsa) — Stories of the NSA, Edward Snowden, and related OpSec topics.
 * [Philosophy](#philosophy)
   * [DP/DR](#dp-dr) — Depersonalization/derealization.
+* [Politics](#politics)
 * [Privacy](#privacy)
 * [Short Stories](#short-stories)
+* [Spirituality](#spirituality)
+  * [Gnostic](#gnostic)
 * [Reddit](#reddit) — Miscellaneous cool Reddit threads and comments.
 
 # Gaming
@@ -134,6 +137,10 @@ in nature so I categorize these links as a sub-genre of [Philosophy](#philosophy
   * [Alan Watts Proves You Don't Exist](https://www.youtube.com/watch?v=vNKOUhx-7qk)
   * [Alan Watts - Are you ready to 'wake up'?](https://www.youtube.com/watch?v=YFzeCv_WFnY)
 
+# Politics
+
+* [Voting lines between Democrats and Republicans on many key issues](https://np.reddit.com/r/technology/comments/6pc5qu/democrats_propose_rules_to_break_up_broadband/dkon8t4/) — and they say both sides are the same. Republicans and Democrats voted polar opposites (-100%...+100%) on many key controversial issues like Net Neutrality, economy/jobs, "war on terror", civil rights, family planning and environmentalism.
+
 # Privacy
 
 This topic has some overlap with my [NSA](#nsa) category; check those links too.
@@ -151,6 +158,16 @@ This topic has some overlap with my [NSA](#nsa) category; check those links too.
 * [Ragged Trousered Philosopher](http://www.fullmoon.nu/articles/art.php?id=tal) — A conversation with God on a train.
 * [The Machine](http://existentialcomics.com/comic/1) — A webcomic about teleporters and whether they murder &amp; re-materialize their users.
 * [25 Lives](https://s2b2.livejournal.com/142934.html) — A touching webcomic about reincarnation.
+
+# Spirituality
+
+## Gnostic
+
+* **The origin story:** because the book of Genesis is just a fraction of the full story.
+  Gnostic readings that were recommended to me:
+  1. [On the Origin of the World](http://www.gnosis.org/naghamm/origin.html)
+  2. [The Hypostasis of the Archons](http://www.gnosis.org/naghamm/hypostas.html)
+  3. [The Apocryphon of John](http://www.gnosis.org/naghamm/apocjn.html)
 
 # Reddit
 

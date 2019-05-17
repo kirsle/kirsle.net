@@ -12,6 +12,9 @@ These are the personal projects I'm currently working on.
 
 ### Open Source
 
+* [sonar](https://git.kirsle.net/apps/sonar) is an alarm clock program that plays
+  a folder of random music. Mine currently wakes me up to speeches from the
+  philosopher [Alan Watts](https://www.youtube.com/watch?v=y_I3Iqx8GY0&list=PLX5WbxWCSYilmAemBeEqz-zBqbcEF62w_).
 * [kirsle/blog](https://github.com/kirsle/blog): the Go software that currently
   powers the back-end of kirsle.net.
 * [rivescript-js](https://github.com/aichaos/rivescript-js): the JavaScript port

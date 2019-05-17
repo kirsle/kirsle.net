@@ -80,6 +80,7 @@
   * [2D Game Art for Programmers](http://www.2dgameartguru.com/) — Guides on vector art using Inkscape, GIMP &amp; co.
   * [Developer's **Music Making** Guide](http://ruoyusun.com/2017/08/29/make-some-music.html)
   * [Tips for Building Mobile Games in HTML5](https://thomashunter.name/blog/tips-for-building-mobile-games-in-html5/)
+  * [256-Color VGA Programming in DOS](http://www.brackeen.com/vga/) — tutorial and guide for building DOS programs and their low-level direct memory access to VGA graphics.
 * Tools
   * [Game Mechanic Explorer](https://gamemechanicexplorer.com/) — Interactive demos and code samples for common game mechanics.
   * [GifCam](http://blog.bahraniapps.com/gifcam/) — Like FRAPS, to make gifs from your games
@@ -121,6 +122,7 @@
 
 * [JavaScript Module Pattern: In-Depth](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html) — How to write self-contained JavaScript modules in raw ES5.
 * [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) — Using `<script type="module">` and `<script nomodule>` to ship native ES6 code to the browser, with pre-browserified fallback for legacy users.
+* [A JavaScript-Free Frontend](https://dev.to/winduptoy/a-javascript-free-frontend-2d3e) — Modals, drop-downs and other <abbr title="Single Page App">SPA</abbr> features in pure HTML and CSS without JavaScript.
 
 ## PHP
 

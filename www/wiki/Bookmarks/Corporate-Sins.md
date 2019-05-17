@@ -5,6 +5,7 @@ corporations over the years.
 
 * [Chick-fil-A](#chick-fil-a)
 * [Cisco](#cisco)
+* [Facebook](#facebook)
 * [Symantec](#symantec)
 
 ---
@@ -45,11 +46,28 @@ entire career in tech.
 >
 > — [Tom's Hardware](https://www.tomshardware.com/news/cisco-backdoor-hardcoded-accounts-software,37480.html)
 
+* [Cisco: We've killed another critical hard-coded root password bug, patch urgently](https://www.zdnet.com/google-amp/article/cisco-weve-killed-another-critical-hard-coded-root-password-bug-patch-urgently/) (Sept 2018) — this makes what, six now in 2018?
 * [Backdoors Keep Appearing in Cisco's Routers](https://www.tomshardware.com/news/cisco-backdoor-hardcoded-accounts-software,37480.html) (July 2018) —
   five backdoors discovered in five months in 2018.
 * [Cisco Removes Backdoor Account, Fourth in the Last Four Months](https://www.bleepingcomputer.com/news/security/cisco-removes-backdoor-account-fourth-in-the-last-four-months/) (June 2018)
 * [Cisco fixes hard-coded password 'backdoor' flaw in Wi-Fi access points](https://www.zdnet.com/article/cisco-fixes-wi-fi-access-points-with-hard-coded-backdoor-access/) (2016)
 * [Malicious Cisco router backdoor found on 79 more devices, 25 in the US](https://arstechnica.com/information-technology/2015/09/malicious-cisco-router-backdoor-found-on-79-more-devices-25-in-the-us/) (2015) — Security researchers discovered a hidden "knock sequence" that allowed remote access to the Cisco routers. When confronted, Cisco "fixed" the problem by shuffling the knock sequence around. The security researches discovered the new sequence again because *of course they did.*
+
+# Facebook
+
+Facebook has been having a really bad 2018 since the Cambridge Analytica scandal began.
+Only started collecting links here 12/6/18, needs some backfilling.
+
+* [Facebook accused of striking 'secret deals over user data' - BBC News](https://www.bbc.com/news/technology-46456695) ‒ leaked internal exec emails about their purposefully privacy-infringing business practices.
+  * Allowed some companies to retain full access to users' friends' data, *even after* closing the general privacy hole in 2014/2015 as related to the Cambridge Analytica leaks.
+  * They were aware the Android permission change to log users' call and text history *would be controversial* before they even launched it, and purposefully directed users attention away from the feature.
+
+    > Michael LeBeau (Facebook product manager):
+    >
+    > "As you know all the growth team is planning on shipping a permissions update on Android at the end of this month. They are going to include the 'read call log' permission... This is a pretty high-risk thing to do from a PR perspective but it appears that the growth team will charge ahead and do it...[The danger is] screenshot of the scary Android permissions screen becomes a meme (as it has in the past), propagates around the web, it gets press attention, and enterprising journalists dig into what exactly the new update is requesting, then write stories about "Facebook uses new Android update to pry into your private life in ever more terrifying ways".
+
+* [As Facebook Raised a Privacy Wall, It Carved an Opening for Tech Giants](https://www.nytimes.com/2018/12/18/technology/facebook-privacy.html) (NY Times) ‒ "Facebook allowed Microsoft’s Bing search engine to see the names of virtually all Facebook users’ friends without consent, the records show, and gave Netflix and Spotify the ability to read Facebook users’ private messages."
+  * Non-NY Times article: [Facebook let tons of companies get info about you, including Amazon, Netflix, and Microsoft](https://www.cnbc.com/2018/12/19/facebook-gave-amazon-microsoft-netflix-special-access-to-data-nyt.html) (CNBC)
 
 # Symantec
 

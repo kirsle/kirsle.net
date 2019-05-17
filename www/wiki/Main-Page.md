@@ -21,6 +21,7 @@ See [the index](/wiki/_pages) for the list of all available pages in this wiki.
 * [Built with RiveScript](/wiki/Built-with-RiveScript) - Collection of known RiveScript projects
 * [Protocol Buffers Protocol](/wiki/Protocol-Buffers-Protocol)
 * [Optimize RiveScript](/wiki/Optimize-RiveScript) - So it can support Alice-sized brains
+* [Self Hosting](/wiki/Self-Hosting) - Own your own data + how well Android works in 2018 without Google.
 
 # Personal Reference
 
