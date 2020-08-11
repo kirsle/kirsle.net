@@ -1,0 +1,188 @@
+{{ define "title" }}App Compatibility{{ end }}
+{{ define "content" }}
+
+<h1><a href="/wiki/Degoogle">Degoogle</a> / App Compatibility</h1>
+
+<p>
+This is my App Compatibility Table for the Play Store apps I use and their
+status running on a google-free Android device.
+</p>
+
+<p>
+My test device is a Pixel (1st gen) running LineageOS 17 without Google Apps
+nor microG. Play Store apps were downloaded using
+<a href="https://f-droid.org/en/packages/com.aurora.store/" target="_blank">Aurora
+Store</a> on F-Droid.
+</p>
+
+<p><strong>Legend:</strong></p>
+<ul>
+	<li><strong class="text-success">Green:</strong> app works to an acceptable
+		level of functionality.</li>
+	<li><strong class="text-warning">Yellow:</strong> app works at a basic level
+		<em>OR</em> there is a functional web-app alternative.</li>
+	<li><strong class="text-danger">Red:</strong> app does not work AND there
+		is no suitable web-app alternative.</li>
+</ul>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>App Name</th>
+			<th>On F-Droid?</th>
+			<th>Web app?</th>
+			<th>Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="bg-success text-light">Alaska Airlines</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				Seems to work. Haven't tested actual flight.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-danger text-light">Alltrails</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				Error: app requires Google Play Services to run.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Bank of America</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				App works fine. Fingerprint reader supported!
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-warning text-dark">Buycott</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				Pops up a warning that it requires Google Play Services, but
+				seems to work anyway.<br>
+				Product barcode scanning works.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Discord</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				Works!
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-danger text-light">Disneyland</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				App requires Google Play Services to work.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Fly Delta</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				Seems to work. Haven't tested actual flight.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Hulu</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				No Chromecast support.<br>
+				Website tells you to get the mobile app.<br>
+				Desktop-mode website could try and play videos, but failed with
+				an error. (Fennec F-Droid browser).
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Kik</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				Works!
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-warning text-dark">Lyft</td>
+			<td>-</td>
+			<td><a href="https://ride.lyft.com/">ride.lyft.com</a></td>
+			<td>
+				App won't run without Google Play Services.<br>
+				Mobile web app works to request a ride.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Netflix</td>
+			<td>-</td>
+			<td>-</td>
+			<td>Works, but no Chromecast support</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Nextcloud</td>
+			<td><a href="https://f-droid.org/en/packages/com.nextcloud.client/" target="_blank">Yes</a></td>
+			<td>-</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">ProtonMail</td>
+			<td>-</td>
+			<td>-</td>
+			<td>No push notification support w/o Play Services.</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Rivermark Mobile</td>
+			<td>-</td>
+			<td>-</td>
+			<td>Works!</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">Twitter</td>
+			<td>-</td>
+			<td><a href="https://twitter.com/">twitter.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="bg-warning text-dark">Uber</td>
+			<td>-</td>
+			<td><a href="https://m.uber.com/">m.uber.com</a></td>
+			<td>
+				App runs, but map doesn't load and GPS location not supported
+				without Google Play Services.<br>
+				Mobile web app works to request a ride.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-danger text-light">Venmo</td>
+			<td>-</td>
+			<td>-</td>
+			<td>
+				App crashes frequently. There is a web app, but sending/receiving
+				payments is not supported in the web app.
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">VLC Player</td>
+			<td><a href="https://f-droid.org/en/packages/org.videolan.vlc/">Yes</a></td>
+			<td>-</td>
+			<td>Works! Has FOSS Chromecast support!</td>
+		</tr>
+		<tr>
+			<td class="bg-success text-light">ZOOM Cloud Meetings</td>
+			<td>-</td>
+			<td>-</td>
+			<td>Seems working, haven't tested a video call yet.</td>
+		</tr>
+	</tbody>
+</table>
+
+{{ end }}

@@ -11,7 +11,9 @@ See [the index](/wiki/_pages) for the list of all available pages in this wiki.
 * [Python cocos2d Installation](/wiki/Python-cocos2d-Installation)
 * [Fedora on Macbook](/wiki/Fedora-on-Macbook)
 * [Debian on Macbook](/wiki/Debian-on-Macbook)
+* [Linux on Smartphones](/wiki/Linux-Phones)
 * [nginx configs](/wiki/nginx-configs)
+* [Go WebAssembly](/wiki/Go-WebAssembly)
 
 # Ideas and Notes
 
@@ -22,6 +24,10 @@ See [the index](/wiki/_pages) for the list of all available pages in this wiki.
 * [Protocol Buffers Protocol](/wiki/Protocol-Buffers-Protocol)
 * [Optimize RiveScript](/wiki/Optimize-RiveScript) - So it can support Alice-sized brains
 * [Self Hosting](/wiki/Self-Hosting) - Own your own data + how well Android works in 2018 without Google.
+* [Degoogle](/wiki/Degoogle) - Notes on my personal effort to de-google my life.
+* [Simple CAS Protocol](/wiki/Simple-CAS-Protocol) - Simple overview of single sign-on with CAS protocol.
+* Google-fu examples:
+  * [Vue.js public path config](/wiki/Vue-DDG-Searches)
 
 # Personal Reference
 

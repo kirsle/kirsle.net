@@ -113,7 +113,7 @@ blockquote {
 .mobile-nav {
     display: none;
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
     body {
         background-image: url("/flare/blue-dust.png");
         background-attachment: scroll;
@@ -361,7 +361,7 @@ ul.blog-categories li:last-child:after {
     color: inherit;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 767px) {
     .content-panel {
         margin-left: 0;
         margin-top: 20px;

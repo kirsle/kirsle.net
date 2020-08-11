@@ -1,0 +1,42 @@
+{{ define "title" }}Archive{{ end }}
+{{ define "content" }}
+
+<h1>Archive</h1>
+
+{{ $thumbs := .Data.Thumbnails }}
+
+{{ range .Data.Archive }}
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>{{ .Date.Format "January, 2006" }}</h3>
+        </div>
+        <div class="card-body">
+
+            <div class="row">
+                {{ range .Posts }}
+                {{ $thumb := index $thumbs .ID }}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card bg-secondary"
+                        style="height: auto; min-height: 150px;
+                        {{ if $thumb }}background-image: url({{ $thumb }}); background-size: cover{{ end }}
+                        "
+                        title="Tags: {{ range .Tags }}#{{ . }} {{ end }}">
+                        <span class="p-1" style="background-color: RGBA(0, 0, 0, 0.8)">
+                            <a href="/{{ .Fragment }}">{{ .Title }}</a><br>
+                            <small class="blog-meta">
+                                {{ .Created.Format "Jan 02 2006" }}
+                                {{ if ne .Privacy "public" }}
+                                    <span class="blog-{{ .Privacy }}">[{{ .Privacy }}]</span>
+                                {{ end }}
+                            </small>
+                        </span>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+
+        </div>
+    </div>
+{{ end }}
+
+{{ end }}

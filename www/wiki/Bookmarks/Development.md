@@ -123,6 +123,7 @@
 * [JavaScript Module Pattern: In-Depth](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html) — How to write self-contained JavaScript modules in raw ES5.
 * [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) — Using `<script type="module">` and `<script nomodule>` to ship native ES6 code to the browser, with pre-browserified fallback for legacy users.
 * [A JavaScript-Free Frontend](https://dev.to/winduptoy/a-javascript-free-frontend-2d3e) — Modals, drop-downs and other <abbr title="Single Page App">SPA</abbr> features in pure HTML and CSS without JavaScript.
+* [Everyone has JavaScript, right?](https://kryogenix.org/code/browser/everyonehasjs.html)
 
 ## PHP
 

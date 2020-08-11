@@ -1,0 +1,95 @@
+{{ define "title" }}Privacy Policy{{ end }}
+{{ define "content" }}
+
+<h1>Privacy Policy</h1>
+
+<p>
+	This page explains some of the privacy features on this website. In
+	my personal life I'm a privacy and security nut and run adblockers
+	and privacy guard add-ons in my web browsers and I respect <em>your</em>
+	privacy too.
+</p>
+
+<p>
+	Two privacy-related aspects of this site are as follows:
+</p>
+
+<ol>
+	<li><a href="#matomo">Matomo Web Analytics</a> is an open source,
+		self-hosted web analytics tool that I use to understand how my
+		visitors navigate my site and where they're coming from. You
+		can safely <a href="#matomo-optout">opt out</a> and your web
+		browser's privacy settings are respected <em>by default</em>.
+	</li>
+	<li><a href="#comments">Comment threads</a> on my blog <em>MAY</em>
+		be subscribed to by email; this is an optional feature and
+		unsubscribing is easy.</li>
+</ol>
+
+<hr>
+
+<h2 id="matomo">Matomo Web Analytics (Self-Hosted)</h2>
+
+<p>
+	I'm currently using the open source analytics tool
+	<a href="https://matomo.org/" target="_blank">Matomo</a> to
+	learn about how my site is being used and where my visitors are
+	coming from. This tool is hosted on the same server as my blog
+	and is using my own database.
+</p>
+
+<p>
+	My Matomo installation anonymizes visitor IP addresses and respects
+	the <a href="https://en.wikipedia.org/wiki/Do_Not_Track" target="_blank">
+	Do Not Track (DNT)</a> setting in your web browser. If you use a
+	browser add-on such as Privacy Badger, Matomo does not track any
+	information about your visits, as Privacy Badger will enable the
+	DNT flag automatically.
+</p>
+
+<h3 id="matomo-optout">Matomo Analytics Opt-Out</h3>
+
+<iframe
+	style="border: 0; height: 200px; width: 600px;"
+	src="https://svc.ckir.net/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=000000&fontColor=ffffff&fontSize=11pt&fontFamily=Verdana"
+></iframe>
+
+<hr>
+
+<h1 id="comments">Comments and Email Subscriptions</h1>
+
+<p>
+	When you leave a comment on my blog, you may <em>optionally</em>
+	enter your email address as well. If so, your email address is used
+	for two things:
+</p>
+
+<ul>
+	<li>If you have a <a href="https://gravatar.com/" target="_blank">Gravatar</a>,
+		it can be displayed alongside your comment.</li>
+	<li>You may subscribe to get email notifications when future comments are
+		added to the same page you just commented on (opt-in).</li>
+</ul>
+
+<p>
+	Your email address is not displayed to other visitors of the site and
+	I will not share it with others. You're also completely free to never
+	tell me your email address in the first place!
+</p>
+
+<p>
+	Also, the name and email address you most recently entered into a
+	comment form or Contact Me page is <strong>cached</strong> in a local
+	session cookie that stays with your web browser (not on the server side).
+</p>
+
+<h2>Unsubscribe from Comment Threads</h2>
+
+<p>
+	To unsubscribe from individual comment threads, you may click the link
+	in the email notification to do so. You may also unsubscribe from
+	<strong>ALL</strong> comment threads site-wide by visiting the
+	<a href="/comments/subscription">Comment Subscription</a> page.
+</p>
+
+{{ end }}

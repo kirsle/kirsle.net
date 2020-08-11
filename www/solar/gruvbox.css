@@ -1,0 +1,53 @@
+/* Gruvbox highlight theme, converted from
+ * https://tmtheme-editor.herokuapp.com/#!/editor/theme/Gruvbox
+ * Using: https://github.com/davinche/pygments-from-tmtheme
+ */
+.highlight { background-color: #282828; color: #fdf4c1aa; }
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: bold; }
+.highlight .c { color: #928374; font-style: italic; }
+.highlight .cp { color: #928374; font-style: italic; }
+.highlight .c1 { color: #928374; font-style: italic; }
+.highlight .cs { color: #928374; font-style: italic; }
+.highlight .cm { color: #928374; font-style: italic; }
+.highlight .m { color: #fdf4c1; }
+.highlight .mf { color: #fdf4c1; }
+.highlight .mi { color: #fdf4c1; }
+.highlight .mo { color: #fdf4c1; }
+.highlight .se { color: #fdf4c1; }
+.highlight .kc { color: #fdf4c1; }
+.highlight .k { color: #fa5c4b; }
+.highlight .kd { color: #fa5c4b; }
+.highlight .kn { color: #fa5c4b; }
+.highlight .kt { color: #fabd2f; }
+.highlight .s { color: #b8bb26; }
+.highlight .sb { color: #b8bb26; }
+.highlight .sc { color: #b8bb26; }
+.highlight .sd { color: #b8bb26; }
+.highlight .s2 { color: #b8bb26; }
+.highlight .sh { color: #b8bb26; }
+.highlight .si { color: #b8bb26; }
+.highlight .sx { color: #b8bb26; }
+.highlight .sr { color: #b8bb26; }
+.highlight .s1 { color: #b8bb26; }
+.highlight .ss { color: #b8bb26; }
+.highlight .bp { color: #fdf4c1; }
+.highlight .nc { color: #8ec07c; }
+.highlight .no { color: #d3869b; }
+.highlight .nt { color: #8ec07c; font-weight: bold; }
+.highlight .nv { color: #fdf4c1; }
+.highlight .vc { color: #fdf4c1; }
+.highlight .vg { color: #fdf4c1; }
+.highlight .vi { color: #fdf4c1; }
+.highlight .ow { color: #fe8019; }
+.highlight .o { color: #fe8019; }
+.highlight .n { color: #fdf4c1aa; }
+.highlight .nl { color: #fdf4c1aa; }
+.highlight .nn { color: #fdf4c1aa; }
+.highlight .nx { color: #fdf4c1aa; }
+.highlight .bp { color: #fdf4c1; }
+.highlight .p { color: #fdf4c1aa; }
+
+
+/* Kirsle.net overrides */
+.highlight { background-color: transparent }

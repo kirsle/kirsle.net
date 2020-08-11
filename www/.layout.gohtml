@@ -19,7 +19,7 @@
 	<!-- Kirsle.net Flare -->
 	<link rel="stylesheet" type="text/css" href="/flare/ui.css">
 
-	<link rel="stylesheet" type="text/css" href="/solar/monokai.css">
+	<link rel="stylesheet" type="text/css" href="/solar/gruvbox.css">
 	<link rel="stylesheet" type="text/css" href="/solar/vim-syntax.css">
 
 	<link rel="alternate" type="application/rss+xml" title="Kirsle's RSS Feed" href="/blog.rss">
@@ -31,7 +31,7 @@
 	<a href="#navbar" class="btn btn-primary"><i class="fas fa-bars"></i></a>
 </div>
 
-<div class="brand d-lg-none">
+<div class="brand d-md-none">
 	<a href="/">
 		<img src="/flare/cjk-48.png" width="48" height="48" alt="Kirsle.net logo">
 		Kirsle.net
@@ -43,7 +43,7 @@
 <div class="container-fluid">
 	<div class="row">
 
-		<div class="order-1 order-lg-12 col-12 col-lg-10 col-xl-8">
+		<div class="order-1 order-md-12 col-12 col-md-9 col-lg-10 col-xl-9" style="min-width: 0; max-width: 1280px">
 			<div class="content-panel mb-4">
 				{{ if .SetupNeeded }}
 				<div class="alert alert-success">
@@ -81,7 +81,7 @@
 			</div>
 		</div>
 
-		<div id="navbar" class="nav-panel order-12 order-lg-1 col-12 col-lg-2">
+		<div id="navbar" class="nav-panel order-12 order-md-1 col-12 col-md-3 col-lg-2">
 			<div class="brand">
 				<a href="/">
 					<img src="/flare/cjk-48.png" width="48" height="48" alt="Kirsle.net logo">
@@ -190,6 +190,22 @@
 		});
 	});
 </script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//svc.ckir.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 
 {{ template "scripts" }}
 

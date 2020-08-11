@@ -9,3 +9,5 @@
 * [ ] In-depth how the Domain Name System works, `/etc/hosts`, PiHole
 * [ ] In-depth how e-mail systems work
   * [x] SMTP servers (connect directly to one and spoof an e-mail)
+* [ ] Cross-site scripting
+* [ ] Programming an API server
